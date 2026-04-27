@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><a href="https://dragonboat.io" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">dragonboat</a> for PMs ‚Äî Fintech 20-Minute Orientation</title>
+<title><a href="https://dragonboat.io" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">dragonboat</a> for PMs &mdash; Fintech 20-Minute Orientation</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
 body {
@@ -14,7 +14,7 @@ body {
   line-height: 1.6;
 }
 
-/* ‚îÄ‚îÄ Nav ‚îÄ‚îÄ */
+/* &#9472;&#9472; Nav &#9472;&#9472; */
 .topbar {
   position: fixed; top: 0; left: 0; right: 0; height: 52px;
   background: #03080f;
@@ -43,10 +43,10 @@ body {
 .collapse-btn { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); background: none; border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; padding: 4px 10px; cursor: pointer; transition: all 0.15s; }
 .collapse-btn:hover { color: #fff; border-color: rgba(255,255,255,0.3); }
 
-/* ‚îÄ‚îÄ Layout ‚îÄ‚îÄ */
+/* &#9472;&#9472; Layout &#9472;&#9472; */
 .page { max-width: 1440px; margin: 0 auto; padding: 80px 48px 80px; }
 
-/* ‚îÄ‚îÄ Hero slide ‚îÄ‚îÄ */
+/* &#9472;&#9472; Hero slide &#9472;&#9472; */
 .hero {
   background: linear-gradient(135deg, #0b1740 0%, #0a1a3a 50%, #061230 100%);
   border: 1px solid rgba(35,108,255,0.3);
@@ -77,6 +77,1080 @@ body {
 .hero-meta { display: flex; gap: 24px; flex-wrap: wrap; }
 .hero-meta-label { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; }
 .hero-meta-value { font-size: 13px; font-weight: 600; color: #fff; }
+
+/* &#9472;&#9472; Agenda strip &#9472;&#9472; */
+.agenda-strip {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(35,108,255,0.12);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 40px;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+}
+.agenda-item {
+  flex: 1;
+  min-width: 140px;
+  padding: 0 16px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+  border-radius: 8px;
+}
+.agenda-item:hover { background: rgba(35,108,255,0.08); }
+.agenda-item:first-child { padding-left: 0; }
+.agenda-item:last-child { border-right: none; }
+.ag-time { font-size: 10px; font-weight: 700; color: #6b9eff; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+.ag-title { font-size: 12px; font-weight: 700; color: #fff; margin-bottom: 2px; }
+.ag-sub { font-size: 11px; color: rgba(255,255,255,0.45); }
+
+/* &#9472;&#9472; Section headings &#9472;&#9472; */
+.section { margin-bottom: 48px; }
+.section-toggle { display: flex; align-items: center; gap: 12px; cursor: pointer; user-select: none; }
+.section-toggle:hover .section-title { color: #6b9eff; }
+.section-chevron { font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.4); flex-shrink: 0; line-height: 1; width: 16px; text-align: center; }
+.section-body { overflow: hidden; transition: opacity 0.25s ease; }
+.section.collapsed .section-body { display: none; }
+.section-label { font-size: 10px; font-weight: 700; color: #6b9eff; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+.section-label::after { content: ''; flex: 1; height: 1px; background: rgba(35,108,255,0.2); }
+.section-title { font-size: 22px; font-weight: 800; margin-bottom: 6px; transition: color 0.15s; }
+.section-sub { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 24px; }
+.time-badge { display: inline-block; background: rgba(35,108,255,0.15); border: 1px solid rgba(35,108,255,0.3); color: #6b9eff; border-radius: 20px; padding: 3px 12px; font-size: 11px; font-weight: 700; margin-bottom: 16px; }
+
+/* &#9472;&#9472; Cards &#9472;&#9472; */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+.card {
+  background: rgba(35,108,255,0.05);
+  border: 1px solid rgba(35,108,255,0.12);
+  border-radius: 10px;
+  padding: 20px;
+}
+.card:hover { border-color: rgba(35,108,255,0.4); background: rgba(35,108,255,0.1); }
+.card-icon { font-size: 22px; margin-bottom: 8px; }
+.card-title { font-size: 14px; font-weight: 700; margin-bottom: 5px; }
+.card-body { font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+
+/* &#9472;&#9472; Problem / solution split &#9472;&#9472; */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+.split-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 20px; }
+.split-box.problem { border-top: 3px solid #e57373; }
+.split-box.solution { border-top: 3px solid #4f88ff; }
+.split-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+.split-box.problem .split-label { color: #e57373; }
+.split-box.solution .split-label { color: #6b9eff; }
+.split-box ul { padding-left: 18px; }
+.split-box li { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 8px; line-height: 1.5; }
+.split-box li strong { color: #fff; }
+
+/* &#9472;&#9472; Hierarchy visual &#9472;&#9472; */
+.hierarchy {
+  display: flex;
+  align-items: center;
+  background: rgba(35,108,255,0.04);
+  border: 1px solid rgba(35,108,255,0.12);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.hier-item { display: flex; align-items: center; gap: 4px; }
+.hier-pill {
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.hier-arrow { color: rgba(255,255,255,0.3); font-size: 16px; margin: 0 4px; }
+.h-goals { background: rgba(156,39,176,0.2); border: 1px solid rgba(156,39,176,0.4); color: #ce93d8; }
+.h-subgoals { background: rgba(156,39,176,0.15); border: 1px solid rgba(156,39,176,0.3); color: #ba68c8; }
+.h-ws { background: rgba(35,108,255,0.15); border: 1px solid rgba(35,108,255,0.35); color: #90caf9; }
+.h-init { background: rgba(27,42,107,0.35); border: 1px solid rgba(79,136,255,0.4); color: #b3c8ff; }
+.h-epics { background: rgba(0,188,212,0.15); border: 1px solid rgba(0,188,212,0.3); color: #80deea; }
+
+/* &#9472;&#9472; Timeline &#9472;&#9472; */
+.timeline { position: relative; padding-left: 24px; margin-bottom: 16px; }
+.timeline::before { content: ''; position: absolute; left: 8px; top: 8px; bottom: 8px; width: 2px; background: rgba(35,108,255,0.25); }
+.tl-item { position: relative; padding: 0 0 24px 20px; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-dot { position: absolute; left: -20px; top: 4px; width: 14px; height: 14px; border-radius: 50%; background: #06101f; border: 2px solid rgba(35,108,255,0.5); }
+.tl-dot.active { background: #236CFF; border-color: #236CFF; box-shadow: 0 0 8px rgba(35,108,255,0.6); }
+.tl-date { font-size: 11px; font-weight: 700; color: #6b9eff; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 3px; }
+.tl-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.tl-desc { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.5; }
+.tl-badge { display: inline-block; background: rgba(35,108,255,0.15); border: 1px solid rgba(35,108,255,0.3); color: #6b9eff; border-radius: 4px; padding: 1px 8px; font-size: 10px; font-weight: 700; margin-top: 4px; }
+.tl-badge.now { background: rgba(35,108,255,0.3); }
+
+/* &#9472;&#9472; Navigation concepts &#9472;&#9472; */
+.nav-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px; }
+.nav-card {
+  background: rgba(35,108,255,0.04);
+  border: 1px solid rgba(35,108,255,0.1);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.nav-card-label { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+.nav-card-title { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.nav-card-body { font-size: 11px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+
+/* &#9472;&#9472; Dependency model &#9472;&#9472; */
+.dep-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+.dep-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 18px; }
+.dep-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; color: rgba(255,255,255,0.4); }
+.dep-title { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.dep-body { font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.55; }
+.dep-sla { display: inline-block; margin-top: 8px; background: rgba(35,108,255,0.15); border: 1px solid rgba(35,108,255,0.3); color: #90caf9; border-radius: 4px; padding: 2px 8px; font-size: 11px; font-weight: 700; }
+
+/* &#9472;&#9472; Ask / action box &#9472;&#9472; */
+.ask-box {
+  background: linear-gradient(135deg, rgba(35,108,255,0.14) 0%, rgba(27,42,107,0.08) 100%);
+  border: 1px solid rgba(35,108,255,0.3);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 16px;
+}
+.ask-box h3 { font-size: 16px; font-weight: 800; margin-bottom: 12px; color: #fff; }
+.ask-steps { display: flex; flex-direction: column; gap: 10px; }
+.ask-step { display: flex; gap: 14px; align-items: flex-start; }
+.ask-num { width: 26px; height: 26px; border-radius: 50%; background: #236CFF; color: #fff; font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+.ask-content { flex: 1; }
+.ask-title { font-size: 13px; font-weight: 700; color: #fff; }
+.ask-desc { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+
+/* &#9472;&#9472; Resources &#9472;&#9472; */
+.resources-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.resource-card {
+  background: rgba(35,108,255,0.04);
+  border: 1px solid rgba(35,108,255,0.1);
+  border-radius: 10px;
+  padding: 16px 18px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color 0.15s;
+}
+.resource-card:hover { border-color: rgba(35,108,255,0.4); }
+.resource-type { font-size: 10px; font-weight: 700; color: #6b9eff; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+.resource-title { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 3px; }
+.resource-desc { font-size: 11px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+
+/* &#9472;&#9472; POC strip &#9472;&#9472; */
+.poc-strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; margin-bottom: 16px; }
+.poc-card { background: rgba(35,108,255,0.06); border: 1px solid rgba(35,108,255,0.15); border-radius: 8px; padding: 12px 16px; }
+.poc-name { font-size: 13px; font-weight: 700; color: #fff; }
+.poc-role { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+
+/* &#9472;&#9472; Callout &#9472;&#9472; */
+.callout { border-radius: 8px; padding: 14px 18px; margin: 14px 0; display: flex; gap: 12px; }
+.callout-icon { font-size: 18px; flex-shrink: 0; }
+.callout-body { flex: 1; font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.5; }
+.callout-body strong { color: #fff; }
+.callout.tip { background: rgba(35,108,255,0.1); border: 1px solid rgba(35,108,255,0.22); }
+.callout.warn { background: rgba(255,193,7,0.08); border: 1px solid rgba(255,193,7,0.2); }
+
+/* &#9472;&#9472; Divider &#9472;&#9472; */
+.sdiv { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.1em; margin: 24px 0 12px; padding-bottom: 6px; border-bottom: 1px solid rgba(35,108,255,0.1); }
+
+/* &#9472;&#9472; Fintech wordmark accent &#9472;&#9472; */
+.ft-wordmark {
+  font-size: 11px;
+  font-weight: 700;
+  color: #6b9eff;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 700px) {
+  .split, .dep-grid { grid-template-columns: 1fr; }
+  .hero { padding: 32px 24px; }
+  .hero-title { font-size: 26px; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-logo">
+    <img src="data:image/png;base64,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" alt="Intuit" style="height:22px; width:auto; filter:brightness(0) invert(1);">
+    <span style="color:rgba(255,255,255,0.2); margin: 0 8px;">&#183;</span>
+    <img src="data:image/png;base64,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" alt="PDX" style="height:22px; width:auto; filter:brightness(0) invert(1);">
+    <span style="color:rgba(255,255,255,0.2); margin: 0 8px;">&#183;</span>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABHUAAAFLCAYAAABY2rBXAAAACXBIWXMAAC4jAAAuIwF4pT92AAAgAElEQVR4nO3d73XbyMH24Ts5+916KzBTgZUKzFSwSgXmVrBKBautINoKlq4gdgWhK4hcQagKHqkCvx9GiGSt/pAggAHA6zqHR87GJMYSRQI/DgZ/+vbtWwAAAACYlj/XHgAAAAAA+xN1AAAAACZI1AEAAACYIFEHAAAAYIJEHQAAAIAJ+qH2ADgKJ0lO7/68fPDfF3e3p2we/Hl7d7tJctXhuAAAAGCy/uSS5nRsmRJwTlOCzfsetnGdEnk2KZHn6u5/AwAAwNEQdTjESUrEaW7vKo7lNiXybJJ8isgDAADAzIk67GuR5Cwl4vxYdSQvu06JO+s4ZQsAAIAZEnXYxUlKyFmln9Op+ibwAAAAMDuiDi85TXKeEnTeVB5LV74muUyJPDeVxwIAAACtiTo8ZZXpzsrZ1W1K3FnH+jsAAABMkKjDQ6skF0ne1h3G4D6m/Lu3dYcBAAAAu/tz7QEwCquUoPF7ji/oJMmHJP9NmblzUnksAAAAsBMzdY7bMmWGypxPs9pXc1rWReVxAAAAwItEneN0khIuPtQeyIhdp8xg2tQdBgAAADxN1Dk+ZymLA8/lalZ9+5wSd1wpCwAAgFGxps7xOEm5jPe/Iujs48eU9YbOKo8DAAAAviPqHIezlDDxY+VxTNWblBhmIWUAAABGw+lX83eZ5Ofag5iRrymnY11VHgcAAABHTtSZr+Z0K1e26t5tStj5VHkcAAAAHDGnX83TacpMEkGnH83pWBeVxwEAAMARM1NnflzdalgfU2btAAAAwKBEnXlZJfm99iCO0JeUmOay5wAAAAxG1JmPVQSdmr4mWUbYAQAAYCDW1JmHVQSd2t4l2cQlzwEAABiIqDN9qwg6YyHsAAAAMBhRZ9pWEXTGRtgBAABgEKLOdK0i6IyVsAMAAEDvRJ1pWkXQGTthBwAAgF6JOtOziqAzFcIOAAAAvRF1pmUVQWdqhB0AAAB6IepMxyqCzlQJOwAAAHRO1JmGVQSdqRN2AAAA6JSoM36rCDpzIewAAADQGVFn3FYRdOZG2AEAAKATos54rSLozJWwAwAAwMFEnXFaRdCZO2EHAACAg4g647OKoHMshB0AAABaE3XGZRVB59gIOwAAALQi6ozHKoLOsRJ2AAAA2JuoMw6rCDrHTtgBAABgL6JOfasIOhTCDgAAADsTdepaRdDhe8IOAAAAOxF16llF0OFpwg4AAACvEnXqWEXQ4WXCDgAAAC/607dv32qP4disIujMxdckN3e3q0f/3+aJv7989L8Xd7ckef/CNpZ32wAAAID/EXWGtYqgMzW3KcFmk2R7d7tKf5FlmfvY0/z5JsIOAAAAj4g6w1lF0JmCrykBZ5MSb7YVx9JoTsESdQAAAPgfUWcYqwg6Y3Wb5FNKxPkU4QQAAICJ+KH2AI7AKoLO2FynBJx1/rgWDgAAAEyCqNOvVQSdsWhm5Kzz9CLGAAAAMCmiTn9WEXTG4GuSyzi1CgAAgJkRdfqxiqBT2+eUmLOpPA4AAADohajTvVUEnZo+JrnIOK5aBQAAAL0Rdbq1iqBTi5gDAADAURF1urOKoFPDl5Tv/bbuMAAAAGBYok43VhF0hnad8n3f1B0GAAAA1PHn2gOYgVUEnSHdJvk1ySKCDgAAAEfMTJ3DrCLoDGlMp1qdJDl98DUpoWmxw31vklzd/Xn76AYAAAA7+dO3b99qj2GqVhF0hnKbsgjyZaXtnyZZ3n1dJHnf47a+pMSdq7vbpsdtAQAAMGGiTjurCDpDqTE7p4k4Z+k34OzqS0rcaW4AAAAg6rSwiqAzlF9TZugM4ezutkzydqBttnGb5NODGwAAAEdK1NnPKoLOEG5TAsum5+2cJjm/29abnrfVhybwrGMGDwAAwNERdXa3iqAzhK8pkWXb0+Of3D3+eZJ3PW2jhuuUuHOZshAzAAAAMyfq7OY0ZSbEFGdzTMnHlNjSR5RYpIS588z/5/gx5bS1bd1hAAAA0CdR53WLlKsQzT0E1NbX+jmLu8f90MNjj524AwAAMGOizstOUmbozOk0nTH6KeXUoS6dpASNnzt+3CkSdwAAAGboz7UHMHKXEXT61kfQOU8JGIJO8SHJf1PCzkndoQAAANAVM3Wet4qFkfvUxxWulhHiXnOdEr1cDh0AAGDiRJ2nLWIdnT7dpgSYq44ez6lW+/ucEi5dKQsAAGCiRJ2nXcVsj750HXSWKadvve3o8Y7JbUrYMWsHAABggqyp80cXEXT60nXQuUjy7wg6bb1J8q+UKGatHQAAgIkxU+d7i5QFZelel0HHVcm69zVl1k5XwQ0AAICeiTrf2yR5X3sQM9Rl0DlN+TlZ76h7tymLKK8rjwMAAKjrNMPO5t/e3diTqHNvFVe76kPXp1xZ76h/v6ac2gYAABynTYad8OAYpCVr6hTN1ZPoVtdBJ3eP97XDx+OPfonZOgAAAKMn6hTnsdhu1/oIOkm5BPcywk7fPqTUeQsoAwAAjJSoUw5az2sPYmb6CjoNYWcY7yPsAAAAjJaoU4KORXe703fQaQg7w3gXYQcAAGCUjj3qmKXTraGCTkPYGYawAwAAMELHHnXM0unO0EGnIewMQ9gBAAAYmWOOOmbpdKdW0GkIO8MQdgAAAEbkmKPOWczS6ULtoNMQdoYh7AAAAIzED7UHUJFZOocbS9BpNGFnkxIf6EcTdpYp33NgXk5Sfr9P726PI+5Nyuv+VcprgdcBAIBKjjXqnMZB/6HGFnQaws4whJ3pOkl5DWT8tne3oaxSZrH+uMPfffh3via5TPIpXg8AAAZ1rFHHLJ3DjDXoNISdYQg703Sa5N+1B8FOfk1yMcB2zlKizNuW93+X5Pe7x7jMMGMGACDHu6bOWe0BTNjYg07DGjvDsMYOTNdJyuyaf6V90HnoTZJfUmYXmQ0GADCAY4w6FkhubypBpyHsDEPYgek5TXkt3+VUq329TfKflNO5AADo0bFGHfY3taDTEHaGIezAdJym/L52MTvnJb9H2AEA6JWowy6mGnQaws4whB0Yv0XK7+lQM1aFHQCAHh1b1FnGqVf7mnrQaQg7wxB2YNw+Zfj3wd9jjR0AgF4cY9Rhd3MJOg1hZxjCDozTRepdEXBdabsAALM21aizank/p17tbm5BpyHsDEPYgXE5SXJecfvv4jQsAIDOTTHqrNJ+x7TWJ5RTM9eg0xB2hiHswHicp/7pxxeVtw8AMDtTizqrlHPz28SGZacjma+5B52GsDMMYQfGoeYsncbbmDELANCpKUWdVUrQSZJti/svuxrIjB1L0GkIO8MQdqCuZerP0mmIOgAAHZpK1FnlPugk5QBxX6688bJjCzoNYWcYwg7Us6w9gAe8FwMAdGgKUWeV74NO0m6mjh3J5x1r0GkIO8MQdqCOZe0BPGBtOwCADo096qzyx6CTtIs6bw8ayXwde9BpCDvDEHaARe0BAADMxZijzipPB502B93Lg0YyX4LO94SdYQg7MKyxzVRd1B4AAMBcjDXqrPJ00EnKgfe+HDz+kaDzNGFnGMIODGcsiyQDANCxMUadVZ4POon1dLog6LxM2BmGsAPD+FJ7AI+0+XAGAIAnjC3qrPJy0EnaRR3uCTq7EXaGIezA8fH+AwDQkTFFnVVeDzptLXt63KkRdPYj7AxD2IF+bWoP4IHr2gMAAJiTsUSdVXYPOoJEO4JOO8LOMIQd6M+YXvc3tQcAADAnP9QeQPafoeNc/P0JOodpws4mJT7QjybsLOP3HLr0KeV9YAwLJn+qPQDYwcWA29omWQ+4PQBmpnbUWaW/U64eOuZP/wWdbgg7wxB2oB+fknyoPIbbiDpMwy8DbutLRB0ADlDz9KtVhgk6yfEehAs63XIq1jCcigXdu6g9gCSXtQcAADA3taLOKsMFnWMl6PRD2BmGsAPd2ib5reL2ryPqAAB0rkbUWUXQ6Zug0y9hZxjCDnTrIvWuPnUep1QCAHRu6DV1VhF0+iboDMMaO8Owxs58XKfMFmF3244f7ybJWcrv1JCLJv8Wa+kAAPRiyKiziqDTN0FnWMLOMISdeVhnHOu6HLurlFkzQ70ff7zbHgAAPRjq9KtVBJ2+CTp1OBVrGE7Fgu6sk/w95X2jTx9T3v8BAOjJEFFnlfpBZ+4H3IJOXcLOMIQd6M6n9Pe6dZvkpwg6AAC96zvqrFI/6CTzPmVD0BkHYWcYwg505yrJaZJf092snY9JFimzgQAA6FmfUWeVfoLOoofHnCpBZ1yEnWEIO9Cti5T31l/T7upYtymLIf8l5b1/zh+kAACMSl8LJa/S3wydRYv7zHEHU9AZJ4snD+Ndkss4vQO6cpMSdy5SZu+c3X09SfL+0d/9cvf3r1Je6zbDDBEAgMf6iDpnGccpVw9dJfmx9iA6JOiMm7AzjA93X1c1BwEzdBXvLwAAk9D16Ven6f88+kXPjz92gs40OBVrGB8i6gAAAEeqy6hzkjIz4U2Hj/mURYv7bDoeQy2CzrQIO8P4PeX7DAAAcFS6jDqb9B90kuNdU0fQmSZhZxifYuFkAADgyHQVdS4z3Nohb1vcZ+ohRNCZNmGnf29Swg4AAMDR6CLqnCX5uYPH2ceixX2mekAt6MyDsNO/9ylX7gEAADgKh0adk/S/MPJTFi3us+14DEMQdOZF2OnfLykLtgMAAMzeoVHnU4ZZR+exZYv7TC2MCDrzJOz0b117AAAAAEM4JOqcp5zuUEObT+I3XQ+iR4LOvAk7/XoXp2EBAABHoG3UOUndg6Y5Rx1B5zgIO/36Je1O0wQAAJiMtlFnnTqnXTXept3li790PZCOCTrHRdjp17r2AAAAAPrUJuosk/zY8TjamNtsHUHnOAk7/XmfcnU+AACAWWoTdS47H0U7yxb3+dT1IDoi6Bw3Yac/Y3m9AgAA6Ny+UWeVsgjpGCxb3OcqJaCMiaBDIuz05W3K6xYAAMDs7Bt1LvoYREvv025dnTHN1hF0eEjY6cdF7QEAAAD0YZ+os0r51HtMli3uM5aoI+jwFGGne2brAAAAs7RP1LnoaxAHaLMI6qfUPwVL0OElwk73LmoPAAAAoGs/7Pj3VhnfLJ2k3UydpFzq+OfuhrEXQYddNGFnk/GsYzVlzWyddd1hAPTqNLudmr7peRwwBbv+vjSuUvbPmLeT7HeVZc+LaVvc3V4z6p/zrlHnos9BHOBtyi/dvoFknTpRR9BhH8JOt1YRdYB5OEl5fzh98PVNi8f5kvJec5XyXrPpYnAwIqd3t0XuPwx+f+Bj3qb8zmzvbpuM/ICPP1jk/rnRxL22r6ON65Tnw9WDr54X4/H4fXORdpNWvqb8TDe5f++s/jPeJeosM85ZOo1VkvM973OVsiNz6Iv6PgQd2hB2uvM+7SIwwBgsUk47X6W794NmP+jHJL/c/flLyqnqn1IOTGAqmoO2Zcr7fV/7+W/uHrt5/OZ35zr3cXQTvz9jcpry+tkc0B8Sb57z9u72+HnneVHPIt2/bzaP8/Dn/DXlZ7tOpeOMP3379u21v/Mp5c1+rK6z25Spx1ZJfu90JM8TdDjUSYSdLnyMRZOXSf5dYbu/ZryzPmGsTlJ2SM9T5/X/a8pO6joj+CRyQK/uHHfoS9ovJ8D9QdtZhv2wdhfN749AOrzmtXN597WPiNPWdcpzYp3xHxtuMuzvVVf7iqvUe99sfr6XGfD3/rWFkhcZd9BJShFts2DyOuWb3jdBhy5YPLkbbV4rYG6+DXxbDvKvet1Q/95NB2M9Sdmx3aZ8AFUr6L9L8s+7cazT7kO0IVyk25/hkN53PPbXbheD/Kv6dZJy0HaV5L8pz9GxBZ3k/vfnvyljXWW/NXzY31nKAfX/pbx2fsi4gk5Sjl1/TvKflNfWy4z3tXVKmvfNm9R932x+vv9NeS4uh9joa1FnKgdAbce57nIQTxB06JKwc7g3MVMHGK+HMeeXjOdg5E3KwdF/Uw5AHJhSwyJl332bugdtbbxLGfM25Xd8UXEsc7PI/cH8vzL+CQkPPQwAm9hHbesi43vfTMpz8d8pP9tFnxt6Leqs+tx4hz6k3Q7GZfq7vLmgQx+EncNNJVYDx+UsZZ9hbDulj/2csvO873qG0NYy5aDovxnnzIt9vEn5Hf9vSqASSNtbpHwP/5vxv27u4n2+D3+eG69bZpwx57H36flDkZeiziLTKuCrFve5Sfnmdk3QoU/CzmF+jDdKYDxOUqZo/yvjvjDFQ29STivZxOsp/VmmPMf+nXGeXnWoD3EA38Yi9zHnQ9WR9ONtSqTYxnPjOc375r8znffNpHwocpWyYHenXoo6U/s0u+0nRl3P1hF0GIKwc5hl7QEA5P5TximdLvDQ+5TxL+sOg5lZ5P6AbY4x56Fm5s5VpnfsNbRF5h1zHnv43FjVHcqoNFeyner75tuU9ZQ6ne36UtRZdbmhAbxNuxfDm3S3aJygw5CEnfbsOAG1nacctI55yvgu3qT8O5yORRcuUg7ap3rA1tbblNl6n2JmxlMuUo6vjiHmPPY25bSsTXqY4TExq5QgMqXZOc/5Zzo8BfO5qLPItE69ahwyW+fQK2EJOtQg7LSzrD0A4KitU3bo5qTZQYU2mk/ff6k9kMp+TPk+LCuPYywePi+mHsAP9T4laFxUHkctFylxa04+pKPTmJ+LOstDH7iS92k/9tUB2xV0qEnY2d/b+LQDqGOd+X7a/CHCDvu7SDlYneIHyn14G7PfEs+L5/ySAa6mNDLrzDf4vksHYWduUSdpXy83ST63uJ+gwxgIO/tb1h4AcHTWmW/QaQg77OokZf97rgdrhzrW2W+LmLX1mvc5nhldl5n/++bBYWeOUeeQ2Trn2W/RZEGHMRF29rOsPQDgqKwz/x3TxoeYZcDLTlMW2Z77QsiH6uz0jIlYphxXmZ3zumY9s1XlcfRplXLFqGPwLgdE3KeiziLTX3zoouX9tnvcV9BhjISd3Tn9ChjKeY4n6DT+GYvS87RVSqg49jVSdvU+xxF2VpnH4vFD+z3zXGdnmfmtofOaH1NmJu3tqagzhwOdQ2brXCb58srfEXQYM2FnN28z/x0koL5l5rco8q7WOa51H3jdKuVAzYH7fjpZd2PE1jm+A/gu/ZJ5nap3knIluGP0c1p8IDLXqJO0rFx3zvL8aViCDlMg7OxmLq93wDgd845pUg7c17UHwWhcxoH7IZqwMzfrHN9Mxj7M6bTXdY47/K6zZ8B9KuosuxjJCLxL+yf2TZ4+P1HQYUqEndeJOkCf1jnuHdOkzJ6ey4EG7a1zPGtj9OmgdTdGaB1Bp0v/zPTX2DlLOQ3pmO39gchza+rMxUXaT1P8lOS3B/9b0GGKhJ2XLWoPAJgtO6b3LuL19pgd45pSffqQeayhso7nRR+m/oHlIWfbzMmP2eM0rKeiztQXSX7oTQ57YpynrK8j6DBlws7zpv7GB4yXHdN7h+6PMV2rHO+aUn36JdNeiHwdQacPv2XaMyNXmVeLONRldpyg8jjqLDsfSn0fcti/6yyCDtMn7DxtrgsOAnWtYsf0sR8zz/1MnreMNXT6tM40Z8BdRNDpw0+ZdtBJvG8+9jY7/kx/6HkgY7FO+UT+psV9byLoMA9N2NmknJON78OQlpnHdPE+XdQeAJ04iZ/lcy4i7ByL00xvkfDrJNu7P59k/PsIzboby7rD2MsqZZYR3blN+b5O7feN3ZynzNh5sWM8jjrLvkZT2duUHYmp10s4lLBDLe/vbjzvovYA6ITX1ue9z/17EPN1kvEuEn6b8vy7uvu6y4e3i7vbacrz9zTjmVHQLEQ+hdMbTzONcU6JJULm703K7/jFS3/pqTV15urnzDdawT6civU96+oADMcHbPN3mXHFzeuUtUb+mhKczlIOkDbZ7WB4e/d3L+/uu7h7rN9SDqpru8j4T8M6SZlJMsbQN1VfU/ZhBZ35e/V98/FMnbmvL/Ep5UWvzWlYMCdm7Nyb++seMA9f8vrMgkXKTv5pxjsz7seUcW7rDoOenGU866V8Tgkxmx4e+yrlQOs85dSXi9SbvdMsRD7mhZPXGc/sptd8Sfn53uTl584y96+5Q+9Lf73bvmPa/TWnWS4ynefkm5TXmfVzf+Fx1Jn7J9ZvUsLOsvI4YAyEHYDxuk3ZZ1mn3UFpMyNhlfEFnlWcbjhHzWlXtX1MeX5tB9re+u7WnCJRYzZKsxD5psK2X3OWMr6xuk55rf2U/b5/D//uScr3/+zu1udz4GPKaygv+5ryM71KeS14aUbTaUrkWab8/MYYe1Z54fX1T9++fXv4vzcZ3xt/H36NnQlonOS4w87fMs6doL4sk/y79iB40p8G2s631/9Kp8byOzb0v7ut65R9lHWHj7m8e8yx7ONdp9vTRZbp9gO7IRdyvc6wIWST/n4fP6XuwfvXlLCyqTiGRcrPs8bv2peM74Prk5QD6jGedvUlZYZTHwsMN0G969+HoYPOJuN539jFdcrPdJ3DZjEtU77PY5l12PhLnonVxxp1kuTvsUo4NI457IzlgHMoy4g6YyXq9GvsUec2Jbz0uZBozZkEj/01410LYsjnyhgPxNtYpu57y9g+sL1MWc9zaD9lHLOlGrVD31O+5H5Npb4t0t0l3Gv8bDeZRhvo62faLO49lu/BP/LMPsIxLZT82DrzP90MdnWTUqTHsOAfwLH5kmGuDHOZcvA9htf6Ve0B0Kl1pe3epoTji0rbf855ykH40C4qbPM5y4wr6NymfKi/zHAfNGxTXuv+mvI638ZtxhfrxqL53izT39pZy5SYMgar5/6PY446zfo6FkmFonnhAmA4v6W89m4H2l7zWl877Ix5UVf2c546a1B8TZkJsamw7V2sM/zB4NuMZ19uTJcv/5zyXKl1lsbDOLDPa29zyfJ15yOavi+5P92xb5epE2kfe5dnTl0+5qiTlBe+TYQdaFxlHC9aAMfgp9S5xPcYws7bjP8yzLzuJHVmh0zl6j+XKeugDOli4O09ZZXxnNL/j5SIPIbnSjNb8usOf7d5jo/1NNWamg9DhvyZrjOOY6TlU//x2KNOUl5w1rUHASOyTnmxBKA/tafTX6X+wd+y8vY53HmGX6NpKkGnscpuB/FdeZ/6wfSi8vYbP2VcM4aS+6j++YW/I+g8r9aHIUmd2XePPTnLVdQpfoywAw+dp/25vwC87NeMY7/jMnVf65cVt83hTjL8wdV1phV0GquBt1froDcp/9YxXBK6djh/yU3KwflTs7g+ZprP8SGM4Wda+33zyTWBRZ17H1L/SQJjcpb6ay4AzM3njOdT7KTugsXLitvmcKsMO0vnNuM5jWZfVykxdyirAbf12EXFbTfGcPC/i1W+DwTNJcun+Bzv228Zz890VXHbT566LOp8T9iBe82nCHPnjRMYym3Gd9WnbYZf86PxNtY1nLKhZ4OcZ9qno1xmuA/L3qTOPtxZ6s/SGctMyF2dpcxA+0fG9/4wFl9Sd/bZY9sMG2kf+8NsncdRZzPMOEZN2IF7m8x/fZ0p7yAC07LKOEPyRcVtPzmVnNEb+uD9c6a/f36TYdd3qRF1ah94j20m5C5uUmZejG3tn7FoZuiNTc2f16tRh0LYgXvnGXaBP4A5+pJ6l9N9zTb11ggQdaZpNeC2blM/FnRlzlFnkbJIcy1jnAnJ4c4zzg9DblJvluurUWeM37BahB24t6o9gJ6IVcBQVrUH8Ip1pe06/Wp6TlIuMjKUy5TwOAdDHggOfQpW7fC2imPZufmScR+P15qt84f3zcdRx2kI3xN2mIuTHDYd9SrzPA3Lmz8whI8Z/0FprVlEy0rbpb3VgNu6zfxOSxnyd2054LZqniLzOeOdCUl7F7UH8IqrlPWQhvaHGXFm6rxO2GHqTlLWxvklh704XqTOC1efNrUHAByFi9oD2MFN6l6mlekY8uB9nfkdn8wx6pym7gLJtWcJ0b0vmcZ++ihiopk6uxF2mKom6Ly7+9+/pP0b/E3m96Y5tx1FYHy+ZPyzdBqbCttcVNgm7Z1k2HVT5jZLpzFUQH2XYU5xXA2wjedMYSYk+7uoPYAdbSptd/Hwfzy1ULI1Jp4m7DA1j4NO41Pav8F/yrw+yRWygb6taw9gD5sK26x9+WP2M+Qsna+Z78H6ZsBtLWeyjedcVNw2/bjONGbpJCOOOttBhjFNwg5T8VzQScrCeYdMFVwdcN+x2dQeADB7o5iavaNN7QEwessBt7UecFtDG/JDpWXPj7/I0/ubQzBLZ57WtQewh5uMYFLMU1HHJ9cvE3YYu5eCTuN92p9KtU29S/h1qfoLMDB7nzO90zzntnYa3VoOuK0pBdF9bQfc1h8uf9yxZc+P/5K5np537Na1B7Cnbe0BPBV1NkMPYoKEHcZql6DTuEj7tQzOU65IMWUCNtC3Te0BtLCtPQBGa5HhTpe7zryfi0Pug/S9BtKy58d/ztfYl5ujKf7uV38emqnTnrDD2OwTdJJyGta65bZuMv1PRza1BwDM3qb2AFrY1B4Ao7UccFvHcDwy5Idjix4fu++ZQM9ZV9ou/ZriDL3qr1c/PPHfmvPCap0bOSUf7r6uag4Csn/QabxPef6uW2zzMmXGzpsW9x2DTe0BHJmpXJoSulR9Rw86NOTB+zH87lxluCuJLdLP7IeT1DtmnOLBP6/b1B5AC9VPs34q6iTtDg6PlbBDbW2DTuMy5Y1x3xekm5QY9HPL7dY0xamdU7eJK1RwXKZ6pcBjOJimnSGjznbAbR2DZfo5WK41S2fOV0Y7dlN8D9rWHsBLUWeKB2q1CDvUcmjQScpMm4u0Wzj5MtN8rfDpDtC3Ke6YJiP4xJHRGmpWSVIixGLA7dWwGHBbJz09bq2oYz9uvra1B9DCtvYAnos6flH2J+wwtC6CTuPnlECz3fN+25QrYX145e+Nzab2AIDZE0eYk8XA25vafsXY9RVfFj097ms2lbZLv6Y6w7W6pxZKbnwebBTzYfFkhgQE+SwAABXDSURBVNJl0GlctLzf1BZMvo1wDfRvqjN14CmL2gPgIHObqbOptF365cOQll6KOg562hF26FsfQScpz91Fi/tdpZzbPBVe24AhTHXnVIziKbUO3ulGX2ul9hWLXjKlfU72M+X3n+uaGxd1+iHs0Je+gk7jouX9pjRbx2sbwPOmGqPoV42Dd8avxoV1pnzgz3xta278pahzE6dgHULYoWt9B52k/WydTymnNY2dU68AYH+L2gPgYIvaA+jItvYAYGxeijqJg59DCTt0ZYig07hocZ+bTOP1Yl17AAAwQYvaA+Bgi44fr9YpeWbqwCOvRZ11pvHp+5gJOxxqyKCTJGdpN816ClFnSqeJAQCMVa1T8pwiCo+8FnUSQaILwg5tDR10kuRNStjZ19hPwfoSU3YBAKZM1IFHdok6PtnuhrDDvmoEncZ5y/uNebbORe0BAMBEufoVY+H0K3hkl6izjQWTuyLssKuaQSd3222zAzfWqHOd8v0EAPb3pvYAONiy9gCAfuwSdRKzdbok7PCa2kGnsWpxn7GegnVRewAAAABd2zXqbFLWo6Abwg7PGUvQSdqtq5OMb0bMdfy+AQAAM7Rr1El80t01YYfHxhR0kuRt2p2Ctel4HIe6qD0AAACAPuwTdTYxW6drwg6NsQWdxqrFfTYdj+EQX+N3DAAAmKl9ok7S/oo4PE/YYaxBJ2m3qN5VxrOujtcsADjcWN7XYVl7ADA2+0adqyQf+xjIkRN2jteYg05SxrVocb9Nt8No5XPGMQ4AmDqXkQYYqX2jTlI++VbruyfsHJ+xB53GssV9au/83cYsHQCAxk3Hj7ft+PF2tai0XRitNlHnJhYe7YuwczymEnSSdlFn0/EY9nWRejsbAABj0/UHbtuOH29Xi0rbhdFqE3WS5DJlAVK6J+zM35SCTjK9mTpfU16jAIBubGsPAO4saw8AxuaHA+67SvKfjsbB9z7cfV3VHAS9mFrQScqlzU+y37TdmyTXd/cd0m383gBA17YDb+9ruj9d6Nj18f38muH3aRcDbw9G75Coc5Xk1yS/dDQWvifszM8Ug07jNPufUrXN8FHnIvXX8wGAuRk6sJyn/qncvK5GeHubEna2FbYNo9T29KvGRZIvHYyDpzkVaz6mHHSSaayr8zlOuwKAPgz9gcly4O3RzqbSdk8rbRdG6dCok5SZJK6G1R9hZ/qmHnSSdlNdh/z05jpmtQFAX7YDb28x8PZop9YpcmeVtguj1EXU2cbBVN+EnemaQ9BJ2u1cDfWp3m3Km7tz7wGgH9uBt2cmxjTUOuV9WWm7MEpdRJ0k+ZSyvg79EXamZy5BJ2m3czVUZDmPdXQAoG9DLrnwLmU/inHbVNru2wh/8D9dRZ2krK/zscPH44+EnemYU9BJkjct7jNEaPk1ficAYAjbgbe3HHh7tPO10nZXlbYLo9Nl1EnKJ+a1frGPhbAzfnMLOo1F7QE88jElJgMA/dsMvD3rpkxDrdnSq0rbhdHpOurcpFR1Yadfws54zTXoJO2iznXXg7jzMd7MAWBIQx+8n8UpWFOwqbTdN7EvCEm6jzpJCTuruCJW34Sd8Zlz0Glr28Njfk2ZFQgADOcqw+7fv4nZOlOwqbjti4rbhtHoI+ok5UV/GWGnb8LOeBxD0FnUHkBK0FnGla4AoIZPA2/vYuDtsb9t6p2l8TbWXoLeok4i7AxF2KnvGIJOUj/qCDoAUNdm4O29jVNspmBTcduXFbcNo9Bn1EmEnaEIO/UcS9CpTdABgPqGnqmTlNk61tYZt3XFbb+L8MeR6zvqJMLOUISd4Qk6wxB0AGAcbpJ8Hnibb3Mcp2Gd1h7AAa7S38UxdnEZ4Y8jNkTUSYSdoQg7wxF0hiHoAMC41Jit83PmvXbKaZL/pHxvpxon1hW3/aby9qGqoaJOIuwMRdjpn6AzDEEHgLl7X3sALdSIOknZv51q8HhJs1+ZJD/e/XmKs3bWlbf/Y1wtjSM1ZNRJhJ2hCDv9EXSGIegAUMvQp5FMLVTcJPlYYbtvUy8o9aXZr3zz4L+9u/tvUwsU2wx/at5j60wziMFBho46ibAzFGGne4LOMAQdAGraDry95cDb68K60nbfV9x2Hy7z9H7lmyT/yvTWElpX3n5zGtbUQmlSxixI0UqNqJMIO0MRdroj6AxD0AHg2CxrD6CFTeotjDuX/dt1yr/lJb9kWuvsfErdBZOT+5lOU/meJffHGZsIO7RQK+okws5Q5vLGV5OgU1z1/PiCDgBjsB14e1M7zaZxUXHbU96/PUmJH68FncbU1tm5qD2ATCvsPDzOeJNp/awZiZpRJxF2hjLlN77aBJ17fcYWQQeAsdgOvL23meZsnXXqzsr4kOkcuDea/cof97zflNbZWaf+bJ1kGmHnNH88zhB22FvtqJMIO0MRdvYn6BxulzckQQeAMdlW2OZFhW124aLy9t+nHEtM4QB4mfLcartfOaV1di5qD+DOu5Tv+bLuMJ50luePM4Qd9jKGqJMIO0MRdnYn6PxRm9Ov3rzy/ws6AIzNtsI23ydZVdjuodapPyvjbZL/ZDwh4bGTlAWR/53X94t2MYV1dtZJvtQexJ03Kd/7i8rjaDSn3/0rLz8fhB12Npaokwg7QxF2XifoPG3f8PLazoagA8AYbSpt9zLTPIBb1R7AnV8yvlkZq5RjnJ87ftwprLNzUXsAj/yS++PNWi5SnqO7nn7XhJ1FL6NhNsYUdRJhZyjCzvMEnad9bXGfl3Y0BB0AxqzN+96hmgO4ZYVtH2KT8czKeJsyK2OTut/HVcrB++8pY+rD2NfZ2ST5WHsQj7zL8M+PkyTnKc+HX7L/bK03Gf/MLCobW9RJhJ2hCDt/JOg8r8v4IugAMHZ9X/HxOc2pIpfp5iDuJCUwbNLvQewq49p3f5/7g/fVQNtc5P7gvc+Y89DY19k5z7ieF43Hz48+gslZyrHWNsk/c9jzYQqLPlPRGKNOIuwMRdi5J+i8bNPiPssn/pugA8AUbCpv/+ck/5eyn7bK7gdzJynvsxcpn+7/X0pgeN/x+B7bZpxh4X3Kv/8m5Xt5lm4PjE9TwsVVkv/m8IP3tsa6zs5NxnN63lOa58f/pXz/ztP+lLbTlH/rOuXf/a+UY60u1lFKhB1e8EPtAbygCTubdPfLwB99uPu6qjmIygSd121b3Gfx6H8LOgBMxab2AO58uLv9nvJh50sziPoON6+5TIkmtcfxlDe5/14mZZ9kk7J/c3X3dfvC/Zd3X09zH85OM65jlGadnVXqzTR7yqckv6X7dYW69mO+X+vmS8o+60vfy+b5MNRzvgk7y9if5oExR51E2BnKMYcdQWc3bXYOFg/+LOgAMCXblKs61Zh18Zw3GWcweWiVss8w9v32d5nnvl9z0H+aOldxe85Fyn7glL7nze/arosaD0XY4Q/GevrVQ07FGsYxnool6OyuTdRppq8KOgBM0afaA+jYEKdtbHOcHxKOSTPzaEya07Acz3XDqVh8ZwpRJxF2hnJMYUfQ2V2bK1osUj6lE3QAmKp17QF0bKjLX39K8utA2+J7txnv1bCuMt6xTZGww/9MJeokws5QjiHsCDr72bS4z2kEHQCm7Sp1Lm0+BxcZ3+Ws5+4249/v2iT5qfYgZkTYIcm0ok4i7AxlzmFH0Nlfm1OvbjL+HQsAeM1l7QFM2HlEsSE1V+Eau3XM5OqSsMPkok4i7AxljmFH0GmnzZoCmwg6AEzfOvY522o+4BF2+vdTprXffhEzubok7By5KUadRNgZypzCjqDTzufaAwCAyszWaU/Y6d+vmeb++irCTpeEnSM21aiTCDtDmUPYEXTa29QeAABUdpFyefOpW1TarrDTn48pz8+pWsWpWF16F1efO0pTjjqJsDOUKYcdQecwc7ucKwC0cV57AB1YVNx2E3bMAO7OPzKPA/iLWDy5Kx9jZuFRmnrUSYSdoUwx7Ag6h/maZFt7EAAwAp8iSBzqJuWS1k65OdxPmdfB+zrJ3+J47hAfM4/IRwtziDqJsDOUKYUdQedw69oDAIARWWUep2HVtoqZGW3dJvl75rmPtklyGqfptfFbBJ2jNpeokwg7Q5lC2BF0urGuPQAAGJFmpol9zcOtk/w1Itk+vqYc68z51Phtyr/xt7rDmIzblEA6h9NDOcCcok4i7AxlzGFH0OnG57gkOQA8dhWfiHflKmVmhgP4131MOca5qjyOIdykRIq/xzHdS5rIt647DMZgblEnEXaGMsawI+h0Z07naQNAlz5lmqcPLWoP4AnNAfzfYtbOU5rTrVY5vg/bPqU8Z0W/P/otxxP52MEco04i7AxlTGFH0OnOdVzKHABess70FnZ9W3sAL9ikzNpxeet7H1OixpxPt3rNw+hnrZ3yPfhbyvfk2CIfL5hr1EmEnaGMIewIOt26qD0AAJiATcq+poPNbtyk7IP8Jcd9hazmwH0VB+6NTUr0+ynHOaPrNuUS9qfxwStPmHPUSYSdodQMO4JOt25z3J8IAcA+mn1Np4h0Z5sSNI4t7lynRAsH7s9bp8xeOpa4c5sye20RSyPwgrlHnUTYGUqNsCPodO8yPhUCgH00p4j8NcmXymOZk22OI+40MWeR+rPfp2Kd+7gzx5lyD2POReyb84pjiDqJsDOUIcOOoNO92/gUAADaavY3/xZxp0vblLjz/1JOQZnLDI3PKc+VRcScttYpM5v+lhL+pn6s9zUlVJ1EzGEPP9QewICaN9pNkjdVRzJvH+6+rnrchqDTD7N0jsNN6hxsbCtsk6cN/fMfy+vKsf672xAkDrNJ2ec8TdkfWqX+vufnTP/06puUfZXL3H9vzzLuBaAf+5oSItaZ9mvE2Gzubicpz4mzJD9WHM8+rlN+Ny8zvn2loa+utR14e10a+nv13evHn759+zbw9qtrzlOt/eY6dx/TT9gRdPpxnfK7YQcDALq3TDnQXGaYfZgvKQcZm7vbnN/fT3P/vX1fdyhP+pzyM/iUaR+0Tk0TeJZ3tzHFvy8pz4dNXJacDhxj1EmEnaF0HXYEnf78FFN/AWAoy5T90cXd12T/IHGdEgma29WDr8dsmfvv72mGPZi/zn1Ma74yDot8/9wY6njiNt8H1s1A2+WIHGvUSYSdofwj3azTIuj050vKGxwAMA6Lu9tjm0FHMQ8nuQ9oD2/J/iGtOUBPvg9q2/jZTNHDsNo8T5r/vs8x4teU2XA3Kc+P5mvzZ+jVMUedRNjpW1czdQSdfv01PtUDAACYnGO5+tVzXBWrP79F0JmCXyPoAAAATNKxz9RpmLHTndsk5+lmfRZBp18WRwYAAJgwUeeesHO465RV5ruY+SHo9M9pVwAAABN27KdfPeRUrMN8SQljgs40OO0KAABg4szU+SMzdvb3a5KLjh5L0Omfq10BAADMgKjzNGFnN7cpp1ttOno8Qad/tymXbrSODgAAwMQ5/eppVykHvl8rj2PMPqd8jzYdPV4T0gSdfi0j6AAAAMyCqPO8m5QDYGHne7dJ/p4yQ6erOCDoDOOnWEcHAABgNkSdl92kBIePtQcyEs3snE8dPqZT3YbxW7q5zDwAAAAjIersZpUyy+FYr4x1neRv6XZ2TlK+r/+JoNO3j0nOaw8CAACAbok6u1vn+E7Huk25stUi3a2d07hI8nvHj8kffU6JZwAAAMyMq1/t7yQlSPxceRx9+5jy79x2/LgnSS6TfOj4cfmjr7EwMgAAwGyJOu0tU2bvvK07jM71FXOS+/V4LIjcP0EHAABg5px+1d4mJVL8mnmstfMxyV9STtXZ9vD4y5QrLwk6/RN0AAAAjoCoc7iLlLjzW91htHKb/mNOUhbp/XcsiDwEQQcAAOBIOP2qW4uUgLHKuAPGdcq6Nuv0e/B/creNH3vcBvcEHQAAgCMi6vTjJCXsnGc8a+7cpqxnc5lyGlTflnfbG3PcmhNBBwAA4MiIOv07TQk8Zxk+8FynhJXN3dchHMvVwcZE0AEAADhCos6wTlMOvs/u/tz1LJavKbNwNne3bceP/5plykwgiyEPR9ABAAA4UqJOXacp6/A0Xxd3//39C/f5mnIAf5MScLZ3t00fA9yR2Tl1CDoAAABHTNThUGcps3PGsnbQsRB0AAAAjtwPtQfAZC1SYo4rWw1P0AEAAEDUYW8nKVf1+qX2QI6UoAMAAEASUYf9XKQEHZcpr0PQAQAA4H9EHXaxSgk61s2pR9ABAADgO6IOzzlJiTnnEXNqE3QAAAD4A1GHxxa5jzlOs6pP0AEAAOBJog6Ns5SY42pW4yHoAAAA8CxR57gtUmbknMUpVmMj6AAAAPAiUef4nKZEnLMk7yqPhacJOgAAALxK1Jm/k5SAs7y7mZEzboIOAAAAOxF15uUkZSZOc1tGxJkSQQcAAICdiTrjcHH39SbJ1Y73Wd59XdzdTuNqVVMm6AAAALCXP3379q32GChBZhNR5lgJOgAAAOztz7UHQJIyO2eZ5LbyOBieoAMAAEAros54CDvHR9ABAACgNVFnXISd4yHoAAAAcBBRZ3yEnfkTdAAAADiYqDNOws58CToAAAB0QtQZL2FnfgQdAAAAOiPqjJuwMx+CDgAAAJ0SdcZP2Jk+QQcAAIDOiTrTIOxMl6ADAABAL0Sd6RB2pkfQAQAAoDeizrQIO9Mh6AAAANArUWd6hJ3xE3QAAADonagzTcLOeAk6AAAADELUmS5hZ3wEHQAAAAYj6kybsDMegg4AAACDEnWmT9ip72MEHQAAAAYm6szDVZLTlNkiDOtjklUEHQAAAAYm6szHNmW2iLAznN9Sgg4AAAAMTtSZl5uUGTsfaw/kCPyU5Lz2IAAAADhef/r27VvtMdCP8yT/rD2IGbpNmRF1VXkcAAAAHDlRZ95Ok3xK8rb2QGbiS5KzWD8HAACAEXD61bw1Cyh/rj2QGfhHXOEKAACAERF15u8mZXbJT3HZ8za+JvlrksvaAwEAAICHRJ3jsY5ZO/v6NeV7Zv0cAAAARseaOsfpLGXmibV2nvYl5VLl27rDAAAAgOeZqXOcPqXMQPk1Tsl66DrJ31PWztlWHQkAAAC8wkwdTlJm7XyoPZCKrpNcpJyiBgAAAJNgpg43Kaca/SXJx7pDGdx1ygLSiwg6AAAATIyZOjx2kuT87vam8lj68jVldtK68jgAAACgNVGHl6zubu/rDqMTtylrCa2TbKqOBAAAADog6rCLRcoVs84zvStmfU6JOZ9STjUDAACAWRB12NciJfCcZZwzeG5TZuIIOQAAAMyaqMMhTlIu/71MuUR6jchzm+QqJeQ0NwAAAJg9UYeuLVNm8yzu/nyS5F1Hj/0lZebN1YPbtqPHBgAAgEkRdRjKScpsnsbp3X97ShNuGpuexgQAAACTJeoAAAAATNCfaw8AAAAAgP2JOgAAAAATJOoAAAAATJCoAwAAADBBog4AAADABP1/P5MBVSTt9YMAAAAASUVORK5CYII=" alt="Fintech" style="height:22px; width:auto;">
+    <span style="color:rgba(255,255,255,0.2); margin: 0 8px;">&#183;</span>
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjI4LjE2OSIgaGVpZ2h0PSI0OC43NjUiIHZpZXdCb3g9IjAgMCAyMjguMTY5IDQ4Ljc2NSI+PGRlZnM+PHN0eWxlPi5he2ZpbGw6bm9uZTt9LmJ7Y2xpcC1wYXRoOnVybCgjYSk7fS5je2ZpbGw6IzJiY2ZjODt9LmR7ZmlsbDojMmVhOGUxO30uZXtmaWxsOiMxMDkwYmQ7fS5me2ZpbGw6IzM0NjFhYzt9Lmd7ZmlsbDojZmZmO30uaHtmaWxsOiMyY2E2YWU7fTwvc3R5bGU+PGNsaXBQYXRoIGlkPSJhIj48cGF0aCBjbGFzcz0iYSIgZD0iTTE5NC40MDksMjUuOTg0QTI0LjM4MiwyNC4zODIsMCwxLDAsMjE4Ljc5MSwxLjZhMjQuMzgzLDI0LjM4MywwLDAsMC0yNC4zODIsMjQuMzgyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTk0LjQwOSAtMS42MDIpIj48L3BhdGg+PC9jbGlwUGF0aD48L2RlZnM+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMy4zMTIpIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNzkuNDA0IDMuMzEyKSI+PGcgY2xhc3M9ImIiPjxyZWN0IGNsYXNzPSJjIiB3aWR0aD0iNTQuNDE1IiBoZWlnaHQ9IjI0LjUxMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMuMzkgMzEuMTIxKSI+PC9yZWN0PjxwYXRoIGNsYXNzPSJkIiBkPSJNMjM2LjUsNDEuNTRhMTIuMjY0LDEyLjI2NCwwLDAsMS05LjI0OS00LjIsMTIuMjkxLDEyLjI5MSwwLDAsMS0xOC4yNjQuMjY0LDEyLjI5MiwxMi4yOTIsMCwwLDEtMTguMjM4LS4yMzRWNTQuOTI3aDU0LjVWMzcuODgyYTEyLjI1NywxMi4yNTcsMCwwLDEtOC43NSwzLjY1OCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE5NC4xMjYgLTQuMzYpIj48L3BhdGg+PHBhdGggY2xhc3M9ImUiIGQ9Ik0yMzYuNDgzLDQ2LjY5YTEyLjI2NCwxMi4yNjQsMCwwLDEtOS4yNDktNC4yLDEyLjI5MSwxMi4yOTEsMCwwLDEtMTguMjY0LjI2NCwxMi4yOTIsMTIuMjkyLDAsMCwxLTE4LjIzOC0uMjM0VjYwLjA3Nmg1NC41VjQzLjAzMmExMi4yNjEsMTIuMjYxLDAsMCwxLTguNzUsMy42NTgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xOTQuMTI1IC00Ljc1OCkiPjwvcGF0aD48cGF0aCBjbGFzcz0iZiIgZD0iTTIxOS41NTguMDI4QTI1LjkwOSwyNS45MDksMCwwLDAsMTkzLjMwOCwzMi41OWgyMy40NDNjMy4yODMsMCw4LjA1Mi0xLjM0Niw4LjA1Mi01LjQ4MmE2LjYzNyw2LjYzNywwLDAsMC0uMTE3LTEuNjMxLDYuMzc0LDYuMzc0LDAsMCwwLS42MzEtMS41NDIsOS43MTcsOS43MTcsMCwwLDAtLjk3OS0xLjQxMSwxMi4wMTMsMTIuMDEzLDAsMCwwLTEuMTYxLTEuMjQxLDQxLjE0OSw0MS4xNDksMCwwLDAtMy40NDktMi44Yy0uOTI4LS43NjktLjM4LTEuMDk0LjItLjkxLjcyNy4yMjksMi4xNTkuMTc1Ljc5LS44LS41NTUtLjM5My0uNjk1LS40ODUtMS4xOC0uODQzLS44MzQtLjYxMy0uOTc1LTEuNDI5LS4yLTEuMjQ0YTEzLjEwOSwxMy4xMDksMCwwLDAsMS41MzMuNDYxYy40MTcsMCwuNjE0LS4zMDUtLjAyNS0uOTA4YTE4LjQzMSwxOC40MzEsMCwwLDEtMS42MjctMS42NTRjLS43NDUtLjg1NS0uMjY1LTEuMzE5Ljc2OC0uNjkzYTguMjA5LDguMjA5LDAsMCwwLDEuNDE5Ljc2NmMuNjM4LjI1MiwxLjI0Ni4zNTcuNzg4LS40NzItLjMyNy0uNTkzLS41NC0uOTE4LS43OTMtMS4zNjEtLjM3OS0uNjY2LS4zODItMS41MjEuNzU3LS41MywxLjE2OCwxLjAxNSwxLjkxOCwxLjcxMywyLjU4LDEuNjg5bC45NDctLjA4YS4zNDIuMzQyLDAsMCwwLC4yOS0uNDZjLS4wNDYtLjE3My0uMDY3LS4yNC0uMTQ3LS41MjEtLjE4My0uNjQuMjY3LS44NDkuNTg4LS4yODUuMTcxLjMuMjA4LjM4OS4zNi42NTYuMjY2LjQ2OS40NjcuMjQzLjQxMi4wNjEtLjA1LS4xNjMtLjA1NC0uMTcyLS4wOTItLjI4OS0uMS0uMzA2LjEwNS0uNDUyLjMwNi0uMzIxLjEwOS4wNzEuMjI2LjI1Ni41MjMuODg5YS44NTQuODU0LDAsMCwwLC41NDUuNDYxLDMuMTMsMy4xMywwLDAsMSwyLjIyOCwyLjNjLjA3MS4yNjktLjAxLjQ1Ny4yNTkuMzg3YTEuMDY2LDEuMDY2LDAsMCwwLC40MDgtLjJjLjMwOS0uMjUxLDEuOTE5LTEuMzM4LDIuMzMzLTEuNjE3LjM1OS0uMjQxLDEuNDI0LS45NDEsMi4xMzkuMDU0LjQ1OC42MzgsMS4wMjguNCwxLjM2OSwxLjAwN2ExLjkyMywxLjkyMywwLDAsMS0uMjc4LDIuMTgyYy0uNDEuNDQ4LTEuNjI0LjI5My0yLjYuMjI0YTMuNCwzLjQsMCwwLDAtMi43NSwxLjUyMmMtLjQ4OS43ODEtLjEzOCwxLC4xOTUsMS4wOTNhNi4wNTIsNi4wNTIsMCwwLDAsMi45NDgtLjI5MywyLjIxMywyLjIxMywwLDAsMCwxLjEyNi0xLjEwN2MuMTY0LS40My42MTctLjUyMi43NTEtLjA3YTcuMTE4LDcuMTE4LDAsMCwxLS4wMTksMi4wMzEsMS45ODIsMS45ODIsMCwwLDEtLjkyMSwxLjI1NWMtLjE3NS4xMTctLjU2Ni4yMzQtLjY2NC4wMTlzLS4xMzUtLjMtLjI5Mi0uMjgtLjUxNC4zMjktLjcxLjM2Ny0uMS0uMzU4LS4zNS0uMzU4LS43MTguNC0uOTUyLjM0MS4wMDgtLjI2OC0uMjA3LS4yODgtLjQzOS4yMTctLjc2My4zMDhhMy4wNDIsMy4wNDIsMCwwLDEtLjk0LjA2NywyLjMzLDIuMzMsMCwwLDAsLjQzMSwxLjUwNmMuNi44OSw2LjA4Myw1LjU4Myw1LjgyOCwxMS43cy0yLjY4LDkuMzIzLTcuMDI5LDEyLjY3OGMtMi44MTgsMi4xNzQtOC4wNCw0Ljg0LTE2Ljc3Niw0LjA4OUEyNS45MDYsMjUuOTA2LDAsMSwwLDIxOS41NTguMDI4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTk0LjI1NiAtMS40NzgpIj48L3BhdGg+PHBhdGggY2xhc3M9ImYiIGQ9Ik0yMjYuNjUyLDIyLjQ5NWMtLjgxOS4yNjMuMjQ2LjU4NS43ODMuNjIyLjQ5Mi4wMzUuNTkyLjAzNS44MTcuMDQuMzE3LjAwNi41NDQuMDkuNTcyLjIyMy4wMTguMDg3LS4wNTkuMTU3LS4yNTcuMjU2LS42NzUuMzM4LS4xODQuNTk0LjU4OC4zOTJhMi4wNTMsMi4wNTMsMCwwLDAsMS42NjgtMS41ODgsNi42NTEsNi42NTEsMCwwLDEtMS41ODctLjM4OCw0LjEsNC4xLDAsMCwxLTIuMjQzLTEuOTUzLDEuNzM0LDEuNzM0LDAsMCwxLS4yMTQuMDkxLDMuMjI3LDMuMjI3LDAsMCwxLTEuODQ3LjAxM2MtLjU2Ny0uMTk0LS43OS4xMTEtLjMyLjUyLDEuMDY5LjkzNSwyLjA0NC42NDIsMi41ODQsMS4wOC4yNDIuMi4wMjIuNTA5LS41NDMuNjkxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTk2LjcyIC0zLjAzKSI+PC9wYXRoPjxwYXRoIGNsYXNzPSJmIiBkPSJNMjI5LjgxNSwxNi4xNDlhLjk3OS45NzksMCwwLDAtLjg1MS0xLjA1Mi44LjgsMCwwLDAtLjk3Mi43LDEuMDExLDEuMDExLDAsMCwwLC44MjUsMS4xLjg1NC44NTQsMCwwLDAsMS0uNzUyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTk3IC0yLjY0MikiPjwvcGF0aD48cGF0aCBjbGFzcz0iZiIgZD0iTTIzOC4yNjQsMTUuOTc4Yy4xNzEtLjI1Ni0uMDItLjQ2NS0uMjA5LS42ODNhLjM0OS4zNDksMCwwLDAtLjU0Ny0uMDE0LDEuNDExLDEuNDExLDAsMCwwLS40LjYyMWMtLjEuMjgxLDAsLjQzMi4yNTYuNDY1YTEuMzM4LDEuMzM4LDAsMCwwLC45LS4zODkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xOTcuNzAyIC0yLjY0OCkiPjwvcGF0aD48cGF0aCBjbGFzcz0iZyIgZD0iTTIxOSwyNy44MTlhLjgzOS44MzksMCwwLDAtLjk1OC41NzNMMjEyLjIsNDUuNDY3YS4wMDguMDA4LDAsMCwxLS4wMDkuMDA2TDIxMiw0NS40MDlhMS43MzksMS43MzksMCwwLDAtMi4yLDEuMDlsLTEuNjUsNC44ODVhMS43MzgsMS43MzgsMCwwLDAsMS4wOSwyLjJsMS43MzMuNTg2YTEuNzM5LDEuNzM5LDAsMCwwLDIuMi0xLjA5MWwxLjY1LTQuODg0YTEuNzM5LDEuNzM5LDAsMCwwLTEuMDktMi4ycy0uMDA2LS4wMDYsMC0uMDA5bDUuODU3LTE3LjExOUEuODA4LjgwOCwwLDAsMCwyMTksMjcuODE5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTk1LjQ2MiAtMy42MjQpIj48L3BhdGg+PC9nPjwvZz48cGF0aCBjbGFzcz0iaCIgZD0iTTgyLjAxNSwyMC4xNjRjNS40ODUsMCw5Ljg0NiwzLjksOS44NDYsOS4zODgsMCw1LjUyMS00LjM2LDkuMzg5LTkuODQ2LDkuMzg5LTUuNDUsMC05LjgxLTMuODY4LTkuODEtOS4zODksMC01LjQ4NSw0LjM1OS05LjM4OCw5LjgxLTkuMzg4bTAsMTQuOTc5YTUuMzM3LDUuMzM3LDAsMCwwLDUuMzQ1LTUuNTkxLDUuMzMzLDUuMzMzLDAsMSwwLTEwLjY1NCwwLDUuMzMsNS4zMywwLDAsMCw1LjMwOSw1LjU5MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUuNTczIDAuMjc3KSI+PC9wYXRoPjxwYXRoIGNsYXNzPSJjIiBkPSJNMTQ1LjI2NiwyMC4xMzJjNS40ODUsMCw5Ljg0NiwzLjksOS44NDYsOS4zODgsMCw1LjUyLTQuMzYsOS4zODgtOS44NDYsOS4zODgtNS40NSwwLTkuODEtMy44NjgtOS44MS05LjM4OCwwLTUuNDg1LDQuMzU5LTkuMzg4LDkuODEtOS4zODhtMCwxNC45NzhhNS4zMzcsNS4zMzcsMCwwLDAsNS4zNDUtNS41OSw1LjMzMyw1LjMzMywwLDEsMC0xMC42NTQsMCw1LjMyOSw1LjMyOSwwLDAsMCw1LjMwOSw1LjU5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTAuNDU0IDAuMjc5KSI+PC9wYXRoPjxwYXRoIGNsYXNzPSJjIiBkPSJNMTc3LjQ1NSwyMy43MzFoLTIuMzIxVjIwLjE3OWgyLjQyNlYxNS4yOTJoNC4zNnY0Ljg4N0gxODZ2My41NTJIMTgxLjkydjcuMjQ0YzAsMi45NTMsMi4zMjEsMy4zNzUsMy41NTIsMy4zNzVhNC4xMTUsNC4xMTUsMCwwLDAsLjgwOC0uMDd2My45YTguMjMsOC4yMywwLDAsMS0xLjM3MS4xMDVjLTIuNSwwLTcuNDU1LS43MzctNy40NTUtNi43NVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMy41MTcgMC42NTMpIj48L3BhdGg+PHBhdGggY2xhc3M9ImgiIGQ9Ik0xMy4zNjIsMTN2Ny43MzNjMCwuNi4wMzUsMS4wNTUuMDM1LDEuMDU1aC0uMDdzLTEuMjY2LTIuMTgxLTUuMTY5LTIuMTgxQzMuNDEsMTkuNjExLDAsMjMuMywwLDI5YzAsNS41NTYsMy4xMjksOS4zODksNy45ODEsOS4zODlhNi4xNjYsNi4xNjYsMCwwLDAsNS41OTEtMi45MTloLjA0MXYyLjQwOUgxNy44TDE3LjgyNywxM1ptLTQuNCwyMS42MjNjLTIuNjM2LDAtNC40My0yLjIxNS00LjQzLTUuNjI2LDAtMy41NTEsMi4wMzktNS41NTUsNC41LTUuNTU1LDIuOTg5LDAsNC40MywyLjc0Myw0LjQzLDUuNTIsMCwzLjk3NC0yLjE4LDUuNjYxLTQuNSw1LjY2MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwLjgzKSI+PC9wYXRoPjxwYXRoIGNsYXNzPSJoIiBkPSJNNjkuMzkyLDIwLjU4N0g2NS40MjFWMjIuN2gtLjA3cy0xLjM3MS0yLjUzMi01LjUyLTIuNTMyYy01LjE2OSwwLTcuOTQ2LDQuMDA5LTcuOTQ2LDguOTMyczIuOTE4LDkuMDcxLDguMDUyLDkuMDcxYTUuNTU5LDUuNTU5LDAsMCwwLDQuOTkzLTIuMzIxSDY1cy0uMDM1LjUyOC0uMDM1Ljk1MXYuODQzYzAsMy4yMzUtMi4zNTYsNC40LTUuMDY0LDQuNGExMS41NzYsMTEuNTc2LDAsMCwxLTQuOTU3LTEuMmwtMS4zNzEsMy41MTVBMTQuMjgzLDE0LjI4MywwLDAsMCw1OS45MzYsNDUuOWM0LjY3NywwLDkuNDU5LTIuMzIxLDkuNDU5LTguNDc0Wk02MC44ODUsMzQuNGMtMi44ODQsMC00LjQ2Ni0yLjMyMS00LjQ2Ni01LjQ0OSwwLTMuMDI1LDEuNDc3LTQuOTkzLDQuMTg0LTQuOTkzLDIuNDI2LDAsNC40NjYsMS4wOSw0LjQ2Niw1LjE2OSwwLDQuMDQ0LTIuMDM5LDUuMjc0LTQuMTg0LDUuMjc0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNC4wMDQgMC4yNzcpIj48L3BhdGg+PHBhdGggY2xhc3M9ImgiIGQ9Ik0xMTEuNjk0LDI2Ljk4NmMwLTQuNzQ4LTIuMjg2LTYuODIyLTYuMjU5LTYuODIyYTYuOSw2LjksMCwwLDAtNi4zMywzLjcyN3YtMy4zSDk0LjgxN1YzOC41MTloNC40M1YzMC4yOTFBNy41NjQsNy41NjQsMCwwLDEsOTkuNiwyNy45YTQuOTE5LDQuOTE5LDAsMCwxLDQuODE3LTMuNjU3YzIuMjUxLDAsMi44MTMsMS40NzcsMi44MTMsMy42NTdWMzguNTE3aDQuNDY1WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTcuMzE4IDAuMjc3KSI+PC9wYXRoPjxwYXRoIGNsYXNzPSJjIiBkPSJNMTI0LjcyOSwxOS42MTFhNi4zNzYsNi4zNzYsMCwwLDAtNS4zOCwyLjVoLS4wN3MuMDctLjYzMy4wNy0xLjUxMlYxM2gtNC40NjZWMzcuOTY2SDExOS4xdi0uOTE0YTkuNTEyLDkuNTEyLDAsMCwwLS4wNjktMS4yaC4wNjlhNi40LDYuNCwwLDAsMCw1LjM0NSwyLjUzMmM0Ljc0NywwLDguMjI4LTMuNjkyLDguMjI4LTkuMzg5LDAtNS41NTUtMy4wOTQtOS4zODktNy45NDYtOS4zODltLTEuMDU1LDE1LjAxNWMtMi45ODksMC00LjQ2Ni0yLjc0NC00LjQ2Ni01LjUyLDAtMy45NzQsMi4xOC01LjY2MSw0LjUtNS42NjEsMi42MzcsMCw0LjQ2NiwyLjIxNSw0LjQ2Niw1LjYyNiwwLDMuNTUyLTIuMDc0LDUuNTU2LTQuNSw1LjU1NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTguODY3IDAuODMpIj48L3BhdGg+PHBhdGggY2xhc3M9ImgiIGQ9Ik00MS4xLDIwLjE2NGExNC4yMjIsMTQuMjIyLDAsMCwwLTIuOTUzLjNoMHMtLjIuMDM5LS41LjEyNmwtLjA0Ny4wMTRjLS4xLjAzLS4yMTguMDY2LS4zNDEuMTA3bC0uMDk0LjAzMWE3LjUxMiw3LjUxMiwwLDAsMC0yLjgsMS42MzhjLjg1NywxLjcsMS43NzMsMy4zNzUsMS43NzMsMy4zNzVhMTIuNzk0LDEyLjc5NCwwLDAsMSwzLjUxMi0xLjkzOGMuMDU5LS4wMTkuMzIyLS4wODguMzkyLS4xYTUuMzc4LDUuMzc4LDAsMCwxLDEuMDMxLS4xYzIuMjg1LDAsMy4zLjk0OSwzLjMsMy41MTZ2LjE0MWgtLjU2MmMtMi45MTksMC0xMC42NTQuNDU3LTEwLjY1NCw2LjA4MiwwLDMuNTg3LDIuOTE4LDUuNTkxLDYuMTE3LDUuNTkxYTUuODM4LDUuODM4LDAsMCwwLDUuNDE2LTMuMTY1aC4wNTJWMzZjLS4wMDguMTM2LS4wMTcuMzI2LS4wMTcuNTUsMCwuMDk0LjAxNywxLjk2Ny4wMTcsMS45NjdoNC4xVjI3LjNjMC00LjAwOS0xLjc1OS03LjEzOS03LjczNi03LjEzOW0zLjM0MSwxMC41ODVjMCwyLjE4LTEuNjg4LDQuNzExLTQuMDc5LDQuNzExLTEuODI5LDAtMi43MDgtMS4xMjUtMi43MDgtMi4zMiwwLTIuNSwzLjY5MS0yLjgxNCw2LjAxMy0yLjgxNGguNzczWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIuNTU5IDAuMjc3KSI+PC9wYXRoPjxwYXRoIGNsYXNzPSJjIiBkPSJNMTY1LjI1NCwyMC4xMzJhMTQuMTU5LDE0LjE1OSwwLDAsMC0yLjk1My4zbDAsMC0uNTUyLjE0MWMtLjEuMDMtLjIxOC4wNjYtLjM0MS4xMDdsLS4xLjAzMWE3LjUsNy41LDAsMCwwLTIuOCwxLjYzN2MuODU3LDEuNywxLjc3MywzLjM3NiwxLjc3MywzLjM3NmExMi44MTEsMTIuODExLDAsMCwxLDMuNTEyLTEuOTM5Yy4wNi0uMDE4LjEyMS0uMDM1LjE4My0uMDUxcy4xNC0uMDM2LjIwOS0uMDUyYTUuNDQ1LDUuNDQ1LDAsMCwxLDEuMDMxLS4xYzIuMjg2LDAsMy4zMDYuOTQ5LDMuMzA2LDMuNTE1di4xNDFoLS41NjNjLTIuOTE5LDAtMTAuNjU0LjQ1OC0xMC42NTQsNi4wODMsMCwzLjU4NiwyLjkxOSw1LjU5LDYuMTE4LDUuNTlhNS44MzgsNS44MzgsMCwwLDAsNS40MTUtMy4xNjRoLjA1MnYuMjIyYy0uMDA4LjEzNy0uMDE3LjMyNy0uMDE3LjU1MSwwLC4wOTQuMDE3LDEuOTY3LjAxNywxLjk2N2g0LjFWMjcuMjdjMC00LjAwOS0xLjc1OC03LjEzOC03LjczNi03LjEzOG0zLjM0MSwxMC41ODRjMCwyLjE4LTEuNjg4LDQuNzEyLTQuMDc5LDQuNzEyLTEuODI4LDAtMi43MDgtMS4xMjUtMi43MDgtMi4zMjEsMC0yLjUsMy42OTItMi44MTMsNi4wMTMtMi44MTNoLjc3M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4xNDEgMC4yNzkpIj48L3BhdGg+PHBhdGggY2xhc3M9ImgiIGQ9Ik0zMS40MTEsMjAuMzU0YTYuMTcyLDYuMTcyLDAsMCwwLTUuNyw0LjYwN2gtLjA3YTguMjIxLDguMjIxLDAsMCwwLC4wNjktMS4wMzFWMjAuNkgyMS40MjVWMzguNTMzaDQuNDN2LTcuMWExMC44NDIsMTAuODQyLDAsMCwxLC4zODgtMi45MTksNS4wNDYsNS4wNDYsMCwwLDEsNC44ODctMy43NjEsNy45NSw3Ljk1LDAsMCwxLDEuMDkuMDd2LTQuNGE1Ljc0Miw1Ljc0MiwwLDAsMC0uODA4LS4wNyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEuNjU0IDAuMjYzKSI+PC9wYXRoPjwvZz48L3N2Zz4=" alt="dragonboat" style="height:22px; width:auto;">
+  </div>
+  <div class="topbar-nav">
+    <a href="#why">dragonboat Overview</a>
+    <a href="#rollout">Timeline</a>
+    <a href="#platform">Platform Orientation</a>
+    <a href="#demo">Walkthrough</a>
+    <a href="#fintech-status">Fintech Status</a>
+    <a href="#uat-risks">UAT Risk Radar</a>
+    <a href="#uat-feedback">UAT Feedback</a>
+    <a href="#resources">Resources</a>
+  </div>
+  <div class="collapse-btns">
+    <button class="collapse-btn" onclick="document.querySelectorAll('.section').forEach(function(s){s.classList.add('collapsed');s.querySelector('.section-chevron').innerHTML='+'})">Collapse All</button>
+    <button class="collapse-btn" onclick="document.querySelectorAll('.section').forEach(function(s){s.classList.remove('collapsed');s.querySelector('.section-chevron').innerHTML='-'})">Expand All</button>
+  </div>
+    <a href="https://claude.ai/new?q=I%27m%20looking%20at%20Fintech%27s%20dragonboat%20PM%20Orientation%20page%20and%20have%20some%20questions.%20Here%27s%20the%20context%3A%0A%0Adragonboat%20is%20Intuit%27s%20new%20Product%20%26%20Portfolio%20Management%20tool%20replacing%20CityPlan%2C%20with%20a%20Go-Live%20target%20of%20June%201%2C%202026.%20It%27s%20part%20of%20the%20In-Year%20Execution%20%28IYE%29%20transformation%20%E2%80%94%20a%20shift%20from%20annual%20planning%20%28IYP%29%20to%20continuous%20in-year%20planning.%0A%0AKEY%20DATES%3A%0A-%20Apr%2030%3A%20CTO%20Staff%20Comms%20%2B%20PDX%20Microsite%20launch%0A-%20Apr%2030%E2%80%93May%204%3A%20Pre-UAT%20Training%20%281.5%20hrs%2C%20hybrid%29%0A-%20May%204%E2%80%938%3A%20UAT%20Testing%20Window%20%284%20hrs%20async%29%0A-%20May%208%E2%80%9315%3A%20Final%20dragonboat%20config%20based%20on%20UAT%20feedback%0A-%20May%2015%3A%20Champions%20%2B%20CTO%20Staff%20sign-off%0A-%20May%2018%E2%80%93Jun%201%3A%20Broad%20Training%20for%20all%20users%0A-%20Jun%201%3A%20Go/No-Go%20decision%20%26%20Go-Live%0A%0ATAXONOMY%20%28The%20Golden%20Thread%29%3A%0APortfolio%20%E2%86%92%20Outcome%20%E2%86%92%20Initiative%20%E2%86%92%20Epic%20%28in%20Jira%29%0A-%20Portfolio%3A%20top-level%20container%20%28e.g.%20Fintech%29%0A-%20Outcome%3A%20annual%20goal%20%28replaces%20Input%20Goals%29%0A-%20Initiative%3A%20major%20body%20of%20work%20%28replaces%20CityPlan%20initiatives%29%0A-%20Epic%3A%20execution-level%20work%20tracked%20in%20Jira%0A%0AFINTECH%20STATUS%3A%20At%20Risk%0A-%20UAT%20kicking%20off%20May%204%20with%20testers%20across%20TPM%2C%20PM%2C%20PD%2C%20and%20EM%20personas%0A-%20CTO%20Staff%20comms%20going%20out%20April%2030%20%E2%80%94%20after%20UAT%20invites%20already%20sent%0A-%20Input%20Goals%20and%20E2E%20prioritization%20not%20fully%20available%20at%20go-live%0A-%20PDX%20engaging%20Fintech%20SMEs%20without%20looping%20in%20Fintech%20Champion%20%28Bryoni%20Lawrence%29%0A-%20Low%20PM%20buy-in%20from%20partner%20orgs%20like%20Services%20flagged%20to%20PDX%0A%0AP0%20UAT%20RISKS%3A%0A1.%20Datalake%20%28ODL%29%20not%20live%20until%20June%201%20%E2%80%94%20BDA%20can%27t%20test%20dragonboat%20to%20datalake%20integration%20during%20May%20UAT%0A2.%20No%20AI/MCP%20connector%20for%20Claude%20%E2%80%94%20gaps%20the%203x%20AI-native%20builder%20mandate%0A%0AP1%20UAT%20RISKS%3A%0A-%20Batch%20uploads%20add%20data%20but%20can%27t%20update%20existing%20records%20%E2%80%94%20duplicates%20risk%0A-%20Workstream%20Delegation%20feature%20gap%20flagged%20in%20SME%20deck%20%E2%80%94%20must%20be%20closed%20before%20UAT%0A-%20Required%20fields%20still%20in%20flux%20%E2%80%94%20UAT%20experience%20may%20differ%20from%20go-live%0A-%20Functions%20Interlock%20%28Legal%2C%20Privacy%2C%20Sales%29%20deferred%20to%20future%20release%0A%0AP2%20RISKS%3A%0A-%20Change%20management%20cascade%20delayed%20%E2%80%94%20comms%20going%20out%20same%20time%20as%20UAT%20begins%0A-%20Input%20Goals%20present%20at%20go-live%20but%20not%20final%20%E2%80%94%20status%20tracking%20won%27t%20activate%20immediately%0A-%20E2E%20prioritization%20not%20available%20at%20go-live%0A-%20UAT%20scenarios%20modeled%20on%20future-state%20IYE%2C%20not%20today%27s%20workflows%0A%0ACONTACTS%3A%0A-%20Bryoni%20Lawrence%20%E2%80%94%20Fintech%20Champion%2C%20Staff%20TPM%0A-%20Greg%20Bohn%20%E2%80%94%20PDX%20Driver%2C%20Staff%20TPM%0A-%20Libby%20Barrese%20%E2%80%94%20PDX%2C%20PgM%0A-%20Jose%20Buraschi%20%E2%80%94%20PDX%2C%20Tech-IG05%20Lead%0A-%20Chermaine%20Garrett%20%E2%80%94%20PDX%2C%20Jira%20Transformation%20Lead%0A-%20Victoria%20Shaw%20%E2%80%94%20IBO%2C%20Director%20IYE%20Planning%20%26%20Execution%20Velocity%0A-%20Monica%20Kwong%20%E2%80%94%20IBO%2C%20Principal%0A-%20Khanh%20Nguyen%20%E2%80%94%20IBO%2C%20Group%20Manager%0A-%20Keri%20Woodworth%20%E2%80%94%20IBO%2C%20Sr%20Biz%20Ops%20Manager%0A-%20Nicole%20Kanemitsu%20%E2%80%94%20IBO%2C%20Staff%20Biz%20Ops%20Manager%0A%0ASLACK%3A%20%23dragonboat-ppm-tech-smes%20%28broad%20support%29%2C%20%23fintech-dragonboat-champions%20%28Fintech%20specific%29%0A%0AWhat%27s%20your%20question%20about%20dragonboat%3F" target="_blank" class="ask-claude-btn">
+    <span style="font-size:13px; font-weight:800; line-height:1;">?</span>
+    Ask Claude
+  </a>
+</div>
+
+<div class="page">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-eyebrow" style="display:flex; align-items:center; gap:12px;">Intuit &#183; <a href="https://oip.intuit.com/input-goals-fy26?tab=TECH&metricId=TECH-IG05%3AAccelerating+Intuit%27s+Execution+Excellence+Through+PDLC+Transformation&table=TECH" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">TECH-IG05</a> <span style="display:inline-flex; align-items:center; gap:6px; background:rgba(255,193,7,0.12); border:1px solid rgba(255,193,7,0.3); border-radius:20px; padding:3px 12px;"><span style="width:8px; height:8px; border-radius:50%; background:#f5c518; display:inline-block;"></span><span style="font-size:11px; font-weight:700; color:#f5c518; letter-spacing:0.04em;">At Risk</span></span></div>
+    <div class="hero-title"><a href="https://dragonboat.io" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">dragonboat</a> Migration</div>
+    <div style="font-size:14px; color:rgba(255,255,255,0.65); margin-bottom:8px; white-space:nowrap;">An orientation to Intuit's new product and portfolio management tool replacing City Plan &mdash; what it is, why it matters, and what you need to know.</div>
+    <div style="margin-bottom:20px; font-size:13px; color:rgba(255,255,255,0.65); display:flex; gap:24px; flex-wrap:wrap;">
+      <span>PDX Driver: <a href="https://insight.app.intuit.com/profile/gbohn" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Greg Bohn, TPM</a></span>
+      <span>Fintech Champion: <a href="https://insight.app.intuit.com/profile/blawrence1" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Bryoni Lawrence, TPM</a></span>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Audience</div>
+        <div class="hero-meta-value">Fintech PMs, TPMs, and EMs</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Current Phase</div>
+        <div class="hero-meta-value">UAT &mdash; April 30 &ndash; May 8, 2026</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Go Live</div>
+        <div class="hero-meta-value">June 1, 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agenda -->
+  <div class="agenda-strip">
+    <a class="agenda-item" href="#why">
+      <div class="ag-title">dragonboat Overview</div>
+      <div class="ag-sub">Why dragonboat &amp; WIIFM?</div>
+    </a>
+    <a class="agenda-item" href="#rollout">
+      <div class="ag-title">Timeline</div>
+      <div class="ag-sub">Dates, milestones &amp; rollout</div>
+    </a>
+    <a class="agenda-item" href="#platform">
+      <div class="ag-title">Platform Orientation</div>
+      <div class="ag-sub">Taxonomy, navigation, key concepts</div>
+    </a>
+    <a class="agenda-item" href="#demo">
+      <div class="ag-title">Walkthrough</div>
+      <div class="ag-sub">Initiatives, dependencies, reporting</div>
+    </a>
+    <a class="agenda-item" href="#fintech-status">
+      <div class="ag-title">Fintech Status</div>
+      <div class="ag-sub">Position, risks &amp; key dates</div>
+    </a>
+    <a class="agenda-item" href="#uat-risks">
+      <div class="ag-title">UAT Risk Radar</div>
+      <div class="ag-sub">P0/P1 predictions for Fintech</div>
+    </a>
+    <a class="agenda-item" href="#uat-feedback">
+      <div class="ag-title">UAT Feedback</div>
+      <div class="ag-sub">Tester findings, ranked by priority</div>
+    </a>
+    <a class="agenda-item" href="#resources">
+      <div class="ag-title">Resources</div>
+      <div class="ag-sub">Docs, links &amp; contacts</div>
+    </a>
+  </div>
+
+
+  <!-- Section 1: The Program -->
+  <div class="section" id="why">
+    
+    <div class="section-title">dragonboat Overview</div>
+
+    <div class="callout tip">
+      <div class="callout-icon">&#128009;</div>
+      <div class="callout-body">
+        <strong>What is <a href="https://dragonboat.io" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">dragonboat</a>?</strong>
+        <div style="margin-top:8px;">Intuit is replacing City Plan with a new product portfolio management platform called dragonboat &mdash; mandatory, company-wide, Go-Live 6/1. dragonboat is a hub to connect teams, align on goals and success metrics, and communicate 6-month portfolio roadmaps. It integrates strategy, intake, planning, and delivery into one platform, replacing the fragmented set of tools we use today.</div>
+        <div style="margin-top:8px;">Since City Plan never fully met Fintech's needs, most of our teams are working out of Smartsheet, Airtable, or Google Sheets today for planning/roadmapping. dragonboat will be the single source of truth for FY27 planning.</div>
+      </div>
+    </div>
+
+    <div class="split">
+      <div class="split-box problem">
+        <div class="split-label">Problems Today (IYP)</div>
+        <ul>
+          <li><strong>No shared plan of record</strong> &mdash; no single source of truth for what is being built and when</li>
+          <li><strong>Churn / long average wait times</strong> to resolve inter-team planning requests</li>
+          <li><strong>High priority inflation</strong> across folio requests</li>
+          <li><strong>Poor dependency request quality</strong> &mdash; low signal, high back-and-forth</li>
+          <li><strong>Lack of integration to Jira</strong>, meaning low execution traceability</li>
+          <li><strong>Too many planning processes</strong> and shadow systems (Google Sheets, Smartsheet, Slack, LeanIX)</li>
+        </ul>
+      </div>
+      <div class="split-box solution">
+        <div class="split-label">What <a href="https://dragonboat.io" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">dragonboat</a> Solves (IYE)</div>
+        <ul>
+          <li><strong>Single source of truth</strong> for roadmaps, goals, workstreams, and dependencies</li>
+          <li><strong>Clear ROI</strong> &mdash; one place to see what is planned and why</li>
+          <li><strong>Golden thread</strong> from Goals &#8594; Workstreams &#8594; Initiatives &#8594; Epics in Jira</li>
+          <li><strong>Structured intake</strong> via a customizable dependency request questionnaire &mdash; replaces ad-hoc Slack/email requests</li>
+          <li><strong>10&#215; velocity goal</strong> &mdash; PDX's stated outcome for the TECH-IG05 transformation</li>
+        </ul>
+        <div style="margin-top:14px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.08); font-size:12px; color:rgba(255,255,255,0.6);">
+          Visit PDX's <a href="https://docs.google.com/document/d/1tqHoUdtfcCVhXX7lCWqr0kw7XbaTlhpPP81N-LCH6Xk/edit?tab=t.rvzsd2u5pfjg#heading=h.ngoksz4wkmoi" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">IYE: The Transformation of In-Year Planning</a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <!-- Section 2: Timeline -->
+  <div class="section" id="rollout">
+    
+    <div class="section-title">Timeline &mdash; Dates &amp; Rollout</div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot active"></div>
+        <div class="tl-date">March 2026</div>
+        <div class="tl-title">Early Access Validation &mdash; Done</div>
+        <div class="tl-desc">Small group of TPMs, EMs, and PMs tested and co-designed initiative creation and dependency management. Their input shaped how the platform has been configured for UAT.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Apr 30, 2026</div>
+        <div class="tl-title">PDX Announces dragonboat Migration Broadly</div>
+        <div class="tl-desc">CTO Staff Comms sent to Intuit about the migration. PDX opens centralized microsite with additional resources.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Apr 30 &ndash; May 4, 2026</div>
+        <div class="tl-title">Pre-UAT Training</div>
+        <div class="tl-desc">PDX hosts hybrid, recorded pre-UAT training for participants. Four options:
+          <ul style="margin-top:8px; padding-left:18px; display:flex; flex-direction:column; gap:4px;">
+            <li><a href="https://intuit.zoom.us/j/97273281483?pwd=AqWn8qG5awqt8naejY9Rkxf6cjKXKB.1&from=addon" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Thu 4/30 7:35&ndash;9:00am PT</a> on Zoom</li>
+            <li><a href="https://intuit.zoom.us/j/97273281483?pwd=AqWn8qG5awqt8naejY9Rkxf6cjKXKB.1&from=addon" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Thu 4/30 1:35&ndash;3:00pm PT</a> on Zoom and in person in MTV-20-04B-Shoreline and SDG-03-01-Bennett</li>
+            <li><a href="https://intuit.zoom.us/j/97273281483?pwd=AqWn8qG5awqt8naejY9Rkxf6cjKXKB.1&from=addon" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Fri 5/1 9:35&ndash;11:00am PT</a> on Zoom</li>
+            <li><a href="https://intuit.zoom.us/j/97273281483?pwd=AqWn8qG5awqt8naejY9Rkxf6cjKXKB.1&from=addon" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Mon 5/4 9:35&ndash;11:00am PT</a> on Zoom</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">May 4, 2026</div>
+        <div class="tl-title">Optional UAT Kick Off</div>
+        <div class="tl-desc">PDX hosts hybrid, recorded optional UAT kick off for participants on <a href="https://intuit.zoom.us/j/96426166541?pwd=bsshn0duceFMbmzlioyCbB7ErczI7a.1&from=addon" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Mon 5/4 11:05am&ndash;12:00pm PT on Zoom</a>.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">May 4 &ndash; May 8, 2026</div>
+        <div class="tl-title">Broad User Access Testing (UAT)</div>
+        <div class="tl-desc">Wider team of EMs, PMs, and TPMs participates in testing in dragonboat Sandbox. Testing guide to be provided by PDX.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">May 18 &ndash; Jun 1, 2026</div>
+        <div class="tl-title">dragonboat Training for All Users</div>
+        <div class="tl-desc">PDX to host dragonboat training for everyone &mdash; dates pending.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">May 18 &ndash; Jun 22, 2026</div>
+        <div class="tl-title">Go/No-Go Decision</div>
+        <div class="tl-desc">CTO Staff sign off on Go/No-Go Decision, made by Tapas Moturu and Otto Krusius.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">June 1, 2026</div>
+        <div class="tl-title">dragonboat Go-Live</div>
+        <div class="tl-desc">Workstream deliverables and workstream dependencies are managed in dragonboat.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Post June 1, 2026</div>
+        <div class="tl-title">Post Migration Support</div>
+        <div class="tl-desc">PDX to provide office hours and hypercare support &mdash; dates pending.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">June 22, 2026</div>
+        <div class="tl-title">dragonboat becomes SOT for Goals &amp; Sub-Goals</div>
+        <div class="tl-desc">The complete hierarchy from Goals through Epics is managed in dragonboat. This is the full platform cutover &mdash; dragonboat replaces the current fragmented toolset as the company's single plan of record.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">July 4, 2026</div>
+        <div class="tl-title">City Plan Goes Read Only</div>
+        <div class="tl-desc">Historical (FY26 and prior) data will be available in ODL for ongoing reference. dragonboat becomes SOT for FY27.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">July 31, 2026</div>
+        <div class="tl-title">City Plan Sunset</div>
+        <div class="tl-desc">City Plan (the legacy planning system) is officially retired. dragonboat is the only plan of record from this date forward. All teams must be fully migrated before this deadline.</div>
+      </div>
+    </div>
+
+    <div class="callout warn">
+      <div class="callout-icon">&#9888;</div>
+      <div class="callout-body"><strong>Note on non-Jira teams:</strong> Some teams in our ecosystem use tools other than Jira today &mdash; for example, some rely on Smartsheet. How these teams connect to dragonboat is still an open question being worked through the program. Flag any teams you work with that don't use Jira directly to <a href="https://insight.app.intuit.com/profile/blawrence1" target="_blank" style="color:#f5c518; text-decoration:underline; text-underline-offset:3px;">Bryoni Lawrence, TPM</a>.</div>
+    </div>
+
+    <div class="sdiv">Confirmed Fintech UAT Participants</div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title">Platform PD <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Yong Liu</span></div>
+        <div class="card-body">Chang Liu, Sr SWE</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Platform PM <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Saurav Sharma</span></div>
+        <div class="card-body">Abhishek Lal, Sr Staff PM</div>
+      </div>
+      <div class="card">
+        <div class="card-title">WFS <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Tushar Thakker</span></div>
+        <div class="card-body">Cristina Andres, M2 SW Quality Analysis</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Invoicing &amp; Payments <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Harshal Deo</span></div>
+        <div class="card-body">Ritu Das, M3 Development</div>
+      </div>
+      <div class="card">
+        <div class="card-title">B2B Development <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Anat Keenan</span></div>
+        <div class="card-body">Nili Davidor, Software Development Group Manager</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Risk <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Matt Allan</span></div>
+        <div class="card-body">Relying on other Fintech UAT participants</div>
+      </div>
+      <div class="card" style="grid-column: 1 / -1;">
+        <div class="card-title">PMO <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Guergana Yordanova</span></div>
+        <div class="card-body" style="display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;">
+          <span style="background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:6px; padding:4px 10px; font-size:11px;">Bryoni Lawrence, Staff TPM</span>
+          <span style="background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:6px; padding:4px 10px; font-size:11px;">Erin Kaaea, M3 TPM</span>
+          <span style="background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:6px; padding:4px 10px; font-size:11px;">John Welder, M3 TPM</span>
+          <span style="background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:6px; padding:4px 10px; font-size:11px;">Eric C. Tom, Principal TPM</span>
+          <span style="background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:6px; padding:4px 10px; font-size:11px;">Nancy Dinh, Sr Staff TPM</span>
+          <span style="background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:6px; padding:4px 10px; font-size:11px;">Karen Louie, Staff TPM</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Section 3: Platform Orientation -->
+  <div class="section" id="platform">
+    
+    <div class="section-title">Platform Orientation &amp; Taxonomy</div>
+
+    <div class="sdiv">The Hierarchy &mdash; The "Golden Thread"</div>
+    <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:14px;">Everything in <a href="https://dragonboat.io" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">dragonboat</a> lives in a nested hierarchy. Every work item has a parent, and every parent traces back to a company goal. This is the foundation that enables portfolio-level visibility.</p>
+
+    <div class="callout tip" style="margin-bottom:12px;">
+      <div class="callout-icon">&#11088;</div>
+      <div class="callout-body"><strong>Pro tip:</strong> Memorizing the way these icons look will help you navigate dragonboat.</div>
+    </div>
+    <div class="hierarchy">
+      <div class="hier-item">
+        <span class="hier-pill h-goals">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" style="vertical-align:-2px;margin-right:5px;"><circle cx="8" cy="8" r="7" stroke="#ce93d8" stroke-width="1.5"/><circle cx="8" cy="8" r="3.5" stroke="#ce93d8" stroke-width="1.5"/><line x1="8" y1="1" x2="8" y2="4" stroke="#ce93d8" stroke-width="1.5"/><line x1="8" y1="12" x2="8" y2="15" stroke="#ce93d8" stroke-width="1.5"/><line x1="1" y1="8" x2="4" y2="8" stroke="#ce93d8" stroke-width="1.5"/><line x1="12" y1="8" x2="15" y2="8" stroke="#ce93d8" stroke-width="1.5"/></svg>Goals
+        </span>
+      </div>
+      <span class="hier-arrow">&#8594;</span>
+      <div class="hier-item">
+        <span class="hier-pill h-subgoals">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" style="vertical-align:-2px;margin-right:5px;"><path d="M2 3 L13 3 L10 8 L13 13 L2 13 L2 3Z" stroke="#ffb74d" stroke-width="1.5" fill="none"/></svg>Sub-Goals
+        </span>
+      </div>
+      <span class="hier-arrow">&#8594;</span>
+      <div class="hier-item">
+        <span class="hier-pill h-ws">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" style="vertical-align:-2px;margin-right:5px;"><circle cx="8" cy="8" r="6.5" stroke="#90caf9" stroke-width="1.5"/><ellipse cx="8" cy="8" rx="3" ry="6.5" stroke="#90caf9" stroke-width="1.5"/><line x1="1.5" y1="8" x2="14.5" y2="8" stroke="#90caf9" stroke-width="1.5"/></svg>Workstream
+        </span>
+      </div>
+      <span class="hier-arrow">&#8594;</span>
+      <div class="hier-item">
+        <span class="hier-pill h-init">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" style="vertical-align:-2px;margin-right:5px;"><circle cx="4.5" cy="4.5" r="2" fill="#b3c8ff"/><circle cx="11.5" cy="4.5" r="2" fill="#b3c8ff"/><circle cx="4.5" cy="11.5" r="2" fill="#b3c8ff"/><circle cx="11.5" cy="11.5" r="2" fill="#b3c8ff"/><circle cx="8" cy="4.5" r="2" fill="#b3c8ff"/><circle cx="8" cy="11.5" r="2" fill="#b3c8ff"/></svg>Initiative
+        </span>
+      </div>
+      <span class="hier-arrow">&#8594;</span>
+      <div class="hier-item">
+        <span class="hier-pill h-epics">
+          <svg width="10" height="10" viewBox="0 0 10 10" style="vertical-align:-1px;margin-right:5px;"><circle cx="5" cy="5" r="5" fill="#4dd0c4"/></svg>Epic (Jira)
+        </span>
+      </div>
+    </div>
+
+    <div class="callout tip">
+      <div class="callout-icon">&#128161;</div>
+      <div class="callout-body">Your primary working level is the Initiative. Workstreams are owned by the quad (PD, PM, XD, Architect). Goals and sub-goals are set at the L1/L2 capability level above. Epics live in Jira and connect up into Initiatives.</div>
+    </div>
+
+    <div class="sdiv">Navigation &mdash; 6 Key Areas</div>
+    <div class="nav-grid">
+      <div class="nav-card">
+        <div class="nav-card-label">&#8853; Home Symbol</div>
+        <div class="nav-card-title">Your Home Page</div>
+        <div class="nav-card-body">The <a href="https://dragonboat.io" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">dragonboat</a> symbol (top left) always returns you to your customizable home page. Start here.</div>
+      </div>
+      <div class="nav-card">
+        <div class="nav-card-label">&#128203; Portfolio</div>
+        <div class="nav-card-title">Roadmaps &amp; Views</div>
+        <div class="nav-card-body">Your home base for creating roadmaps and portfolio views. Query the database to slice by team, quarter, or goal.</div>
+      </div>
+      <div class="nav-card">
+        <div class="nav-card-label">&#127919; Strategy</div>
+        <div class="nav-card-title">Goals &amp; Sub-Goals</div>
+        <div class="nav-card-body">View and navigate the company goal hierarchy. Your workstreams connect here.</div>
+      </div>
+      <div class="nav-card">
+        <div class="nav-card-label">&#128229; Intake</div>
+        <div class="nav-card-title">Gather Requests</div>
+        <div class="nav-card-body">Structured questionnaire for incoming requests. Replaces ad-hoc Slack/email asks with a consistent intake form.</div>
+      </div>
+      <div class="nav-card">
+        <div class="nav-card-label">&#128467; Planner</div>
+        <div class="nav-card-title">Dependency Management</div>
+        <div class="nav-card-body">Where cross-team dependencies are submitted, triaged, and tracked. Connects to the quarterly review rhythm.</div>
+      </div>
+      <div class="nav-card">
+        <div class="nav-card-label">&#128202; Dashboard</div>
+        <div class="nav-card-title">Reports</div>
+        <div class="nav-card-body">Built-in reports and roadmap sharing. Week 3 UAT focus. Portfolio health, goal progress, delivery status.</div>
+      </div>
+    </div>
+
+    <div class="sdiv">Understanding Views</div>
+    <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:14px;">A <strong>View</strong> is the result of a specific filter query. Think of <a href="https://dragonboat.io" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">dragonboat</a> as a database &mdash; you query it to create your roadmap or your report. Each view has a configuration: group by, then by, then by. Icon key:</p>
+    <div class="card-grid" style="grid-template-columns: repeat(4, 1fr);">
+      <div class="card">
+        <div class="card-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#ce93d8" stroke-width="1.5"/><circle cx="8" cy="8" r="3.5" stroke="#ce93d8" stroke-width="1.5"/><line x1="8" y1="1" x2="8" y2="4" stroke="#ce93d8" stroke-width="1.5"/><line x1="8" y1="12" x2="8" y2="15" stroke="#ce93d8" stroke-width="1.5"/><line x1="1" y1="8" x2="4" y2="8" stroke="#ce93d8" stroke-width="1.5"/><line x1="12" y1="8" x2="15" y2="8" stroke="#ce93d8" stroke-width="1.5"/></svg></div>
+        <div class="card-title">Goal / Sub-Goal</div>
+        <div class="card-body">Target crosshair icon &mdash; the strategic layer set above your team. Goals own Sub-Goals.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#90caf9" stroke-width="1.5"/><ellipse cx="8" cy="8" rx="3" ry="6.5" stroke="#90caf9" stroke-width="1.5"/><line x1="1.5" y1="8" x2="14.5" y2="8" stroke="#90caf9" stroke-width="1.5"/></svg></div>
+        <div class="card-title">Workstream</div>
+        <div class="card-body">Blue globe icon &mdash; your team's execution containers, managed by the quad (PD, PM, XD, Arch).</div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg width="24" height="24" viewBox="0 0 16 16" fill="none"><circle cx="4.5" cy="4.5" r="2" fill="#b3c8ff"/><circle cx="11.5" cy="4.5" r="2" fill="#b3c8ff"/><circle cx="4.5" cy="11.5" r="2" fill="#b3c8ff"/><circle cx="11.5" cy="11.5" r="2" fill="#b3c8ff"/><circle cx="8" cy="4.5" r="2" fill="#b3c8ff"/><circle cx="8" cy="11.5" r="2" fill="#b3c8ff"/></svg></div>
+        <div class="card-title">Initiative</div>
+        <div class="card-body">Blue six-dot grid icon &mdash; your primary working level as a PM. Create, hydrate, and track here.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg width="20" height="20" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="#4dd0c4"/></svg></div>
+        <div class="card-title">Epic (Jira)</div>
+        <div class="card-body">Teal dot &mdash; Jira epics linked up into Initiatives. This creates the golden thread from goal to delivery.</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Section 4: Demo -->
+  <div class="section" id="demo">
+    
+    <div class="section-title">Walkthrough</div>
+    <div class="section-sub">If you need access to the dragonboat Sandbox, request in <a href="https://intuit.enterprise.slack.com/archives/C0A9HK5QHDK" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">#dragonboat-ppm-tech-smes</a>. You can also explore dragonboat's <a href="https://mkt.dragonboat.co/demo-room-sppm" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Demo Videos</a>.</div>
+
+    <div class="sdiv">1 &mdash; Setting Up an Initiative</div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title">Inline Editing (Recommended)</div>
+        <div class="card-body">Filter to the Workstream level in your view, then create the initiative directly underneath it. Keeps the hierarchy clean and ensures correct parent linkage from the start.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Blue + Button (Top Right)</div>
+        <div class="card-body">Creates an initiative out of context. Use this when you need to create quickly without being in a workstream view. You'll need to assign the parent workstream manually.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Hydrate with Key Attributes</div>
+        <div class="card-body">Once created, add: description &amp; objective, target quarter, linked Jira epics, and any capability dependencies. The quad (PD, PM, XD, Arch) owns this together.</div>
+      </div>
+    </div>
+
+    <div class="callout tip">
+      <div class="callout-icon">&#11088;</div>
+      <div class="callout-body"><strong>Pro tip:</strong> The <strong>&#8853; symbol</strong> (top right, next to search) always brings you back to your home page. Use the search/filter icon next to it to find initiatives by person name or team. Asterisk fields (*) are marked for eventual data hygiene &mdash; they won't be required at creation initially to reduce friction, but fill them in when you can.</div>
+    </div>
+
+    <div class="sdiv">2 &mdash; Setting Dependencies</div>
+
+    <div class="dep-grid">
+      <div class="dep-box">
+        <div class="dep-label">Old Model &mdash; IYP</div>
+        <div class="dep-title">Administrative &amp; Rarely Updated</div>
+        <div class="dep-body">Dependencies were standalone tickets &mdash; often disconnected from the work itself. Low quality, rarely linked to Jira, and almost never updated after submission. The receiver had little context on what was actually needed.</div>
+      </div>
+      <div class="dep-box">
+        <div class="dep-label">New Model &mdash; IYE</div>
+        <div class="dep-title">Structural Component of an Initiative</div>
+        <div class="dep-body">A dependency is not a standalone ticket. It is a structural part of an Initiative &mdash; created when a PM or TPM breaks an initiative into epics and identifies a capability gap their team cannot fill. Owned by the quad. Reviewed on a quarterly rhythm with clear triage SLAs for in-quarter requests.</div>
+      </div>
+    </div>
+
+    <div class="callout tip">
+      <div class="callout-icon">&#128279;</div>
+      <div class="callout-body"><strong>When to create a dependency:</strong> When you break an initiative down into epics and identify a capability gap that your own team cannot fill. That gap becomes a dependency. The earlier you flag it, the better &mdash; the quarterly review is when accepted dependencies are confirmed for the delivery quarter.</div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title">Day 3 &mdash; Triage</div>
+        <div class="card-body">Receiving team acknowledges the request and assigns an owner.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Day 7 &mdash; Align on Solution</div>
+        <div class="card-body">Quad-to-quad alignment on whether and how the dependency can be fulfilled.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Day 14 &mdash; Response</div>
+        <div class="card-body">Formal accept, reject, or redirect. If rejected, the requesting team adjusts the initiative scope.</div>
+      </div>
+    </div>
+
+    <div class="sdiv">3 &mdash; Reporting</div>
+    <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:14px;"><a href="https://dragonboat.io" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">dragonboat</a> has built-in reporting. No more manual status decks assembled from spreadsheets.</p>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title">Portfolio Roadmap</div>
+        <div class="card-body">6-quarter rolling view of your initiatives. Shareable directly from the platform &mdash; no export required.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Goal Progress</div>
+        <div class="card-body">How your initiatives roll up to sub-goals and goals. Executive-level view built automatically from your data.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Delivery Health</div>
+        <div class="card-body">Initiative status, at-risk flags, and dependency blockers surfaced in one view.</div>
+      </div>
+    </div>
+
+    <div class="sdiv">dragonboat Help Resources</div>
+    <div class="resources-grid">
+      <div class="resource-card" href="https://app.dragonboat.io/zendesk-redirect?brand_id=360000906153&locale_id=1&return_to=https%3A%2F%2Fdragonboat.zendesk.com%2Fhc%2Fen-us%2Farticles%2F7397424135831-Milestone-as-a-portfolio-roadmap-object&timestamp=1777253359" onclick="window.open(this.getAttribute('href'),'_blank')" style="cursor:pointer;">
+        <div class="resource-title"><a href="https://app.dragonboat.io/zendesk-redirect?brand_id=360000906153&locale_id=1&return_to=https%3A%2F%2Fdragonboat.zendesk.com%2Fhc%2Fen-us%2Farticles%2F7397424135831-Milestone-as-a-portfolio-roadmap-object&timestamp=1777253359" target="_blank" style="color:#fff; text-decoration:none;">Initiative Milestones</a></div>
+        <div class="resource-desc">How milestones work as portfolio roadmap objects in dragonboat.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://dragonboat.zendesk.com/hc/en-us/articles/360049922013-Create-Share-and-Manage-or-Transfer-Views-Real-time-Reports" target="_blank" style="color:#fff; text-decoration:none;">Create and Share Views / Dashboards</a></div>
+        <div class="resource-desc">How to create, share, and manage views and real-time reports.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://dragonboat.zendesk.com/hc/en-us/articles/12977874672407-Connecting-Metrics-and-Portfolio-Items" target="_blank" style="color:#fff; text-decoration:none;">Connecting Metrics to Portfolio Items</a></div>
+        <div class="resource-desc">How to connect metrics and portfolio items in dragonboat.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://dragonboat.zendesk.com/hc/en-us/articles/360045241354-Portfolio-Item-s-Health-Progress-Alerts" target="_blank" style="color:#fff; text-decoration:none;">Portfolio Item Health, Progress &amp; Alerts</a></div>
+        <div class="resource-desc">Understanding health indicators, progress tracking, and alert configurations.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://dragonboat.zendesk.com/hc/en-us/articles/9217842646807-The-Intake-App-Overview" target="_blank" style="color:#fff; text-decoration:none;">Intake App (Customers &amp; Requests)</a></div>
+        <div class="resource-desc">Overview of the Intake App &mdash; how to gather and manage incoming requests.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://intuit-champions-sandbox.dragonboat.io/home" target="_blank" style="color:#fff; text-decoration:none;">Access dragonboat Sandbox</a></div>
+        <div class="resource-desc">Practice creating initiatives, navigating views, and testing dependency flows in a safe environment.</div>
+      </div>
+    </div>
+
+    <div class="sdiv">Guided Walkthrough Videos</div>
+    <div class="resources-grid">
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://drive.google.com/file/d/1nFpo-Vq6d5Afa-hxj4cJVo_T1-WkaY67/view?usp=sharing" target="_blank" style="color:#fff; text-decoration:none;">Usability Features</a></div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://drive.google.com/file/d/1U5kqqSZioGvQ6gDji-zbFakDAZz4H9xT/view?usp=sharing" target="_blank" style="color:#fff; text-decoration:none;">Dependencies</a></div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://drive.google.com/file/d/1eHYJmkwJo9yEECbbv7yzfVPDNNtVbS3T/view?usp=sharing" target="_blank" style="color:#fff; text-decoration:none;">Dependencies Cont'd</a></div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://drive.google.com/file/d/12hc4ejPm3qiL3alTMAQRhtfxt7DaxiaT/view?usp=sharing" target="_blank" style="color:#fff; text-decoration:none;">Taxonomy &amp; Roadmaps</a></div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://drive.google.com/file/d/1ec6GEtdyQiLda61Yhhw-l2rSLtyEB_PU/view?usp=sharing" target="_blank" style="color:#fff; text-decoration:none;">Initiative Creation &amp; Hydration</a></div>
+      </div>
+    </div>
+
+    <div class="sdiv">How to Provide UAT Feedback</div>
+    <div class="ask-box">
+      <div class="ask-steps">
+        <div class="ask-step">
+          <div class="ask-num">1</div>
+          <div class="ask-content">
+            <div class="ask-title"><a href="https://intuit-champions-sandbox.dragonboat.io/requests/list" target="_blank" style="color:#fff; text-decoration:underline; text-underline-offset:3px;">Submit feedback directly in dragonboat</a></div>
+            <div class="ask-desc">Submit your feedback and see responses live in the sandbox. Watch the <a href="https://www.loom.com/share/44abcad4b9704b7698aa66bb4752dd9f" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">2-min demo video</a> on how to submit.</div>
+          </div>
+        </div>
+        <div class="ask-step">
+          <div class="ask-num" style="background:rgba(255,255,255,0.15); font-size:10px;">P0</div>
+          <div class="ask-content">
+            <div class="ask-title">Urgent (P0) &mdash; Blocked</div>
+            <div class="ask-desc">Cannot complete validation use cases or do your work. Flag immediately in <a href="https://intuit.enterprise.slack.com/archives/C0A9HK5QHDK" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">#dragonboat-ppm-tech-smes</a>.</div>
+          </div>
+        </div>
+        <div class="ask-step">
+          <div class="ask-num" style="background:rgba(255,255,255,0.15); font-size:10px;">P1</div>
+          <div class="ask-content">
+            <div class="ask-title">Must-Have (P1)</div>
+            <div class="ask-desc">Can complete the use case, but something is wrong/broken that prevents effective real-life use.</div>
+          </div>
+        </div>
+        <div class="ask-step">
+          <div class="ask-num" style="background:rgba(255,255,255,0.15); font-size:10px;">P2</div>
+          <div class="ask-content">
+            <div class="ask-title">Should-Have (P2)</div>
+            <div class="ask-desc">Can get the work done, but there is a significant gap or friction point impacting the experience.</div>
+          </div>
+        </div>
+        <div class="ask-step">
+          <div class="ask-num" style="background:rgba(255,255,255,0.15); font-size:10px;">P3</div>
+          <div class="ask-content">
+            <div class="ask-title">Nice-to-Have (P3)</div>
+            <div class="ask-desc">Everything works, but you have an idea that would make the experience better.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Resources -->
+
+
+  <div class="section" id="fintech-status">
+    <div class="section-title">Fintech Status</div>
+
+    <div class="sdiv">Fintech Status as of Apr 26, 2026</div>
+    <div class="callout" style="background:rgba(255,140,0,0.06); border-color:rgba(255,140,0,0.25); margin-bottom:12px;">
+      <div class="callout-icon">&#128993;</div>
+      <div class="callout-body">
+        <strong>At Risk &mdash; actively monitoring</strong>
+        <div style="margin-top:8px; color:rgba(255,255,255,0.75); line-height:1.7;">
+          <div>&#8226; UAT is on track to kick off <strong>May 4</strong> with Fintech testers confirmed across TPM, PM, PD, and EM personas.</div>
+          <div style="margin-top:4px;">&#8226; CTO Staff comms are set to go out <strong>April 30</strong> &mdash; after UAT invites have already been sent. Fintech has flagged that comms going out after UAT begins risks lower engagement and "why are we doing this?" questions from the broader population.</div>
+          <div style="margin-top:4px;">&#8226; Input Goals and E2E prioritization will <strong>not</strong> be fully available at go-live &mdash; both confirmed by PDX as known constraints, not yet widely communicated.</div>
+          <div style="margin-top:4px;">&#8226; PDX has been engaging Fintech SMEs directly without looping in the Fintech Champion &mdash; flagged to PDX multiple times, actively being resolved. If you are a SME/UAT participant getting direct comms from PDX, loop in <a href="https://insight.app.intuit.com/profile/blawrence1" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Bryoni Lawrence, Staff TPM</a>.</div>
+          <div style="margin-top:4px;">&#8226; Low PM buy-in from other orgs Fintech partners closely with &mdash; like Services &mdash; will result in low adoption. Flagged to PDX; PDX is actively working with Services Champions to engage their PMs.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sdiv">Key Dates at a Glance</div>
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap:10px; margin-top:12px;">
+      <div style="background:rgba(35,108,255,0.06); border:1px solid rgba(35,108,255,0.15); border-radius:8px; padding:14px 16px;">
+        <div style="font-size:10px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:6px;">Apr 30</div>
+        <div style="font-size:13px; font-weight:700; color:#fff;">CTO Staff Comms</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px;">Tool mandate + PDX microsite launch</div>
+      </div>
+      <div style="background:rgba(35,108,255,0.06); border:1px solid rgba(35,108,255,0.15); border-radius:8px; padding:14px 16px;">
+        <div style="font-size:10px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:6px;">Apr 30 &ndash; May 4</div>
+        <div style="font-size:13px; font-weight:700; color:#fff;">Pre-UAT Training</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px;">1.5 hrs, hybrid + recorded</div>
+      </div>
+      <div style="background:rgba(35,108,255,0.06); border:1px solid rgba(35,108,255,0.15); border-radius:8px; padding:14px 16px;">
+        <div style="font-size:10px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:6px;">May 4 &ndash; May 8</div>
+        <div style="font-size:13px; font-weight:700; color:#fff;">UAT Window</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px;">4 hrs total, async testing</div>
+      </div>
+      <div style="background:rgba(35,108,255,0.06); border:1px solid rgba(35,108,255,0.15); border-radius:8px; padding:14px 16px;">
+        <div style="font-size:10px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:6px;">May 8 &ndash; May 15</div>
+        <div style="font-size:13px; font-weight:700; color:#fff;">Final Config</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px;">P0 blockers need resolution plan</div>
+      </div>
+      <div style="background:rgba(255,140,0,0.06); border:1px solid rgba(255,140,0,0.2); border-radius:8px; padding:14px 16px;">
+        <div style="font-size:10px; font-weight:700; color:#f8a84b; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:6px;">May 15</div>
+        <div style="font-size:13px; font-weight:700; color:#fff;">Champions Sign-Off</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px;">CTO Staff + PM Counterparts</div>
+      </div>
+      <div style="background:rgba(255,140,0,0.06); border:1px solid rgba(255,140,0,0.2); border-radius:8px; padding:14px 16px;">
+        <div style="font-size:10px; font-weight:700; color:#f8a84b; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:6px;">May 18 &ndash; Jun 1</div>
+        <div style="font-size:13px; font-weight:700; color:#fff;">Broad Training</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px;">All users trained on JTBD with real data</div>
+      </div>
+      <div style="background:rgba(220,53,69,0.06); border:1px solid rgba(220,53,69,0.2); border-radius:8px; padding:14px 16px;">
+        <div style="font-size:10px; font-weight:700; color:#e06c75; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:6px;">Jun 1</div>
+        <div style="font-size:13px; font-weight:700; color:#fff;">Go-Live</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px;">Go/No-Go decision by Tapas &amp; Otto</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="uat-risks">
+    <div class="section-title">Fintech UAT Risk Radar</div>
+    <div class="section-sub" style="margin-bottom:20px;">Based on program documents, early access feedback, and Fintech-specific planning context &mdash; here's what we're predicting will surface during Broad UAT.</div>
+
+    <div class="callout" style="background:rgba(220,53,69,0.08); border-color:rgba(220,53,69,0.3); margin-bottom:12px;">
+      <div class="callout-icon">&#128308;</div>
+      <div class="callout-body">
+        <strong>P0 &mdash; Datalake Not Live During UAT Window</strong>
+        <div style="margin-top:6px; color:rgba(255,255,255,0.75);">The ODL (datalake) integration is confirmed live <strong>June 1</strong>, but Broad UAT is running in May. We need our BDA to be able to test the integration between dragonboat and the datalake before the tool goes live, so we can ensure we are able to get work done using the tool.</div>
+      </div>
+    </div>
+
+    <div class="callout" style="background:rgba(220,53,69,0.08); border-color:rgba(220,53,69,0.3); margin-bottom:12px;">
+      <div class="callout-icon">&#128308;</div>
+      <div class="callout-body">
+        <strong>P0 &mdash; No AI / MCP Connector for Claude</strong>
+        <div style="margin-top:6px; color:rgba(255,255,255,0.75);">Intuit's mandate is the <a href="https://sites.intuit.com/home/3-x-ai-native-builder" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">3&#215; AI-native builder initiative</a>. But dragonboat currently has no planned AI integration or MCP connector for Claude. Users will immediately ask "where's the AI?" &mdash; and there's no answer. This creates a credibility gap between the pitch and the product. <em>Risk: erodes trust in the broader IYE transformation narrative.</em></div>
+      </div>
+    </div>
+
+    <div class="callout" style="background:rgba(255,140,0,0.08); border-color:rgba(255,140,0,0.3); margin-bottom:12px;">
+      <div class="callout-icon">&#128992;</div>
+      <div class="callout-body">
+        <strong>P1 &mdash; Batch Upload Overwrites vs. Updates</strong>
+        <div style="margin-top:6px; color:rgba(255,255,255,0.75);">Confirmed in the <a href="https://docs.google.com/document/d/1lHS0CKAXt8l3HER3f5dxyLLHmYR4rRaKjyqV4lQEyaw/edit?tab=t.q3bkydkzdgkz#heading=h.gyd55pr6rcsm" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Living FAQ</a>: batch uploads <strong>add</strong> new data but cannot update existing records. Teams migrating initiative data from their own trackers will attempt to "re-upload" to correct mistakes and end up with duplicates. This was flagged in Early Access and 20 feedback items were still "Reviewing" at close &mdash; meaning it may not be resolved by Broad UAT. <em>Risk: data integrity issues that undermine confidence in dragonboat as a SOT.</em></div>
+      </div>
+    </div>
+
+    <div class="callout" style="background:rgba(255,140,0,0.08); border-color:rgba(255,140,0,0.3); margin-bottom:12px;">
+      <div class="callout-icon">&#128992;</div>
+      <div class="callout-body">
+        <strong>P1 &mdash; Workstream Delegation Feature Gap</strong>
+        <div style="margin-top:6px; color:rgba(255,255,255,0.75);">The <a href="https://docs.google.com/presentation/d/18vmqNVmZy0jvxvtTXgxTaxFPRnbieaEqBHpEIjTcR6o/edit?slide=id.g3dff4542ea3_0_3565#slide=id.g3dff4542ea3_0_3565" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">SME deck</a> explicitly flags that "dragonboat has feature gaps (e.g., Workstream Delegation) that must be closed prior to final UAT." Fintech has complex org structures where delegation of planning authority across workstreams is standard. If this feature isn't closed by Broad UAT, PMs running cross-functional initiatives will hit a hard wall. <em>Risk: blocks a core use case for larger Fintech programs.</em></div>
+      </div>
+    </div>
+
+    <div class="callout" style="background:rgba(255,140,0,0.08); border-color:rgba(255,140,0,0.3); margin-bottom:12px;">
+      <div class="callout-icon">&#128992;</div>
+      <div class="callout-body">
+        <strong>P1 &mdash; Required Fields Still In Flux</strong>
+        <div style="margin-top:6px; color:rgba(255,255,255,0.75);">During Early Access, required field configuration was still changing mid-test. If fields are still shifting going into Broad UAT, participants will hit inconsistent validation errors depending on when they log in &mdash; and worse, what they test may not reflect what they actually use on 6/1. My concern here is less about the tool and more about our ability to change manage a moving target: if the experience at UAT doesn't match go-live, we lose credibility with the very people we need to be our biggest advocates. <em>Risk: UAT differs from go-live experience, and teams show up on Day 1 feeling misled.</em></div>
+      </div>
+    </div>
+
+    <div class="callout" style="background:rgba(255,140,0,0.08); border-color:rgba(255,140,0,0.3); margin-bottom:12px;">
+      <div class="callout-icon">&#128992;</div>
+      <div class="callout-body">
+        <strong>P1 &mdash; Functions Interlock Deferred (Legal, Privacy, Sales)</strong>
+        <div style="margin-top:6px; color:rgba(255,255,255,0.75);">Enabling Functions (Legal, Privacy, Sales) interlock is explicitly deferred to a future release. Fintech programs with compliance dependencies will discover they can't represent cross-functional gating in dragonboat yet. <em>Risk: The tool gets reported as "not fit for purpose" for regulated work, even when it's on our roadmaps &mdash; i.e. the tool does not become SOT for all work.</em></div>
+      </div>
+    </div>
+
+    <div class="callout" style="background:rgba(255,200,0,0.06); border-color:rgba(255,200,0,0.25); margin-bottom:12px;">
+      <div class="callout-icon">&#128993;</div>
+      <div class="callout-body">
+        <strong>P2 &mdash; Change Management Cascade Delay</strong>
+        <div style="margin-top:6px; color:rgba(255,255,255,0.75);">Exec comms cascade was delayed as of 3/27, set to go out 4/30. If comms about leadership alignment haven't been sent before Broad UAT, users will show up to test a tool the broad user population hasn't heard of &mdash; generating "why are we doing this?" questions instead of productive feedback. <em>Risk: low engagement quality during UAT due to lack of leadership buy-in context.</em></div>
+      </div>
+    </div>
+
+
+    <div class="callout" style="background:rgba(255,200,0,0.06); border-color:rgba(255,200,0,0.25); margin-bottom:12px;">
+      <div class="callout-icon">&#128993;</div>
+      <div class="callout-body">
+        <strong>P2 &mdash; Input Goals Present at Go-Live But Not Final</strong>
+        <div style="margin-top:6px; color:rgba(255,255,255,0.75);">Input Goals (IGs) will be loaded into dragonboat by 6/1, but they won't be final versions. Status tracking won't activate until IGs are fully finalized and brought over by PDX. Teams assuming they can start health tracking immediately at go-live will be wrong. <em>Risk: Teams start entering status data against placeholder IGs, creating data integrity issues.</em></div>
+        <div style="margin-top:8px; font-size:11px; color:rgba(107,158,255,0.8);">&#9873; Confirmed by PDX as a known constraint &mdash; not yet widely communicated to dragonboat testers/users.</div>
+      </div>
+    </div>
+
+    <div class="callout" style="background:rgba(255,200,0,0.06); border-color:rgba(255,200,0,0.25); margin-bottom:12px;">
+      <div class="callout-icon">&#128993;</div>
+      <div class="callout-body">
+        <strong>P2 &mdash; E2E Prioritization Not Available at Go-Live</strong>
+        <div style="margin-top:6px; color:rgba(255,255,255,0.75);">End-to-end prioritization won't be available on 6/1 &mdash; PDX plans to standardize this in a future phase. Teams will need to maintain their current prioritization processes (Google Sheets, Smartsheets, etc.) in the interim. <em>Risk: Immediate "this tool doesn't do what we were told" feedback from users who expected full portfolio prioritization on Day 1.</em></div>
+        <div style="margin-top:8px; font-size:11px; color:rgba(107,158,255,0.8);">&#9873; Confirmed by PDX &mdash; not yet widely communicated to dragonboat testers/users.</div>
+      </div>
+    </div>
+
+    <div class="callout" style="background:rgba(255,200,0,0.06); border-color:rgba(255,200,0,0.25); margin-bottom:12px;">
+      <div class="callout-icon">&#128993;</div>
+      <div class="callout-body">
+        <strong>P2 &mdash; UAT Scenarios Modeled on Future-State IYE, Not Today's Workflows</strong>
+        <div style="margin-top:6px; color:rgba(255,255,255,0.75);">PDX's UAT test cases are built around the future-state IYE process &mdash; not how teams operate today. Testing theoretical workflows means testers can't validate whether dragonboat actually replaces their current day-to-day tools. Real friction points and edge cases will go undetected, only surfacing post-go-live. <em>Risk: UAT passes with low-quality signal, followed by a wave of "this doesn't work for us" feedback after 6/1.</em></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section" id="uat-feedback">
+    <div class="section-title">Fintech UAT Feedback</div>
+    <div class="section-sub" style="margin-bottom:20px;">Feedback collected from Fintech UAT testers during the May 4&ndash;8 testing window, ranked by severity.</div>
+    <div class="callout" style="background:rgba(35,108,255,0.06); border-color:rgba(35,108,255,0.2);">
+      <div class="callout-icon">&#128284;</div>
+      <div class="callout-body">
+        <strong>Coming soon &mdash; UAT runs May 4&ndash;8.</strong>
+        <div style="margin-top:6px; color:rgba(255,255,255,0.75);">This is where I'll record the feedback our testers provide during UAT, ranked P0 through P3.</div>
+      </div>
+    </div>
+
+    <div class="sdiv" style="margin-top:28px;">Tester Resources</div>
+
+    <div class="resources-grid" style="margin-top:12px;">
+      <div class="resource-card">
+        <div class="resource-type">Coming Soon</div>
+        <div class="resource-title">UAT Testing Guide</div>
+        <div class="resource-desc">Step-by-step testing guide to be provided by PDX before UAT kicks off. Will cover Jobs to Be Done, test scenarios, and how to navigate the tool during testing.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-type">Coming Soon</div>
+        <div class="resource-title">How to Submit Feedback</div>
+        <div class="resource-desc">Feedback submission instructions and portal link to be released by PDX. In the meantime, questions can be posted in <a href="https://intuit.enterprise.slack.com/archives/C0A9HK5QHDK" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">#dragonboat-ppm-tech-smes</a>.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-type">Coming Soon</div>
+        <div class="resource-title">Known Issues Log</div>
+        <div class="resource-desc">Before filing feedback, check here first. This log will track issues already identified so testers aren't re-reporting known bugs or config gaps.</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section" id="resources">
+    <div class="section-title">Resources</div>
+
+    <div class="resources-grid">
+      <div class="resource-card">
+        <div class="resource-type">Coming Soon</div>
+        <div class="resource-title">PDX dragonboat Microsite</div>
+        <div class="resource-desc">Centralized PDX resource hub for the dragonboat migration &mdash; launching April 30.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://docs.google.com/presentation/d/1BIQdJ6X9UpHpBqZe6ISjEokq8W5b9qAaAJ53dV-_Uy4/edit?slide=id.g3cc4e7aa786_1_0#slide=id.g3cc4e7aa786_1_0" target="_blank" style="color:#fff; text-decoration:none;">dragonboat 101 &mdash; Evergreen Slides</a></div>
+        <div class="resource-desc">Core orientation slides covering what dragonboat is and how it works.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://docs.google.com/document/d/1cCJslEW_PaLes8_FD_ldizE_A3r8GTKnmhZHplTbBBc/edit?tab=t.nwaeu2dyqmr#heading=h.1mwnm3l83q6c" target="_blank" style="color:#fff; text-decoration:none;">IYE BRD</a></div>
+        <div class="resource-desc">Business Requirements Document governing the dragonboat migration &mdash; Phase 1 data goes live June 1, Jira integration June 18.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://docs.google.com/document/d/19l3eOarWI-43WvnSeIqa1YXyDIEUzHoyk-i6KMM2UrM/edit?tab=t.yluvskxihria#heading=h.fkp6qatma6u7" target="_blank" style="color:#fff; text-decoration:none;">dragonboat PRD</a></div>
+        <div class="resource-desc">Product Requirements Document for the dragonboat migration.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://docs.google.com/document/d/1tqHoUdtfcCVhXX7lCWqr0kw7XbaTlhpPP81N-LCH6Xk/edit?tab=t.rvzsd2u5pfjg" target="_blank" style="color:#fff; text-decoration:none;">In-Year Execution (IYE) Strategic Narrative Paper</a></div>
+        <div class="resource-desc">The "why" behind the IYP &#8594; IYE transformation. Covers the vision, problem statement, and the strategic rationale for the <a href="https://dragonboat.io" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">dragonboat</a> investment.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://dragonboat.io" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">dragonboat</a> Sandbox</div>
+        <div class="resource-desc">Explore <a href="https://dragonboat.io" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">dragonboat</a> in a safe, non-production environment. Use this to practice creating initiatives, navigating views, and testing dependency flows before Go-Live.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://docs.google.com/document/d/1lHS0CKAXt8l3HER3f5dxyLLHmYR4rRaKjyqV4lQEyaw/edit?tab=t.q3bkydkzdgkz#heading=h.gyd55pr6rcsm" target="_blank" style="color:#fff; text-decoration:none;">Living FAQ Document</a></div>
+        <div class="resource-desc">Have a question? Submit it here. Continuously updated with answers as they come in. The first place to check before pinging someone directly.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://docs.google.com/presentation/d/1_GsSINaSfqnjZi7mIncjxJpYuI_b0UDgtmUUwHTiU2o/edit?slide=id.g3e032a9d508_0_74#slide=id.g3e032a9d508_0_74" target="_blank" style="color:#fff; text-decoration:none;">Champion April 2026 &mdash; TECH-IG05 Program Overview</a></div>
+        <div class="resource-desc">Program overview deck for Champions &mdash; context, strategy, and rollout plan.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://docs.google.com/presentation/d/1vmbpgYqYQ0lWfCJqh9ooJ7q9P7EivMPZdGc_VoYuD40/edit?slide=id.g3dff4542ea3_0_1618#slide=id.g3dff4542ea3_0_1618" target="_blank" style="color:#fff; text-decoration:none;">Reference Slides for UAT Participants</a></div>
+        <div class="resource-desc">PDX-provided reference deck for UAT testers &mdash; context, scope, and what you're being asked to validate.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://docs.google.com/presentation/d/18vmqNVmZy0jvxvtTXgxTaxFPRnbieaEqBHpEIjTcR6o/edit?slide=id.g3dff4542ea3_0_3565#slide=id.g3dff4542ea3_0_3565" target="_blank" style="color:#fff; text-decoration:none;">Rolling Roadmaps &amp; Program Overview</a></div>
+        <div class="resource-desc">Champions cascade material &mdash; the slides and talking points used to communicate the <a href="https://dragonboat.io" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">dragonboat</a> rollout to wider teams. Use for team-level communications.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title"><a href="https://docs.google.com/document/d/1AOQ422CIT1w47irDrEoyudiMXoCGTcVACizfL6b7VoY/edit?tab=t.tparellb2sat" target="_blank" style="color:#fff; text-decoration:none;">Operationalizing IYE for FY27</a></div>
+        <div class="resource-desc">End-to-end guide for executing In-Year planning in FY27 &mdash; timelines, dependency SLAs, Jira integration flows, and team responsibilities.</div>
+      </div>
+    </div>
+
+    <div class="sdiv">Contacts</div>
+    <div class="poc-strip">
+      <div class="poc-card">
+        <div class="poc-name"><a href="https://insight.app.intuit.com/profile/blawrence1" target="_blank" style="color:#fff; text-decoration:underline; text-underline-offset:3px;">Bryoni Lawrence</a></div>
+        <div class="poc-role">Fintech Champion &#183; Staff TPM</div>
+      </div>
+      <div class="poc-card">
+        <div class="poc-name"><a href="https://insight.app.intuit.com/profile/gbohn" target="_blank" style="color:#fff; text-decoration:underline; text-underline-offset:3px;">Greg Bohn</a></div>
+        <div class="poc-role">PDX Driver &#183; Staff TPM</div>
+      </div>
+      <div class="poc-card">
+        <div class="poc-name"><a href="https://insight.app.intuit.com/profile/ebarrese" target="_blank" style="color:#fff; text-decoration:underline; text-underline-offset:3px;">Libby Barrese</a></div>
+        <div class="poc-role">PDX &#183; PgM</div>
+      </div>
+      <div class="poc-card">
+        <div class="poc-name"><a href="https://insight.app.intuit.com/profile/jburaschi" target="_blank" style="color:#fff; text-decoration:underline; text-underline-offset:3px;">Jose Buraschi</a></div>
+        <div class="poc-role">PDX &#183; Tech-IG05 Lead</div>
+      </div>
+      <div class="poc-card">
+        <div class="poc-name"><a href="https://insight.app.intuit.com/profile/cgarrett4" target="_blank" style="color:#fff; text-decoration:underline; text-underline-offset:3px;">Chermaine Garrett</a></div>
+        <div class="poc-role">PDX &#183; Jira Transformation Lead</div>
+      </div>
+      <div class="poc-card">
+        <div class="poc-name"><a href="https://insight.app.intuit.com/profile/vshaw1" target="_blank" style="color:#fff; text-decoration:underline; text-underline-offset:3px;">Victoria Shaw</a></div>
+        <div class="poc-role">IBO &#183; Director, IYE Planning &amp; Execution Velocity</div>
+      </div>
+      <div class="poc-card">
+        <div class="poc-name"><a href="https://insight.app.intuit.com/profile/mkwong" target="_blank" style="color:#fff; text-decoration:underline; text-underline-offset:3px;">Monica Kwong</a></div>
+        <div class="poc-role">IBO &#183; Principal</div>
+      </div>
+      <div class="poc-card">
+        <div class="poc-name"><a href="https://insight.app.intuit.com/profile/knguyen19" target="_blank" style="color:#fff; text-decoration:underline; text-underline-offset:3px;">Khanh Nguyen</a></div>
+        <div class="poc-role">IBO &#183; Group Manager</div>
+      </div>
+      <div class="poc-card">
+        <div class="poc-name"><a href="https://insight.app.intuit.com/profile/kwoodworth" target="_blank" style="color:#fff; text-decoration:underline; text-underline-offset:3px;">Keri Woodworth</a></div>
+        <div class="poc-role">IBO &#183; Sr Biz Ops Manager</div>
+      </div>
+      <div class="poc-card">
+        <div class="poc-name"><a href="https://insight.app.intuit.com/profile/nkanemitsu" target="_blank" style="color:#fff; text-decoration:underline; text-underline-offset:3px;">Nicole Kanemitsu</a></div>
+        <div class="poc-role">IBO &#183; Staff Biz Ops Manager</div>
+      </div>
+    </div>
+
+    <div class="sdiv">Slack Channels</div>
+    <div class="callout tip">
+      <div class="callout-body">
+        <div><strong>Broad UAT &amp; Migration Support:</strong> <a href="https://intuit.enterprise.slack.com/archives/C0A9HK5QHDK" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">#dragonboat-ppm-tech-smes</a></div>
+        <div style="margin-top:6px;"><strong>Fintech Specific:</strong> <a href="https://intuit.enterprise.slack.com/archives/C0AFTKJTT18" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">#fintech-dragonboat-champions</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.section').forEach(function(section) {
+  // Find the section-title
+  var title = section.querySelector('.section-title');
+  var label = section.querySelector('.section-label');
+  if (!title) return;
+
+  // Create toggle wrapper around label + title
+  var toggle = document.createElement('div');
+  toggle.className = 'section-toggle';
+
+  var chevron = document.createElement('span');
+  chevron.className = 'section-chevron';
+  chevron.innerHTML = '&minus;';
+
+  // Insert toggle before label (or title if no label)
+  var anchor = label || title;
+  section.insertBefore(toggle, anchor);
+  if (label) toggle.appendChild(label);
+  toggle.appendChild(chevron);
+  toggle.appendChild(title);
+
+  // Wrap remaining content in section-body
+  var body = document.createElement('div');
+  body.className = 'section-body';
+  while (section.children.length > 1) {
+    body.appendChild(section.children[1]);
+  }
+  section.appendChild(body);
+
+  // Click handler
+  toggle.addEventListener('click', function() {
+    section.classList.toggle('collapsed');
+    chevron.innerHTML = section.classList.contains('collapsed') ? '&plus;' : '&minus;';
+  });
+});
+</script>
+</body>
+</html>
 
 /* ‚îÄ‚îÄ Agenda strip ‚îÄ‚îÄ */
 .agenda-strip {
