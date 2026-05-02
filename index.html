@@ -829,7 +829,21 @@ body {
     <div class="section-title">Walkthrough</div>
     <div class="section-sub">If you need access to the dragonboat Sandbox, request in <a href="https://intuit.enterprise.slack.com/archives/C0A9HK5QHDK" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">#dragonboat-ppm-tech-smes</a>. You can also explore dragonboat's <a href="https://mkt.dragonboat.co/demo-room-sppm" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Demo Videos</a>.</div>
 
-    <div class="sdiv">Navigation 101 &mdash; Home Screen &amp; Key Takeaways</div>
+    <div style="display:flex; flex-wrap:wrap; gap:6px; margin:16px 0 8px; padding:12px 16px; background:rgba(255,255,255,0.03); border:1px solid rgba(35,108,255,0.15); border-radius:8px;">
+      <span style="font-size:10px; font-weight:700; color:rgba(255,255,255,0.35); text-transform:uppercase; letter-spacing:0.08em; align-self:center; margin-right:4px;">Jump to:</span>
+      <a href="#demo-nav101" onclick="document.getElementById('demo-nav101').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">Navigation 101</a>
+      <a href="#demo-setup" onclick="document.getElementById('demo-setup').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">Setting Up an Initiative</a>
+      <a href="#demo-initmgmt" onclick="document.getElementById('demo-initmgmt').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">Initiative Management</a>
+      <a href="#demo-hydration" onclick="document.getElementById('demo-hydration').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">Hydrating Initiatives</a>
+      <a href="#demo-takeaways" onclick="document.getElementById('demo-takeaways').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">Key Takeaways</a>
+      <a href="#demo-deps" onclick="document.getElementById('demo-deps').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">Setting Dependencies</a>
+      <a href="#demo-reporting" onclick="document.getElementById('demo-reporting').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">Reporting</a>
+      <a href="#demo-help" onclick="document.getElementById('demo-help').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">Help Resources</a>
+      <a href="#demo-videos" onclick="document.getElementById('demo-videos').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">Walkthrough Videos</a>
+      <a href="#demo-uatfeedback" onclick="document.getElementById('demo-uatfeedback').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">UAT Feedback</a>
+    </div>
+
+    <div id="demo-nav101"></div><div class="sdiv">Navigation 101 &mdash; Home Screen &amp; Key Takeaways</div>
     <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:16px;">When you first land in dragonboat, you&#8217;ll see your <strong>Home Screen</strong> &mdash; your personal dashboard and the fastest way to orient yourself before diving into work.</p>
 
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:20px;">
@@ -856,7 +870,7 @@ body {
       </div>
     </div>
 
-    <div class="sdiv">1 &mdash; Setting Up an Initiative</div>
+    <div id="demo-setup"></div><div class="sdiv">1 &mdash; Setting Up an Initiative</div>
     <div class="card-grid">
       <div class="card">
         <div class="card-title">Inline Editing (Recommended)</div>
@@ -878,7 +892,7 @@ body {
     </div>
 
 
-    <div class="sdiv">Initiative Management &mdash; What You Need to Know</div>
+    <div id="demo-initmgmt"></div><div class="sdiv">Initiative Management &mdash; What You Need to Know</div>
     <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:14px;">An <strong style="color:#fff;">initiative is the pivot point</strong>, bridging strategy and the engineering work that brings the strategy to life. It is a large, outcome-driven body of work that delivers specific customer or business outcomes.</p>
 
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:16px;">
@@ -921,7 +935,7 @@ body {
       </div>
     </div>
 
-    <div class="sdiv">Hydrating Initiatives &mdash; What You Need to Know</div>
+    <div id="demo-hydration"></div><div class="sdiv">Hydrating Initiatives &mdash; What You Need to Know</div>
     <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:14px;"><strong style="color:#fff;">Hydration turns a named initiative into an execution-ready commitment.</strong> Pre-populated dependency data from annual planning is reviewed and updated to reflect Quad decisions &mdash; before any dependency is submitted.</p>
 
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:16px;">
@@ -954,7 +968,7 @@ body {
       </div>
     </div>
 
-    <div class="sdiv">Key Takeaways &mdash; Initiative Management</div>
+    <div id="demo-takeaways"></div><div class="sdiv">Key Takeaways &mdash; Initiative Management</div>
     <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:20px;">
       <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px;">
         <div style="background:#236CFF; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">1</div>
@@ -982,7 +996,7 @@ body {
       </div>
     </div>
 
-    <div class="sdiv">2 &mdash; Setting Dependencies</div>
+    <div id="demo-deps"></div><div class="sdiv">2 &mdash; Setting Dependencies</div>
 
     <div class="dep-grid">
       <div class="dep-box">
@@ -1017,7 +1031,7 @@ body {
       </div>
     </div>
 
-    <div class="sdiv">3 &mdash; Reporting</div>
+    <div id="demo-reporting"></div><div class="sdiv">3 &mdash; Reporting</div>
     <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:14px;"><a href="https://dragonboat.io" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">dragonboat</a> has built-in reporting. No more manual status decks assembled from spreadsheets.</p>
     <div class="card-grid">
       <div class="card">
@@ -1034,7 +1048,7 @@ body {
       </div>
     </div>
 
-    <div class="sdiv">dragonboat Help Resources</div>
+    <div id="demo-help"></div><div class="sdiv">dragonboat Help Resources</div>
     <div class="resources-grid">
       <div class="resource-card" href="https://app.dragonboat.io/zendesk-redirect?brand_id=360000906153&locale_id=1&return_to=https%3A%2F%2Fdragonboat.zendesk.com%2Fhc%2Fen-us%2Farticles%2F7397424135831-Milestone-as-a-portfolio-roadmap-object&timestamp=1777253359" onclick="window.open(this.getAttribute('href'),'_blank')" style="cursor:pointer;">
         <div class="resource-title"><a href="https://app.dragonboat.io/zendesk-redirect?brand_id=360000906153&locale_id=1&return_to=https%3A%2F%2Fdragonboat.zendesk.com%2Fhc%2Fen-us%2Farticles%2F7397424135831-Milestone-as-a-portfolio-roadmap-object&timestamp=1777253359" target="_blank" style="color:#fff; text-decoration:none;">Initiative Milestones</a></div>
@@ -1062,7 +1076,7 @@ body {
       </div>
     </div>
 
-    <div class="sdiv">Guided Walkthrough Videos</div>
+    <div id="demo-videos"></div><div class="sdiv">Guided Walkthrough Videos</div>
     <div class="resources-grid">
       <div class="resource-card">
         <div class="resource-title"><a href="https://drive.google.com/file/d/1nFpo-Vq6d5Afa-hxj4cJVo_T1-WkaY67/view?usp=sharing" target="_blank" style="color:#fff; text-decoration:none;">Usability Features</a></div>
@@ -1081,7 +1095,7 @@ body {
       </div>
     </div>
 
-    <div class="sdiv">How to Provide UAT Feedback</div>
+    <div id="demo-uatfeedback"></div><div class="sdiv">How to Provide UAT Feedback</div>
     <div class="ask-box">
       <div class="ask-steps">
         <div class="ask-step">
