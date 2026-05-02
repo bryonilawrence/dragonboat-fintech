@@ -36,6 +36,7 @@ body {
 .topbar-nav { display: flex; gap: 2px; flex-wrap: nowrap; overflow: visible; }
 .topbar-nav a { color: rgba(255,255,255,0.6); font-size: 11px; font-weight: 600; text-decoration: none; padding: 5px 8px; border-radius: 4px; white-space: nowrap; }
 .topbar-nav a:hover { background: rgba(255,255,255,0.06); }
+.topbar-nav a.active { background: rgba(35,108,255,0.2); color: #fff; }
 .ask-claude-btn { display: flex; align-items: center; gap: 6px; background: linear-gradient(135deg, #6b9eff, #236CFF); color: #fff !important; font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 20px; text-decoration: none !important; white-space: nowrap; letter-spacing: 0.02em; transition: opacity 0.15s; }
 .ask-claude-btn:hover { opacity: 0.88; background: linear-gradient(135deg, #6b9eff, #236CFF) !important; }
 .ask-claude-btn svg { flex-shrink: 0; }
@@ -89,7 +90,7 @@ body {
   gap: 0;
   overflow-x: auto;
 }
-.agenda-item {
+.agenda-item { cursor: pointer;
   flex: 1;
   min-width: 140px;
   padding: 0 16px;
@@ -108,7 +109,7 @@ body {
 .ag-sub { font-size: 11px; color: rgba(255,255,255,0.45); }
 
 /* &#9472;&#9472; Section headings &#9472;&#9472; */
-.section { margin-bottom: 48px; }
+.section { margin-bottom: 48px; display: none; }
 .section-toggle { display: flex; align-items: center; gap: 12px; cursor: pointer; user-select: none; }
 .section-toggle:hover .section-title { color: #6b9eff; }
 .section-chevron { font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.4); flex-shrink: 0; line-height: 1; width: 16px; text-align: center; }
@@ -283,18 +284,18 @@ body {
     <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjI4LjE2OSIgaGVpZ2h0PSI0OC43NjUiIHZpZXdCb3g9IjAgMCAyMjguMTY5IDQ4Ljc2NSI+PGRlZnM+PHN0eWxlPi5he2ZpbGw6bm9uZTt9LmJ7Y2xpcC1wYXRoOnVybCgjYSk7fS5je2ZpbGw6IzJiY2ZjODt9LmR7ZmlsbDojMmVhOGUxO30uZXtmaWxsOiMxMDkwYmQ7fS5me2ZpbGw6IzM0NjFhYzt9Lmd7ZmlsbDojZmZmO30uaHtmaWxsOiMyY2E2YWU7fTwvc3R5bGU+PGNsaXBQYXRoIGlkPSJhIj48cGF0aCBjbGFzcz0iYSIgZD0iTTE5NC40MDksMjUuOTg0QTI0LjM4MiwyNC4zODIsMCwxLDAsMjE4Ljc5MSwxLjZhMjQuMzgzLDI0LjM4MywwLDAsMC0yNC4zODIsMjQuMzgyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTk0LjQwOSAtMS42MDIpIj48L3BhdGg+PC9jbGlwUGF0aD48L2RlZnM+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMy4zMTIpIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNzkuNDA0IDMuMzEyKSI+PGcgY2xhc3M9ImIiPjxyZWN0IGNsYXNzPSJjIiB3aWR0aD0iNTQuNDE1IiBoZWlnaHQ9IjI0LjUxMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMuMzkgMzEuMTIxKSI+PC9yZWN0PjxwYXRoIGNsYXNzPSJkIiBkPSJNMjM2LjUsNDEuNTRhMTIuMjY0LDEyLjI2NCwwLDAsMS05LjI0OS00LjIsMTIuMjkxLDEyLjI5MSwwLDAsMS0xOC4yNjQuMjY0LDEyLjI5MiwxMi4yOTIsMCwwLDEtMTguMjM4LS4yMzRWNTQuOTI3aDU0LjVWMzcuODgyYTEyLjI1NywxMi4yNTcsMCwwLDEtOC43NSwzLjY1OCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE5NC4xMjYgLTQuMzYpIj48L3BhdGg+PHBhdGggY2xhc3M9ImUiIGQ9Ik0yMzYuNDgzLDQ2LjY5YTEyLjI2NCwxMi4yNjQsMCwwLDEtOS4yNDktNC4yLDEyLjI5MSwxMi4yOTEsMCwwLDEtMTguMjY0LjI2NCwxMi4yOTIsMTIuMjkyLDAsMCwxLTE4LjIzOC0uMjM0VjYwLjA3Nmg1NC41VjQzLjAzMmExMi4yNjEsMTIuMjYxLDAsMCwxLTguNzUsMy42NTgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xOTQuMTI1IC00Ljc1OCkiPjwvcGF0aD48cGF0aCBjbGFzcz0iZiIgZD0iTTIxOS41NTguMDI4QTI1LjkwOSwyNS45MDksMCwwLDAsMTkzLjMwOCwzMi41OWgyMy40NDNjMy4yODMsMCw4LjA1Mi0xLjM0Niw4LjA1Mi01LjQ4MmE2LjYzNyw2LjYzNywwLDAsMC0uMTE3LTEuNjMxLDYuMzc0LDYuMzc0LDAsMCwwLS42MzEtMS41NDIsOS43MTcsOS43MTcsMCwwLDAtLjk3OS0xLjQxMSwxMi4wMTMsMTIuMDEzLDAsMCwwLTEuMTYxLTEuMjQxLDQxLjE0OSw0MS4xNDksMCwwLDAtMy40NDktMi44Yy0uOTI4LS43NjktLjM4LTEuMDk0LjItLjkxLjcyNy4yMjksMi4xNTkuMTc1Ljc5LS44LS41NTUtLjM5My0uNjk1LS40ODUtMS4xOC0uODQzLS44MzQtLjYxMy0uOTc1LTEuNDI5LS4yLTEuMjQ0YTEzLjEwOSwxMy4xMDksMCwwLDAsMS41MzMuNDYxYy40MTcsMCwuNjE0LS4zMDUtLjAyNS0uOTA4YTE4LjQzMSwxOC40MzEsMCwwLDEtMS42MjctMS42NTRjLS43NDUtLjg1NS0uMjY1LTEuMzE5Ljc2OC0uNjkzYTguMjA5LDguMjA5LDAsMCwwLDEuNDE5Ljc2NmMuNjM4LjI1MiwxLjI0Ni4zNTcuNzg4LS40NzItLjMyNy0uNTkzLS41NC0uOTE4LS43OTMtMS4zNjEtLjM3OS0uNjY2LS4zODItMS41MjEuNzU3LS41MywxLjE2OCwxLjAxNSwxLjkxOCwxLjcxMywyLjU4LDEuNjg5bC45NDctLjA4YS4zNDIuMzQyLDAsMCwwLC4yOS0uNDZjLS4wNDYtLjE3My0uMDY3LS4yNC0uMTQ3LS41MjEtLjE4My0uNjQuMjY3LS44NDkuNTg4LS4yODUuMTcxLjMuMjA4LjM4OS4zNi42NTYuMjY2LjQ2OS40NjcuMjQzLjQxMi4wNjEtLjA1LS4xNjMtLjA1NC0uMTcyLS4wOTItLjI4OS0uMS0uMzA2LjEwNS0uNDUyLjMwNi0uMzIxLjEwOS4wNzEuMjI2LjI1Ni41MjMuODg5YS44NTQuODU0LDAsMCwwLC41NDUuNDYxLDMuMTMsMy4xMywwLDAsMSwyLjIyOCwyLjNjLjA3MS4yNjktLjAxLjQ1Ny4yNTkuMzg3YTEuMDY2LDEuMDY2LDAsMCwwLC40MDgtLjJjLjMwOS0uMjUxLDEuOTE5LTEuMzM4LDIuMzMzLTEuNjE3LjM1OS0uMjQxLDEuNDI0LS45NDEsMi4xMzkuMDU0LjQ1OC42MzgsMS4wMjguNCwxLjM2OSwxLjAwN2ExLjkyMywxLjkyMywwLDAsMS0uMjc4LDIuMTgyYy0uNDEuNDQ4LTEuNjI0LjI5My0yLjYuMjI0YTMuNCwzLjQsMCwwLDAtMi43NSwxLjUyMmMtLjQ4OS43ODEtLjEzOCwxLC4xOTUsMS4wOTNhNi4wNTIsNi4wNTIsMCwwLDAsMi45NDgtLjI5MywyLjIxMywyLjIxMywwLDAsMCwxLjEyNi0xLjEwN2MuMTY0LS40My42MTctLjUyMi43NTEtLjA3YTcuMTE4LDcuMTE4LDAsMCwxLS4wMTksMi4wMzEsMS45ODIsMS45ODIsMCwwLDEtLjkyMSwxLjI1NWMtLjE3NS4xMTctLjU2Ni4yMzQtLjY2NC4wMTlzLS4xMzUtLjMtLjI5Mi0uMjgtLjUxNC4zMjktLjcxLjM2Ny0uMS0uMzU4LS4zNS0uMzU4LS43MTguNC0uOTUyLjM0MS4wMDgtLjI2OC0uMjA3LS4yODgtLjQzOS4yMTctLjc2My4zMDhhMy4wNDIsMy4wNDIsMCwwLDEtLjk0LjA2NywyLjMzLDIuMzMsMCwwLDAsLjQzMSwxLjUwNmMuNi44OSw2LjA4Myw1LjU4Myw1LjgyOCwxMS43cy0yLjY4LDkuMzIzLTcuMDI5LDEyLjY3OGMtMi44MTgsMi4xNzQtOC4wNCw0Ljg0LTE2Ljc3Niw0LjA4OUEyNS45MDYsMjUuOTA2LDAsMSwwLDIxOS41NTguMDI4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTk0LjI1NiAtMS40NzgpIj48L3BhdGg+PHBhdGggY2xhc3M9ImYiIGQ9Ik0yMjYuNjUyLDIyLjQ5NWMtLjgxOS4yNjMuMjQ2LjU4NS43ODMuNjIyLjQ5Mi4wMzUuNTkyLjAzNS44MTcuMDQuMzE3LjAwNi41NDQuMDkuNTcyLjIyMy4wMTguMDg3LS4wNTkuMTU3LS4yNTcuMjU2LS42NzUuMzM4LS4xODQuNTk0LjU4OC4zOTJhMi4wNTMsMi4wNTMsMCwwLDAsMS42NjgtMS41ODgsNi42NTEsNi42NTEsMCwwLDEtMS41ODctLjM4OCw0LjEsNC4xLDAsMCwxLTIuMjQzLTEuOTUzLDEuNzM0LDEuNzM0LDAsMCwxLS4yMTQuMDkxLDMuMjI3LDMuMjI3LDAsMCwxLTEuODQ3LjAxM2MtLjU2Ny0uMTk0LS43OS4xMTEtLjMyLjUyLDEuMDY5LjkzNSwyLjA0NC42NDIsMi41ODQsMS4wOC4yNDIuMi4wMjIuNTA5LS41NDMuNjkxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTk2LjcyIC0zLjAzKSI+PC9wYXRoPjxwYXRoIGNsYXNzPSJmIiBkPSJNMjI5LjgxNSwxNi4xNDlhLjk3OS45NzksMCwwLDAtLjg1MS0xLjA1Mi44LjgsMCwwLDAtLjk3Mi43LDEuMDExLDEuMDExLDAsMCwwLC44MjUsMS4xLjg1NC44NTQsMCwwLDAsMS0uNzUyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTk3IC0yLjY0MikiPjwvcGF0aD48cGF0aCBjbGFzcz0iZiIgZD0iTTIzOC4yNjQsMTUuOTc4Yy4xNzEtLjI1Ni0uMDItLjQ2NS0uMjA5LS42ODNhLjM0OS4zNDksMCwwLDAtLjU0Ny0uMDE0LDEuNDExLDEuNDExLDAsMCwwLS40LjYyMWMtLjEuMjgxLDAsLjQzMi4yNTYuNDY1YTEuMzM4LDEuMzM4LDAsMCwwLC45LS4zODkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xOTcuNzAyIC0yLjY0OCkiPjwvcGF0aD48cGF0aCBjbGFzcz0iZyIgZD0iTTIxOSwyNy44MTlhLjgzOS44MzksMCwwLDAtLjk1OC41NzNMMjEyLjIsNDUuNDY3YS4wMDguMDA4LDAsMCwxLS4wMDkuMDA2TDIxMiw0NS40MDlhMS43MzksMS43MzksMCwwLDAtMi4yLDEuMDlsLTEuNjUsNC44ODVhMS43MzgsMS43MzgsMCwwLDAsMS4wOSwyLjJsMS43MzMuNTg2YTEuNzM5LDEuNzM5LDAsMCwwLDIuMi0xLjA5MWwxLjY1LTQuODg0YTEuNzM5LDEuNzM5LDAsMCwwLTEuMDktMi4ycy0uMDA2LS4wMDYsMC0uMDA5bDUuODU3LTE3LjExOUEuODA4LjgwOCwwLDAsMCwyMTksMjcuODE5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTk1LjQ2MiAtMy42MjQpIj48L3BhdGg+PC9nPjwvZz48cGF0aCBjbGFzcz0iaCIgZD0iTTgyLjAxNSwyMC4xNjRjNS40ODUsMCw5Ljg0NiwzLjksOS44NDYsOS4zODgsMCw1LjUyMS00LjM2LDkuMzg5LTkuODQ2LDkuMzg5LTUuNDUsMC05LjgxLTMuODY4LTkuODEtOS4zODksMC01LjQ4NSw0LjM1OS05LjM4OCw5LjgxLTkuMzg4bTAsMTQuOTc5YTUuMzM3LDUuMzM3LDAsMCwwLDUuMzQ1LTUuNTkxLDUuMzMzLDUuMzMzLDAsMSwwLTEwLjY1NCwwLDUuMzMsNS4zMywwLDAsMCw1LjMwOSw1LjU5MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUuNTczIDAuMjc3KSI+PC9wYXRoPjxwYXRoIGNsYXNzPSJjIiBkPSJNMTQ1LjI2NiwyMC4xMzJjNS40ODUsMCw5Ljg0NiwzLjksOS44NDYsOS4zODgsMCw1LjUyLTQuMzYsOS4zODgtOS44NDYsOS4zODgtNS40NSwwLTkuODEtMy44NjgtOS44MS05LjM4OCwwLTUuNDg1LDQuMzU5LTkuMzg4LDkuODEtOS4zODhtMCwxNC45NzhhNS4zMzcsNS4zMzcsMCwwLDAsNS4zNDUtNS41OSw1LjMzMyw1LjMzMywwLDEsMC0xMC42NTQsMCw1LjMyOSw1LjMyOSwwLDAsMCw1LjMwOSw1LjU5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTAuNDU0IDAuMjc5KSI+PC9wYXRoPjxwYXRoIGNsYXNzPSJjIiBkPSJNMTc3LjQ1NSwyMy43MzFoLTIuMzIxVjIwLjE3OWgyLjQyNlYxNS4yOTJoNC4zNnY0Ljg4N0gxODZ2My41NTJIMTgxLjkydjcuMjQ0YzAsMi45NTMsMi4zMjEsMy4zNzUsMy41NTIsMy4zNzVhNC4xMTUsNC4xMTUsMCwwLDAsLjgwOC0uMDd2My45YTguMjMsOC4yMywwLDAsMS0xLjM3MS4xMDVjLTIuNSwwLTcuNDU1LS43MzctNy40NTUtNi43NVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMy41MTcgMC42NTMpIj48L3BhdGg+PHBhdGggY2xhc3M9ImgiIGQ9Ik0xMy4zNjIsMTN2Ny43MzNjMCwuNi4wMzUsMS4wNTUuMDM1LDEuMDU1aC0uMDdzLTEuMjY2LTIuMTgxLTUuMTY5LTIuMTgxQzMuNDEsMTkuNjExLDAsMjMuMywwLDI5YzAsNS41NTYsMy4xMjksOS4zODksNy45ODEsOS4zODlhNi4xNjYsNi4xNjYsMCwwLDAsNS41OTEtMi45MTloLjA0MXYyLjQwOUgxNy44TDE3LjgyNywxM1ptLTQuNCwyMS42MjNjLTIuNjM2LDAtNC40My0yLjIxNS00LjQzLTUuNjI2LDAtMy41NTEsMi4wMzktNS41NTUsNC41LTUuNTU1LDIuOTg5LDAsNC40MywyLjc0Myw0LjQzLDUuNTIsMCwzLjk3NC0yLjE4LDUuNjYxLTQuNSw1LjY2MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwLjgzKSI+PC9wYXRoPjxwYXRoIGNsYXNzPSJoIiBkPSJNNjkuMzkyLDIwLjU4N0g2NS40MjFWMjIuN2gtLjA3cy0xLjM3MS0yLjUzMi01LjUyLTIuNTMyYy01LjE2OSwwLTcuOTQ2LDQuMDA5LTcuOTQ2LDguOTMyczIuOTE4LDkuMDcxLDguMDUyLDkuMDcxYTUuNTU5LDUuNTU5LDAsMCwwLDQuOTkzLTIuMzIxSDY1cy0uMDM1LjUyOC0uMDM1Ljk1MXYuODQzYzAsMy4yMzUtMi4zNTYsNC40LTUuMDY0LDQuNGExMS41NzYsMTEuNTc2LDAsMCwxLTQuOTU3LTEuMmwtMS4zNzEsMy41MTVBMTQuMjgzLDE0LjI4MywwLDAsMCw1OS45MzYsNDUuOWM0LjY3NywwLDkuNDU5LTIuMzIxLDkuNDU5LTguNDc0Wk02MC44ODUsMzQuNGMtMi44ODQsMC00LjQ2Ni0yLjMyMS00LjQ2Ni01LjQ0OSwwLTMuMDI1LDEuNDc3LTQuOTkzLDQuMTg0LTQuOTkzLDIuNDI2LDAsNC40NjYsMS4wOSw0LjQ2Niw1LjE2OSwwLDQuMDQ0LTIuMDM5LDUuMjc0LTQuMTg0LDUuMjc0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNC4wMDQgMC4yNzcpIj48L3BhdGg+PHBhdGggY2xhc3M9ImgiIGQ9Ik0xMTEuNjk0LDI2Ljk4NmMwLTQuNzQ4LTIuMjg2LTYuODIyLTYuMjU5LTYuODIyYTYuOSw2LjksMCwwLDAtNi4zMywzLjcyN3YtMy4zSDk0LjgxN1YzOC41MTloNC40M1YzMC4yOTFBNy41NjQsNy41NjQsMCwwLDEsOTkuNiwyNy45YTQuOTE5LDQuOTE5LDAsMCwxLDQuODE3LTMuNjU3YzIuMjUxLDAsMi44MTMsMS40NzcsMi44MTMsMy42NTdWMzguNTE3aDQuNDY1WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTcuMzE4IDAuMjc3KSI+PC9wYXRoPjxwYXRoIGNsYXNzPSJjIiBkPSJNMTI0LjcyOSwxOS42MTFhNi4zNzYsNi4zNzYsMCwwLDAtNS4zOCwyLjVoLS4wN3MuMDctLjYzMy4wNy0xLjUxMlYxM2gtNC40NjZWMzcuOTY2SDExOS4xdi0uOTE0YTkuNTEyLDkuNTEyLDAsMCwwLS4wNjktMS4yaC4wNjlhNi40LDYuNCwwLDAsMCw1LjM0NSwyLjUzMmM0Ljc0NywwLDguMjI4LTMuNjkyLDguMjI4LTkuMzg5LDAtNS41NTUtMy4wOTQtOS4zODktNy45NDYtOS4zODltLTEuMDU1LDE1LjAxNWMtMi45ODksMC00LjQ2Ni0yLjc0NC00LjQ2Ni01LjUyLDAtMy45NzQsMi4xOC01LjY2MSw0LjUtNS42NjEsMi42MzcsMCw0LjQ2NiwyLjIxNSw0LjQ2Niw1LjYyNiwwLDMuNTUyLTIuMDc0LDUuNTU2LTQuNSw1LjU1NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTguODY3IDAuODMpIj48L3BhdGg+PHBhdGggY2xhc3M9ImgiIGQ9Ik00MS4xLDIwLjE2NGExNC4yMjIsMTQuMjIyLDAsMCwwLTIuOTUzLjNoMHMtLjIuMDM5LS41LjEyNmwtLjA0Ny4wMTRjLS4xLjAzLS4yMTguMDY2LS4zNDEuMTA3bC0uMDk0LjAzMWE3LjUxMiw3LjUxMiwwLDAsMC0yLjgsMS42MzhjLjg1NywxLjcsMS43NzMsMy4zNzUsMS43NzMsMy4zNzVhMTIuNzk0LDEyLjc5NCwwLDAsMSwzLjUxMi0xLjkzOGMuMDU5LS4wMTkuMzIyLS4wODguMzkyLS4xYTUuMzc4LDUuMzc4LDAsMCwxLDEuMDMxLS4xYzIuMjg1LDAsMy4zLjk0OSwzLjMsMy41MTZ2LjE0MWgtLjU2MmMtMi45MTksMC0xMC42NTQuNDU3LTEwLjY1NCw2LjA4MiwwLDMuNTg3LDIuOTE4LDUuNTkxLDYuMTE3LDUuNTkxYTUuODM4LDUuODM4LDAsMCwwLDUuNDE2LTMuMTY1aC4wNTJWMzZjLS4wMDguMTM2LS4wMTcuMzI2LS4wMTcuNTUsMCwuMDk0LjAxNywxLjk2Ny4wMTcsMS45NjdoNC4xVjI3LjNjMC00LjAwOS0xLjc1OS03LjEzOS03LjczNi03LjEzOW0zLjM0MSwxMC41ODVjMCwyLjE4LTEuNjg4LDQuNzExLTQuMDc5LDQuNzExLTEuODI5LDAtMi43MDgtMS4xMjUtMi43MDgtMi4zMiwwLTIuNSwzLjY5MS0yLjgxNCw2LjAxMy0yLjgxNGguNzczWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIuNTU5IDAuMjc3KSI+PC9wYXRoPjxwYXRoIGNsYXNzPSJjIiBkPSJNMTY1LjI1NCwyMC4xMzJhMTQuMTU5LDE0LjE1OSwwLDAsMC0yLjk1My4zbDAsMC0uNTUyLjE0MWMtLjEuMDMtLjIxOC4wNjYtLjM0MS4xMDdsLS4xLjAzMWE3LjUsNy41LDAsMCwwLTIuOCwxLjYzN2MuODU3LDEuNywxLjc3MywzLjM3NiwxLjc3MywzLjM3NmExMi44MTEsMTIuODExLDAsMCwxLDMuNTEyLTEuOTM5Yy4wNi0uMDE4LjEyMS0uMDM1LjE4My0uMDUxcy4xNC0uMDM2LjIwOS0uMDUyYTUuNDQ1LDUuNDQ1LDAsMCwxLDEuMDMxLS4xYzIuMjg2LDAsMy4zMDYuOTQ5LDMuMzA2LDMuNTE1di4xNDFoLS41NjNjLTIuOTE5LDAtMTAuNjU0LjQ1OC0xMC42NTQsNi4wODMsMCwzLjU4NiwyLjkxOSw1LjU5LDYuMTE4LDUuNTlhNS44MzgsNS44MzgsMCwwLDAsNS40MTUtMy4xNjRoLjA1MnYuMjIyYy0uMDA4LjEzNy0uMDE3LjMyNy0uMDE3LjU1MSwwLC4wOTQuMDE3LDEuOTY3LjAxNywxLjk2N2g0LjFWMjcuMjdjMC00LjAwOS0xLjc1OC03LjEzOC03LjczNi03LjEzOG0zLjM0MSwxMC41ODRjMCwyLjE4LTEuNjg4LDQuNzEyLTQuMDc5LDQuNzEyLTEuODI4LDAtMi43MDgtMS4xMjUtMi43MDgtMi4zMjEsMC0yLjUsMy42OTItMi44MTMsNi4wMTMtMi44MTNoLjc3M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4xNDEgMC4yNzkpIj48L3BhdGg+PHBhdGggY2xhc3M9ImgiIGQ9Ik0zMS40MTEsMjAuMzU0YTYuMTcyLDYuMTcyLDAsMCwwLTUuNyw0LjYwN2gtLjA3YTguMjIxLDguMjIxLDAsMCwwLC4wNjktMS4wMzFWMjAuNkgyMS40MjVWMzguNTMzaDQuNDN2LTcuMWExMC44NDIsMTAuODQyLDAsMCwxLC4zODgtMi45MTksNS4wNDYsNS4wNDYsMCwwLDEsNC44ODctMy43NjEsNy45NSw3Ljk1LDAsMCwxLDEuMDkuMDd2LTQuNGE1Ljc0Miw1Ljc0MiwwLDAsMC0uODA4LS4wNyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEuNjU0IDAuMjYzKSI+PC9wYXRoPjwvZz48L3N2Zz4=" alt="dragonboat" style="height:22px; width:auto;">
   </div>
   <div class="topbar-nav">
-    <a href="#why">dragonboat Overview</a>
-    <a href="#rollout">Timeline</a>
-    <a href="#platform">Platform Orientation</a>
-    <a href="#demo">Walkthrough</a>
-    <a href="#fintech-status">Fintech Status</a>
-    <a href="#uat-risks">UAT Risk Radar</a>
-    <a href="#uat-feedback">UAT Feedback</a>
-    <a href="#resources">Resources</a>
+    <a href="#" data-section="why" onclick="showSection('why'); return false;">dragonboat Overview</a>
+    <a href="#" data-section="rollout" onclick="showSection('rollout'); return false;">Timeline</a>
+    <a href="#" data-section="platform" onclick="showSection('platform'); return false;">Platform Orientation</a>
+    <a href="#" data-section="demo" onclick="showSection('demo'); return false;">Walkthrough</a>
+    <a href="#" data-section="fintech-status" onclick="showSection('fintech-status'); return false;">Fintech Status</a>
+    <a href="#" data-section="uat-risks" onclick="showSection('uat-risks'); return false;">UAT Risk Radar</a>
+    <a href="#" data-section="uat-feedback" onclick="showSection('uat-feedback'); return false;">UAT Feedback</a>
+    <a href="#" data-section="resources" onclick="showSection('resources'); return false;">Resources</a>
   </div>
   <div class="collapse-btns">
-    <button class="collapse-btn" onclick="document.querySelectorAll('.section').forEach(function(s){s.classList.add('collapsed');s.querySelector('.section-chevron').innerHTML='+'})">Collapse All</button>
-    <button class="collapse-btn" onclick="document.querySelectorAll('.section').forEach(function(s){s.classList.remove('collapsed');s.querySelector('.section-chevron').innerHTML='-'})">Expand All</button>
+    <button class="collapse-btn" onclick="var s=document.querySelector('.section[style*=block]');if(s){s.classList.add('collapsed');var c=s.querySelector('.section-chevron');if(c)c.innerHTML='+'}">Collapse</button>
+    <button class="collapse-btn" onclick="var s=document.querySelector('.section[style*=block]');if(s){s.classList.remove('collapsed');var c=s.querySelector('.section-chevron');if(c)c.innerHTML='-'}">Expand</button>
   </div>
     <a href="https://claude.ai/new?q=I%27m%20looking%20at%20Fintech%27s%20dragonboat%20PM%20Orientation%20page%20and%20have%20some%20questions.%20Here%27s%20the%20context%3A%0A%0Adragonboat%20is%20Intuit%27s%20new%20Product%20%26%20Portfolio%20Management%20tool%20replacing%20CityPlan%2C%20with%20a%20Go-Live%20target%20of%20June%201%2C%202026.%20It%27s%20part%20of%20the%20In-Year%20Execution%20%28IYE%29%20transformation%20%E2%80%94%20a%20shift%20from%20annual%20planning%20%28IYP%29%20to%20continuous%20in-year%20planning.%0A%0AKEY%20DATES%3A%0A-%20Apr%2030%3A%20CTO%20Staff%20Comms%20%2B%20PDX%20Microsite%20launch%0A-%20Apr%2030%E2%80%93May%204%3A%20Pre-UAT%20Training%20%281.5%20hrs%2C%20hybrid%29%0A-%20May%204%E2%80%938%3A%20UAT%20Testing%20Window%20%284%20hrs%20async%29%0A-%20May%208%E2%80%9315%3A%20Final%20dragonboat%20config%20based%20on%20UAT%20feedback%0A-%20May%2015%3A%20Champions%20%2B%20CTO%20Staff%20sign-off%0A-%20May%2018%E2%80%93Jun%201%3A%20Broad%20Training%20for%20all%20users%0A-%20Jun%201%3A%20Go/No-Go%20decision%20%26%20Go-Live%0A%0ATAXONOMY%20%28The%20Golden%20Thread%29%3A%0APortfolio%20%E2%86%92%20Outcome%20%E2%86%92%20Initiative%20%E2%86%92%20Epic%20%28in%20Jira%29%0A-%20Portfolio%3A%20top-level%20container%20%28e.g.%20Fintech%29%0A-%20Outcome%3A%20annual%20goal%20%28replaces%20Input%20Goals%29%0A-%20Initiative%3A%20major%20body%20of%20work%20%28replaces%20CityPlan%20initiatives%29%0A-%20Epic%3A%20execution-level%20work%20tracked%20in%20Jira%0A%0AFINTECH%20STATUS%3A%20At%20Risk%0A-%20UAT%20kicking%20off%20May%204%20with%20testers%20across%20TPM%2C%20PM%2C%20PD%2C%20and%20EM%20personas%0A-%20CTO%20Staff%20comms%20going%20out%20April%2030%20%E2%80%94%20after%20UAT%20invites%20already%20sent%0A-%20Input%20Goals%20and%20E2E%20prioritization%20not%20fully%20available%20at%20go-live%0A-%20PDX%20engaging%20Fintech%20SMEs%20without%20looping%20in%20Fintech%20Champion%20%28Bryoni%20Lawrence%29%0A-%20Low%20PM%20buy-in%20from%20partner%20orgs%20like%20Services%20flagged%20to%20PDX%0A%0AP0%20UAT%20RISKS%3A%0A1.%20Datalake%20%28ODL%29%20not%20live%20until%20June%201%20%E2%80%94%20BDA%20can%27t%20test%20dragonboat%20to%20datalake%20integration%20during%20May%20UAT%0A2.%20No%20AI/MCP%20connector%20for%20Claude%20%E2%80%94%20gaps%20the%203x%20AI-native%20builder%20mandate%0A%0AP1%20UAT%20RISKS%3A%0A-%20Batch%20uploads%20add%20data%20but%20can%27t%20update%20existing%20records%20%E2%80%94%20duplicates%20risk%0A-%20Workstream%20Delegation%20feature%20gap%20flagged%20in%20SME%20deck%20%E2%80%94%20must%20be%20closed%20before%20UAT%0A-%20Required%20fields%20still%20in%20flux%20%E2%80%94%20UAT%20experience%20may%20differ%20from%20go-live%0A-%20Functions%20Interlock%20%28Legal%2C%20Privacy%2C%20Sales%29%20deferred%20to%20future%20release%0A%0AP2%20RISKS%3A%0A-%20Change%20management%20cascade%20delayed%20%E2%80%94%20comms%20going%20out%20same%20time%20as%20UAT%20begins%0A-%20Input%20Goals%20present%20at%20go-live%20but%20not%20final%20%E2%80%94%20status%20tracking%20won%27t%20activate%20immediately%0A-%20E2E%20prioritization%20not%20available%20at%20go-live%0A-%20UAT%20scenarios%20modeled%20on%20future-state%20IYE%2C%20not%20today%27s%20workflows%0A%0ACONTACTS%3A%0A-%20Bryoni%20Lawrence%20%E2%80%94%20Fintech%20Champion%2C%20Staff%20TPM%0A-%20Greg%20Bohn%20%E2%80%94%20PDX%20Driver%2C%20Staff%20TPM%0A-%20Libby%20Barrese%20%E2%80%94%20PDX%2C%20PgM%0A-%20Jose%20Buraschi%20%E2%80%94%20PDX%2C%20Tech-IG05%20Lead%0A-%20Chermaine%20Garrett%20%E2%80%94%20PDX%2C%20Jira%20Transformation%20Lead%0A-%20Victoria%20Shaw%20%E2%80%94%20IBO%2C%20Director%20IYE%20Planning%20%26%20Execution%20Velocity%0A-%20Monica%20Kwong%20%E2%80%94%20IBO%2C%20Principal%0A-%20Khanh%20Nguyen%20%E2%80%94%20IBO%2C%20Group%20Manager%0A-%20Keri%20Woodworth%20%E2%80%94%20IBO%2C%20Sr%20Biz%20Ops%20Manager%0A-%20Nicole%20Kanemitsu%20%E2%80%94%20IBO%2C%20Staff%20Biz%20Ops%20Manager%0A%0ASLACK%3A%20%23dragonboat-ppm-tech-smes%20%28broad%20support%29%2C%20%23fintech-dragonboat-champions%20%28Fintech%20specific%29%0A%0AWhat%27s%20your%20question%20about%20dragonboat%3F" target="_blank" class="ask-claude-btn">
     <span style="font-size:13px; font-weight:800; line-height:1;">?</span>
@@ -331,35 +332,35 @@ body {
 
   <!-- Agenda -->
   <div class="agenda-strip">
-    <a class="agenda-item" href="#why">
+    <a class="agenda-item" href="#" data-section="why" onclick="showSection('why'); return false;">
       <div class="ag-title">dragonboat Overview</div>
       <div class="ag-sub">Why dragonboat &amp; WIIFM?</div>
     </a>
-    <a class="agenda-item" href="#rollout">
+    <a class="agenda-item" href="#" data-section="rollout" onclick="showSection('rollout'); return false;">
       <div class="ag-title">Timeline</div>
       <div class="ag-sub">Dates, milestones &amp; rollout</div>
     </a>
-    <a class="agenda-item" href="#platform">
+    <a class="agenda-item" href="#" data-section="platform" onclick="showSection('platform'); return false;">
       <div class="ag-title">Platform Orientation</div>
       <div class="ag-sub">Taxonomy, navigation, key concepts</div>
     </a>
-    <a class="agenda-item" href="#demo">
+    <a class="agenda-item" href="#" data-section="demo" onclick="showSection('demo'); return false;">
       <div class="ag-title">Walkthrough</div>
       <div class="ag-sub">Initiatives, dependencies, reporting</div>
     </a>
-    <a class="agenda-item" href="#fintech-status">
+    <a class="agenda-item" href="#" data-section="fintech-status" onclick="showSection('fintech-status'); return false;">
       <div class="ag-title">Fintech Status</div>
       <div class="ag-sub">Position, risks &amp; key dates</div>
     </a>
-    <a class="agenda-item" href="#uat-risks">
+    <a class="agenda-item" href="#" data-section="uat-risks" onclick="showSection('uat-risks'); return false;">
       <div class="ag-title">UAT Risk Radar</div>
       <div class="ag-sub">P0/P1 predictions for Fintech</div>
     </a>
-    <a class="agenda-item" href="#uat-feedback">
+    <a class="agenda-item" href="#" data-section="uat-feedback" onclick="showSection('uat-feedback'); return false;">
       <div class="ag-title">UAT Feedback</div>
       <div class="ag-sub">Tester findings, ranked by priority</div>
     </a>
-    <a class="agenda-item" href="#resources">
+    <a class="agenda-item" href="#" data-section="resources" onclick="showSection('resources'); return false;">
       <div class="ag-title">Resources</div>
       <div class="ag-sub">Docs, links &amp; contacts</div>
     </a>
@@ -1113,42 +1114,67 @@ body {
 </div>
 
 <script>
-document.querySelectorAll('.section').forEach(function(section) {
-  // Find the section-title
-  var title = section.querySelector('.section-title');
-  var label = section.querySelector('.section-label');
-  if (!title) return;
-
-  // Create toggle wrapper around label + title
-  var toggle = document.createElement('div');
-  toggle.className = 'section-toggle';
-
-  var chevron = document.createElement('span');
-  chevron.className = 'section-chevron';
-  chevron.innerHTML = '&minus;';
-
-  // Insert toggle before label (or title if no label)
-  var anchor = label || title;
-  section.insertBefore(toggle, anchor);
-  if (label) toggle.appendChild(label);
-  toggle.appendChild(chevron);
-  toggle.appendChild(title);
-
-  // Wrap remaining content in section-body
-  var body = document.createElement('div');
-  body.className = 'section-body';
-  while (section.children.length > 1) {
-    body.appendChild(section.children[1]);
-  }
-  section.appendChild(body);
-
-  // Click handler
-  toggle.addEventListener('click', function() {
-    section.classList.toggle('collapsed');
-    chevron.innerHTML = section.classList.contains('collapsed') ? '&plus;' : '&minus;';
+function showSection(id) {
+  // Hide all sections
+  document.querySelectorAll('.section').forEach(function(s) {
+    s.style.display = 'none';
   });
+
+  // Show target section
+  var target = document.getElementById(id);
+  if (target) {
+    target.style.display = 'block';
+    window.scrollTo(0, 0);
+  }
+
+  // Update active nav
+  document.querySelectorAll('.topbar-nav a[data-section]').forEach(function(a) {
+    a.classList.remove('active');
+    if (a.getAttribute('data-section') === id) a.classList.add('active');
+  });
+}
+
+// Collapsible sections
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.section').forEach(function(section) {
+    var title = section.querySelector('.section-title');
+    var label = section.querySelector('.section-label');
+    if (!title) return;
+
+    var toggle = document.createElement('div');
+    toggle.className = 'section-toggle';
+
+    var chevron = document.createElement('span');
+    chevron.className = 'section-chevron';
+    chevron.innerHTML = '&minus;';
+
+    var anchor = label || title;
+    section.insertBefore(toggle, anchor);
+    if (label) toggle.appendChild(label);
+    toggle.appendChild(chevron);
+    toggle.appendChild(title);
+
+    var body = document.createElement('div');
+    body.className = 'section-body';
+    while (section.children.length > 1) {
+      body.appendChild(section.children[1]);
+    }
+    section.appendChild(body);
+
+    toggle.addEventListener('click', function() {
+      section.classList.toggle('collapsed');
+      chevron.innerHTML = section.classList.contains('collapsed') ? '&plus;' : '&minus;';
+    });
+  });
+
+  // Show first section by default
+  showSection('why');
+});
+
+// Collapse/Expand all (update to work with new structure)
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('collapse-btn')) return; // handled inline
 });
 </script>
 </body>
 </html>
-
