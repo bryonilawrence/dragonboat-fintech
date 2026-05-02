@@ -287,13 +287,11 @@ body {
     <a href="#" data-section="why" onclick="showSection('why'); return false;">Overview</a>
     <a href="#" data-section="rollout" onclick="showSection('rollout'); return false;">Timeline</a>
     <a href="#" data-section="platform" onclick="showSection('platform'); return false;">Platform Orientation</a>
-    <a href="#" data-section="demo" onclick="showSection('demo'); return false;">Walkthrough</a>
     <a href="#" data-section="initiatives" onclick="showSection('initiatives'); return false;">Initiatives</a>
     <a href="#" data-section="roadmaps" onclick="showSection('roadmaps'); return false;">Roadmaps</a>
     <a href="#" data-section="dependencies" onclick="showSection('dependencies'); return false;">Dependencies</a>
     <a href="#" data-section="fintech-status" onclick="showSection('fintech-status'); return false;">Fintech Status</a>
-    <a href="#" data-section="uat-risks" onclick="showSection('uat-risks'); return false;">Risk Radar</a>
-    <a href="#" data-section="uat-feedback" onclick="showSection('uat-feedback'); return false;">UAT Feedback</a>
+    <a href="#" data-section="uat-feedback" onclick="showSection('uat-feedback'); return false;">UAT</a>
     <a href="#" data-section="resources" onclick="showSection('resources'); return false;">Resources</a>
   </div>
   <div class="collapse-btns">
@@ -311,7 +309,7 @@ body {
   <!-- Hero -->
   <div class="hero">
     <div class="hero-eyebrow" style="display:flex; align-items:center; gap:12px;">Intuit &#183; <a href="https://oip.intuit.com/input-goals-fy26?tab=TECH&metricId=TECH-IG05%3AAccelerating+Intuit%27s+Execution+Excellence+Through+PDLC+Transformation&table=TECH" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">TECH-IG05</a> <span style="display:inline-flex; align-items:center; gap:6px; background:rgba(255,193,7,0.12); border:1px solid rgba(255,193,7,0.3); border-radius:20px; padding:3px 12px;"><span style="width:8px; height:8px; border-radius:50%; background:#f5c518; display:inline-block;"></span><span style="font-size:11px; font-weight:700; color:#f5c518; letter-spacing:0.04em;">At Risk</span></span></div>
-    <div class="hero-title"><a href="https://dragonboat.io" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Dragonboat</a> Migration</div>
+    <div class="hero-title"><a href="https://dragonboat.io" target="_blank" style="color:#fff; text-decoration:none;">Dragonboat</a> Migration</div>
     <div style="font-size:14px; color:rgba(255,255,255,0.65); margin-bottom:8px; white-space:nowrap;">An orientation to Intuit's new product and portfolio management tool replacing City Plan &mdash; what it is, why it matters, and what you need to know.</div>
     <div style="margin-bottom:20px; font-size:13px; color:rgba(255,255,255,0.65); display:flex; gap:24px; flex-wrap:wrap;">
       <span>PDX Driver: <a href="https://insight.app.intuit.com/profile/gbohn" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Greg Bohn, TPM</a></span>
@@ -539,97 +537,6 @@ body {
 
 
 
-    <div class="sdiv">What UAT Is Testing</div>
-    <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:16px;">UAT covers the first three phases of the IYE process &mdash; the ones that happen in Dragonboat. Phases 4 and 5 are out of scope for this round.</p>
-
-    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap:12px; margin-bottom:8px;">
-      <div style="background:rgba(35,108,255,0.08); border:1px solid rgba(35,108,255,0.25); border-top:3px solid #236CFF; border-radius:8px; padding:16px;">
-        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Phase 1 &mdash; In Scope</div>
-        <div style="font-size:14px; font-weight:800; color:#fff; margin-bottom:10px;">Annual Baseline</div>
-        <ul style="padding-left:16px; margin:0; display:flex; flex-direction:column; gap:6px;">
-          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Validate that annual plan baseline data has been ingested into Dragonboat, organized in roadmaps</li>
-          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Find workstreams and initiatives in the platform</li>
-        </ul>
-        <div style="margin-top:12px; font-size:10px; color:rgba(255,255,255,0.35); font-weight:600;">Dragonboat + Smartsheet</div>
-      </div>
-
-      <div style="background:rgba(35,108,255,0.08); border:1px solid rgba(35,108,255,0.25); border-top:3px solid #236CFF; border-radius:8px; padding:16px;">
-        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Phase 2 &mdash; In Scope</div>
-        <div style="font-size:14px; font-weight:800; color:#fff; margin-bottom:10px;">Initiative Management</div>
-        <ul style="padding-left:16px; margin:0; display:flex; flex-direction:column; gap:6px;">
-          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Hydrate initiatives (identify quad, define customer problem, attach PRDs, detail solutioning)</li>
-          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Create epics for work that does not require dependencies</li>
-          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Identify, prioritize (1-N), and submit cross-team dependencies (sender)</li>
-          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Refresh 6Q Roadmaps</li>
-        </ul>
-        <div style="margin-top:12px; font-size:10px; color:rgba(255,255,255,0.35); font-weight:600;">Dragonboat + Jira</div>
-      </div>
-
-      <div style="background:rgba(35,108,255,0.08); border:1px solid rgba(35,108,255,0.25); border-top:3px solid #236CFF; border-radius:8px; padding:16px;">
-        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Phase 3 &mdash; In Scope</div>
-        <div style="font-size:14px; font-weight:800; color:#fff; margin-bottom:10px;">Dependency Management</div>
-        <ul style="padding-left:16px; margin:0; display:flex; flex-direction:column; gap:6px;">
-          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Review, scope, and estimate effort for inbound dependencies (receiver)</li>
-          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Enter decision on dependencies (receiver)</li>
-          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Promote &ldquo;aligned&rdquo; dependencies to epics (receiver)</li>
-        </ul>
-        <div style="margin-top:12px; font-size:10px; color:rgba(255,255,255,0.35); font-weight:600;">Dragonboat + Jira</div>
-      </div>
-
-      <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); border-top:3px solid rgba(255,255,255,0.12); border-radius:8px; padding:16px; opacity:0.55;">
-        <div style="font-size:11px; font-weight:700; color:rgba(255,255,255,0.4); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Phase 4 &mdash; Out of Scope</div>
-        <div style="font-size:14px; font-weight:800; color:rgba(255,255,255,0.4); margin-bottom:10px;">Execution Progress</div>
-        <ul style="padding-left:16px; margin:0; display:flex; flex-direction:column; gap:6px;">
-          <li style="font-size:12px; color:rgba(255,255,255,0.4); line-height:1.5;">Monitor execution health, progress, and dependencies</li>
-          <li style="font-size:12px; color:rgba(255,255,255,0.4); line-height:1.5;">Track performance against 6Q roadmap commitments</li>
-          <li style="font-size:12px; color:rgba(255,255,255,0.4); line-height:1.5;">Identify risks and adjust forward-looking plans</li>
-        </ul>
-        <div style="margin-top:12px; font-size:10px; color:rgba(255,255,255,0.25); font-weight:600;">Future release</div>
-      </div>
-
-      <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); border-top:3px solid rgba(255,255,255,0.12); border-radius:8px; padding:16px; opacity:0.55;">
-        <div style="font-size:11px; font-weight:700; color:rgba(255,255,255,0.4); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Phase 5 &mdash; Out of Scope</div>
-        <div style="font-size:14px; font-weight:800; color:rgba(255,255,255,0.4); margin-bottom:10px;">Trade-off Management</div>
-        <ul style="padding-left:16px; margin:0; display:flex; flex-direction:column; gap:6px;">
-          <li style="font-size:12px; color:rgba(255,255,255,0.4); line-height:1.5;">Intake new requests and evaluate within capacity constraints</li>
-          <li style="font-size:12px; color:rgba(255,255,255,0.4); line-height:1.5;">Reprioritize within roadmap or trigger explicit trade-offs</li>
-          <li style="font-size:12px; color:rgba(255,255,255,0.4); line-height:1.5;">Escalate for investment if needed and update 6Q roadmap</li>
-        </ul>
-        <div style="margin-top:12px; font-size:10px; color:rgba(255,255,255,0.25); font-weight:600;">Future release</div>
-      </div>
-    </div>
-
-    <div class="sdiv">Confirmed Fintech UAT Participants</div>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-title">Platform PD <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Yong Liu</span></div>
-        <div class="card-body">Chang Liu, Sr SWE</div>
-      </div>
-      <div class="card">
-        <div class="card-title">Platform PM <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Saurav Sharma</span></div>
-        <div class="card-body">Abhishek Lal, Sr Staff PM</div>
-      </div>
-      <div class="card">
-        <div class="card-title">WFS <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Tushar Thakker</span></div>
-        <div class="card-body">Cristina Andres, M2 SW Quality Analysis<br>John Welder, M3 TPM</div>
-      </div>
-      <div class="card">
-        <div class="card-title">Invoicing &amp; Payments <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Harshal Deo</span></div>
-        <div class="card-body">Ritu Das, M3 Development<br>Erin Kaaea, M3 TPM<br>Eric C. Tom, Principal TPM</div>
-      </div>
-      <div class="card">
-        <div class="card-title">B2B Development <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Anat Keenan</span></div>
-        <div class="card-body">Nili Davidor, Software Development Group Manager<br>Zohar Erel, TPM</div>
-      </div>
-      <div class="card">
-        <div class="card-title">Risk <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Matt Allan</span></div>
-        <div class="card-body">Relying on other Fintech UAT participants</div>
-      </div>
-      <div class="card">
-        <div class="card-title">PMO <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Guergana Yordanova</span></div>
-        <div class="card-body">Bryoni Lawrence, Staff TPM<br>Nancy Dinh, Sr Staff TPM<br>Karen Louie, Staff TPM</div>
-      </div>
-    </div>
   </div>
 
 
@@ -748,120 +655,6 @@ body {
   </div>
 
 
-  <!-- Section 4: Demo -->
-  <div class="section" id="demo">
-    
-    <div class="section-title">Walkthrough</div>
-    <div class="section-sub">If you need access to the Dragonboat Sandbox, request in <a href="https://intuit.enterprise.slack.com/archives/C0A9HK5QHDK" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">#Dragonboat-ppm-tech-smes</a>. You can also explore Dragonboat's <a href="https://mkt.dragonboat.co/demo-room-sppm" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Demo Videos</a>.</div>
-
-    <div style="display:flex; flex-wrap:wrap; gap:6px; margin:16px 0 8px; padding:12px 16px; background:rgba(255,255,255,0.03); border:1px solid rgba(35,108,255,0.15); border-radius:8px;">
-      <span style="font-size:10px; font-weight:700; color:rgba(255,255,255,0.35); text-transform:uppercase; letter-spacing:0.08em; align-self:center; margin-right:4px;">Jump to:</span>
-      <a href="#demo-nav101" onclick="document.getElementById('demo-nav101').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">Navigation 101</a>
-
-
-
-      <a href="#demo-takeaways" onclick="document.getElementById('demo-takeaways').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">Key Takeaways</a>
-
-      <a href="#demo-reporting" onclick="document.getElementById('demo-reporting').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">Reporting</a>
-      <a href="#demo-help" onclick="document.getElementById('demo-help').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">Help Resources</a>
-      <a href="#demo-videos" onclick="document.getElementById('demo-videos').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">Walkthrough Videos</a>
-
-    </div>
-
-    <div id="demo-nav101"></div><div class="sdiv">Navigation 101 &mdash; Home Screen &amp; Key Takeaways</div>
-    <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:16px;">When you first land in Dragonboat, you&#8217;ll see your <strong>Home Screen</strong> &mdash; your personal dashboard and the fastest way to orient yourself before diving into work.</p>
-
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:20px;">
-      <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(35,108,255,0.18); border-radius:10px; padding:18px;">
-        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:12px;">Home Screen Sections</div>
-        <div style="display:flex; flex-direction:column; gap:9px;">
-          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#236CFF; border-radius:4px; padding:2px 8px; font-size:10px; font-weight:700; color:#fff; white-space:nowrap; margin-top:1px; flex-shrink:0;">My Goals</div><div style="font-size:12px; color:rgba(255,255,255,0.7);">Goals and sub-goals you&#8217;re aligned to &mdash; your strategic anchors.</div></div>
-          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#1B2A6B; border-radius:4px; padding:2px 8px; font-size:10px; font-weight:700; color:#fff; white-space:nowrap; margin-top:1px; flex-shrink:0;">My Portfolio Items</div><div style="font-size:12px; color:rgba(255,255,255,0.7);">Initiatives you own or are a contributor on.</div></div>
-          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#1a6b3a; border-radius:4px; padding:2px 8px; font-size:10px; font-weight:700; color:#fff; white-space:nowrap; margin-top:1px; flex-shrink:0;">Dependency Requests</div><div style="font-size:12px; color:rgba(255,255,255,0.7);">Incoming and outgoing cross-team dependencies assigned to you.</div></div>
-          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#5d4037; border-radius:4px; padding:2px 8px; font-size:10px; font-weight:700; color:#fff; white-space:nowrap; margin-top:1px; flex-shrink:0;">Favorite Views</div><div style="font-size:12px; color:rgba(255,255,255,0.7);">Pinned roadmap views and reports you&#8217;ve saved for quick access.</div></div>
-          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#4a148c; border-radius:4px; padding:2px 8px; font-size:10px; font-weight:700; color:#fff; white-space:nowrap; margin-top:1px; flex-shrink:0;">Get Started Guide</div><div style="font-size:12px; color:rgba(255,255,255,0.7);">Dragonboat&#8217;s built-in onboarding checklist. Good for first-timers.</div></div>
-          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#006064; border-radius:4px; padding:2px 8px; font-size:10px; font-weight:700; color:#fff; white-space:nowrap; margin-top:1px; flex-shrink:0;">Views Shared With Me</div><div style="font-size:12px; color:rgba(255,255,255,0.7);">Roadmaps and reports that teammates have shared directly with you.</div></div>
-        </div>
-      </div>
-
-      <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(35,108,255,0.18); border-radius:10px; padding:18px;">
-        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:12px;">4 Key Takeaways</div>
-        <div style="display:flex; flex-direction:column; gap:13px;">
-          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#236CFF; border-radius:50%; width:22px; height:22px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">1</div><div style="font-size:12px; color:rgba(255,255,255,0.85);"><strong>Start at the homepage</strong> &mdash; the Dragonboat icon in the upper left is always home base. Return here whenever you&#8217;re lost.</div></div>
-          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#236CFF; border-radius:50%; width:22px; height:22px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">2</div><div style="font-size:12px; color:rgba(255,255,255,0.85);"><strong>Taxonomy is visible everywhere:</strong> Goal &#8594; Subgoal &#8594; Workstream &#8594; Initiative &#8594; Epic. Every screen shows where you are in the hierarchy.</div></div>
-          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#236CFF; border-radius:50%; width:22px; height:22px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">3</div><div style="font-size:12px; color:rgba(255,255,255,0.85);"><strong>Dependencies live in Planner &#8594; Demand</strong> &mdash; this is the inbox for dependency requests, both incoming and outgoing.</div></div>
-          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#236CFF; border-radius:50%; width:22px; height:22px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">4</div><div style="font-size:12px; color:rgba(255,255,255,0.85);"><strong>Audit trail is always available</strong> &mdash; click the <strong>History</strong> button on any initiative or dependency to see a full log of every change made.</div></div>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div id="demo-reporting"></div><div class="sdiv">3 &mdash; Reporting</div>
-    <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:14px;"><a href="https://dragonboat.io" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Dragonboat</a> has built-in reporting. No more manual status decks assembled from spreadsheets.</p>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-title">Portfolio Roadmap</div>
-        <div class="card-body">6-quarter rolling view of your initiatives. Shareable directly from the platform &mdash; no export required.</div>
-      </div>
-      <div class="card">
-        <div class="card-title">Goal Progress</div>
-        <div class="card-body">How your initiatives roll up to sub-goals and goals. Executive-level view built automatically from your data.</div>
-      </div>
-      <div class="card">
-        <div class="card-title">Delivery Health</div>
-        <div class="card-body">Initiative status, at-risk flags, and dependency blockers surfaced in one view.</div>
-      </div>
-    </div>
-
-    <div id="demo-help"></div><div class="sdiv">Dragonboat Help Resources</div>
-    <div class="resources-grid">
-      <div class="resource-card" href="https://app.dragonboat.io/zendesk-redirect?brand_id=360000906153&locale_id=1&return_to=https%3A%2F%2Fdragonboat.zendesk.com%2Fhc%2Fen-us%2Farticles%2F7397424135831-Milestone-as-a-portfolio-roadmap-object&timestamp=1777253359" onclick="window.open(this.getAttribute('href'),'_blank')" style="cursor:pointer;">
-        <div class="resource-title"><a href="https://app.dragonboat.io/zendesk-redirect?brand_id=360000906153&locale_id=1&return_to=https%3A%2F%2Fdragonboat.zendesk.com%2Fhc%2Fen-us%2Farticles%2F7397424135831-Milestone-as-a-portfolio-roadmap-object&timestamp=1777253359" target="_blank" style="color:#fff; text-decoration:none;">Initiative Milestones</a></div>
-        <div class="resource-desc">How milestones work as portfolio roadmap objects in Dragonboat.</div>
-      </div>
-      <div class="resource-card">
-        <div class="resource-title"><a href="https://dragonboat.zendesk.com/hc/en-us/articles/360049922013-Create-Share-and-Manage-or-Transfer-Views-Real-time-Reports" target="_blank" style="color:#fff; text-decoration:none;">Create and Share Views / Dashboards</a></div>
-        <div class="resource-desc">How to create, share, and manage views and real-time reports.</div>
-      </div>
-      <div class="resource-card">
-        <div class="resource-title"><a href="https://dragonboat.zendesk.com/hc/en-us/articles/12977874672407-Connecting-Metrics-and-Portfolio-Items" target="_blank" style="color:#fff; text-decoration:none;">Connecting Metrics to Portfolio Items</a></div>
-        <div class="resource-desc">How to connect metrics and portfolio items in Dragonboat.</div>
-      </div>
-      <div class="resource-card">
-        <div class="resource-title"><a href="https://dragonboat.zendesk.com/hc/en-us/articles/360045241354-Portfolio-Item-s-Health-Progress-Alerts" target="_blank" style="color:#fff; text-decoration:none;">Portfolio Item Health, Progress &amp; Alerts</a></div>
-        <div class="resource-desc">Understanding health indicators, progress tracking, and alert configurations.</div>
-      </div>
-      <div class="resource-card">
-        <div class="resource-title"><a href="https://dragonboat.zendesk.com/hc/en-us/articles/9217842646807-The-Intake-App-Overview" target="_blank" style="color:#fff; text-decoration:none;">Intake App (Customers &amp; Requests)</a></div>
-        <div class="resource-desc">Overview of the Intake App &mdash; how to gather and manage incoming requests.</div>
-      </div>
-      <div class="resource-card">
-        <div class="resource-title"><a href="https://intuit-champions-sandbox.dragonboat.io/home" target="_blank" style="color:#fff; text-decoration:none;">Access Dragonboat Sandbox</a></div>
-        <div class="resource-desc">Practice creating initiatives, navigating views, and testing dependency flows in a safe environment.</div>
-      </div>
-    </div>
-
-    <div id="demo-videos"></div><div class="sdiv">Guided Walkthrough Videos</div>
-    <div class="resources-grid">
-      <div class="resource-card">
-        <div class="resource-title"><a href="https://drive.google.com/file/d/1nFpo-Vq6d5Afa-hxj4cJVo_T1-WkaY67/view?usp=sharing" target="_blank" style="color:#fff; text-decoration:none;">Usability Features</a></div>
-      </div>
-      <div class="resource-card">
-        <div class="resource-title"><a href="https://drive.google.com/file/d/1U5kqqSZioGvQ6gDji-zbFakDAZz4H9xT/view?usp=sharing" target="_blank" style="color:#fff; text-decoration:none;">Dependencies</a></div>
-      </div>
-      <div class="resource-card">
-        <div class="resource-title"><a href="https://drive.google.com/file/d/1eHYJmkwJo9yEECbbv7yzfVPDNNtVbS3T/view?usp=sharing" target="_blank" style="color:#fff; text-decoration:none;">Dependencies Cont'd</a></div>
-      </div>
-      <div class="resource-card">
-        <div class="resource-title"><a href="https://drive.google.com/file/d/12hc4ejPm3qiL3alTMAQRhtfxt7DaxiaT/view?usp=sharing" target="_blank" style="color:#fff; text-decoration:none;">Taxonomy &amp; Roadmaps</a></div>
-      </div>
-      <div class="resource-card">
-        <div class="resource-title"><a href="https://drive.google.com/file/d/1ec6GEtdyQiLda61Yhhw-l2rSLtyEB_PU/view?usp=sharing" target="_blank" style="color:#fff; text-decoration:none;">Initiative Creation &amp; Hydration</a></div>
-      </div>
-    </div>
-
-  </div>
 
 
   <!-- Resources -->
@@ -1337,11 +1130,10 @@ body {
 
       </div>
     </div>
-  </div>
 
-  <div class="section" id="uat-risks">
-    <div class="section-title">Fintech Risk Radar</div>
-    <div class="section-sub" style="margin-bottom:20px;">Based on program documents, early access feedback, and Fintech-specific planning context &mdash; here's what we're predicting will surface during Broad UAT.</div>
+
+    <div class="sdiv" style="margin-top:8px;">Risk Radar</div>
+    <div style="font-size:13px; color:rgba(255,255,255,0.55); margin-bottom:20px;">Based on program documents, early access feedback, and Fintech-specific planning context &mdash; here&#8217;s what we&#8217;re predicting will surface during Broad UAT.</div>
 
     <div class="callout" style="background:rgba(220,53,69,0.08); border-color:rgba(220,53,69,0.3); margin-bottom:12px;">
       <div class="callout-icon">&#128308;</div>
@@ -1424,12 +1216,105 @@ body {
         <div style="margin-top:6px; color:rgba(255,255,255,0.75);">PDX&#8217;s UAT test cases are built around the future-state IYE process &mdash; not how teams operate today. Testing theoretical workflows means testers can&#8217;t validate whether Dragonboat actually replaces their current day-to-day tools. Real friction points and edge cases will go undetected, only surfacing post-go-live. <em>Risk: UAT passes with low-quality signal, followed by a wave of &#8220;this doesn&#8217;t work for us&#8221; feedback after 6/1.</em></div>
       </div>
     </div>
-
   </div>
 
+
   <div class="section" id="uat-feedback">
-    <div class="section-title">Fintech UAT Feedback</div>
+    <div class="section-title">UAT</div>
     <div class="section-sub" style="margin-bottom:20px;">Feedback collected from Fintech UAT testers during the May 4&ndash;8 testing window, ranked by severity.</div>
+
+    <div class="sdiv">What UAT Is Testing</div>
+    <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:16px;">UAT covers the first three phases of the IYE process &mdash; the ones that happen in Dragonboat. Phases 4 and 5 are out of scope for this round.</p>
+
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap:12px; margin-bottom:8px;">
+      <div style="background:rgba(35,108,255,0.08); border:1px solid rgba(35,108,255,0.25); border-top:3px solid #236CFF; border-radius:8px; padding:16px;">
+        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Phase 1 &mdash; In Scope</div>
+        <div style="font-size:14px; font-weight:800; color:#fff; margin-bottom:10px;">Annual Baseline</div>
+        <ul style="padding-left:16px; margin:0; display:flex; flex-direction:column; gap:6px;">
+          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Validate that annual plan baseline data has been ingested into Dragonboat, organized in roadmaps</li>
+          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Find workstreams and initiatives in the platform</li>
+        </ul>
+        <div style="margin-top:12px; font-size:10px; color:rgba(255,255,255,0.35); font-weight:600;">Dragonboat + Smartsheet</div>
+      </div>
+
+      <div style="background:rgba(35,108,255,0.08); border:1px solid rgba(35,108,255,0.25); border-top:3px solid #236CFF; border-radius:8px; padding:16px;">
+        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Phase 2 &mdash; In Scope</div>
+        <div style="font-size:14px; font-weight:800; color:#fff; margin-bottom:10px;">Initiative Management</div>
+        <ul style="padding-left:16px; margin:0; display:flex; flex-direction:column; gap:6px;">
+          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Hydrate initiatives (identify quad, define customer problem, attach PRDs, detail solutioning)</li>
+          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Create epics for work that does not require dependencies</li>
+          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Identify, prioritize (1-N), and submit cross-team dependencies (sender)</li>
+          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Refresh 6Q Roadmaps</li>
+        </ul>
+        <div style="margin-top:12px; font-size:10px; color:rgba(255,255,255,0.35); font-weight:600;">Dragonboat + Jira</div>
+      </div>
+
+      <div style="background:rgba(35,108,255,0.08); border:1px solid rgba(35,108,255,0.25); border-top:3px solid #236CFF; border-radius:8px; padding:16px;">
+        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Phase 3 &mdash; In Scope</div>
+        <div style="font-size:14px; font-weight:800; color:#fff; margin-bottom:10px;">Dependency Management</div>
+        <ul style="padding-left:16px; margin:0; display:flex; flex-direction:column; gap:6px;">
+          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Review, scope, and estimate effort for inbound dependencies (receiver)</li>
+          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Enter decision on dependencies (receiver)</li>
+          <li style="font-size:12px; color:rgba(255,255,255,0.7); line-height:1.5;">Promote &ldquo;aligned&rdquo; dependencies to epics (receiver)</li>
+        </ul>
+        <div style="margin-top:12px; font-size:10px; color:rgba(255,255,255,0.35); font-weight:600;">Dragonboat + Jira</div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); border-top:3px solid rgba(255,255,255,0.12); border-radius:8px; padding:16px; opacity:0.55;">
+        <div style="font-size:11px; font-weight:700; color:rgba(255,255,255,0.4); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Phase 4 &mdash; Out of Scope</div>
+        <div style="font-size:14px; font-weight:800; color:rgba(255,255,255,0.4); margin-bottom:10px;">Execution Progress</div>
+        <ul style="padding-left:16px; margin:0; display:flex; flex-direction:column; gap:6px;">
+          <li style="font-size:12px; color:rgba(255,255,255,0.4); line-height:1.5;">Monitor execution health, progress, and dependencies</li>
+          <li style="font-size:12px; color:rgba(255,255,255,0.4); line-height:1.5;">Track performance against 6Q roadmap commitments</li>
+          <li style="font-size:12px; color:rgba(255,255,255,0.4); line-height:1.5;">Identify risks and adjust forward-looking plans</li>
+        </ul>
+        <div style="margin-top:12px; font-size:10px; color:rgba(255,255,255,0.25); font-weight:600;">Future release</div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); border-top:3px solid rgba(255,255,255,0.12); border-radius:8px; padding:16px; opacity:0.55;">
+        <div style="font-size:11px; font-weight:700; color:rgba(255,255,255,0.4); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Phase 5 &mdash; Out of Scope</div>
+        <div style="font-size:14px; font-weight:800; color:rgba(255,255,255,0.4); margin-bottom:10px;">Trade-off Management</div>
+        <ul style="padding-left:16px; margin:0; display:flex; flex-direction:column; gap:6px;">
+          <li style="font-size:12px; color:rgba(255,255,255,0.4); line-height:1.5;">Intake new requests and evaluate within capacity constraints</li>
+          <li style="font-size:12px; color:rgba(255,255,255,0.4); line-height:1.5;">Reprioritize within roadmap or trigger explicit trade-offs</li>
+          <li style="font-size:12px; color:rgba(255,255,255,0.4); line-height:1.5;">Escalate for investment if needed and update 6Q roadmap</li>
+        </ul>
+        <div style="margin-top:12px; font-size:10px; color:rgba(255,255,255,0.25); font-weight:600;">Future release</div>
+      </div>
+    </div>
+
+    <div class="sdiv">Confirmed Fintech UAT Participants</div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title">Platform PD <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Yong Liu</span></div>
+        <div class="card-body">Chang Liu, Sr SWE</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Platform PM <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Saurav Sharma</span></div>
+        <div class="card-body">Abhishek Lal, Sr Staff PM</div>
+      </div>
+      <div class="card">
+        <div class="card-title">WFS <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Tushar Thakker</span></div>
+        <div class="card-body">Cristina Andres, M2 SW Quality Analysis<br>John Welder, M3 TPM</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Invoicing &amp; Payments <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Harshal Deo</span></div>
+        <div class="card-body">Ritu Das, M3 Development<br>Erin Kaaea, M3 TPM<br>Eric C. Tom, Principal TPM</div>
+      </div>
+      <div class="card">
+        <div class="card-title">B2B Development <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Anat Keenan</span></div>
+        <div class="card-body">Nili Davidor, Software Development Group Manager<br>Zohar Erel, TPM</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Risk <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Matt Allan</span></div>
+        <div class="card-body">Relying on other Fintech UAT participants</div>
+      </div>
+      <div class="card">
+        <div class="card-title">PMO <span style="font-weight:400; color:rgba(255,255,255,0.5);">&#183; Guergana Yordanova</span></div>
+        <div class="card-body">Bryoni Lawrence, Staff TPM<br>Nancy Dinh, Sr Staff TPM<br>Karen Louie, Staff TPM</div>
+      </div>
+    </div>
+
     <div class="callout" style="background:rgba(35,108,255,0.06); border-color:rgba(35,108,255,0.2);">
       <div class="callout-icon">&#128284;</div>
       <div class="callout-body">
