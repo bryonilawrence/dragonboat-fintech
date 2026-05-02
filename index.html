@@ -288,6 +288,8 @@ body {
     <a href="#" data-section="rollout" onclick="showSection('rollout'); return false;">Timeline</a>
     <a href="#" data-section="platform" onclick="showSection('platform'); return false;">Platform Orientation</a>
     <a href="#" data-section="demo" onclick="showSection('demo'); return false;">Walkthrough</a>
+    <a href="#" data-section="roadmaps" onclick="showSection('roadmaps'); return false;">Roadmaps</a>
+    <a href="#" data-section="dependencies" onclick="showSection('dependencies'); return false;">Dependencies</a>
     <a href="#" data-section="fintech-status" onclick="showSection('fintech-status'); return false;">Fintech Status</a>
     <a href="#" data-section="uat-risks" onclick="showSection('uat-risks'); return false;">UAT Risk Radar</a>
     <a href="#" data-section="uat-feedback" onclick="showSection('uat-feedback'); return false;">UAT Feedback</a>
@@ -347,6 +349,14 @@ body {
     <a class="agenda-item" href="#" data-section="demo" onclick="showSection('demo'); return false;">
       <div class="ag-title">Walkthrough</div>
       <div class="ag-sub">Initiatives, dependencies, reporting</div>
+    </a>
+    <a class="agenda-item" href="#" data-section="roadmaps" onclick="showSection('roadmaps'); return false;">
+      <div class="ag-title">Roadmaps</div>
+      <div class="ag-sub">6QRM, views, key takeaways</div>
+    </a>
+    <a class="agenda-item" href="#" data-section="dependencies" onclick="showSection('dependencies'); return false;">
+      <div class="ag-title">Dependencies</div>
+      <div class="ag-sub">Workflow, receiving teams, takeaways</div>
     </a>
     <a class="agenda-item" href="#" data-section="fintech-status" onclick="showSection('fintech-status'); return false;">
       <div class="ag-title">Fintech Status</div>
@@ -835,6 +845,33 @@ body {
     <div class="section-title">Walkthrough</div>
     <div class="section-sub">If you need access to the dragonboat Sandbox, request in <a href="https://intuit.enterprise.slack.com/archives/C0A9HK5QHDK" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">#dragonboat-ppm-tech-smes</a>. You can also explore dragonboat's <a href="https://mkt.dragonboat.co/demo-room-sppm" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Demo Videos</a>.</div>
 
+    <div class="sdiv">Navigation 101 &mdash; Home Screen &amp; Key Takeaways</div>
+    <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:16px;">When you first land in dragonboat, you&#8217;ll see your <strong>Home Screen</strong> &mdash; your personal dashboard and the fastest way to orient yourself before diving into work.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:20px;">
+      <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(35,108,255,0.18); border-radius:10px; padding:18px;">
+        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:12px;">Home Screen Sections</div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#236CFF; border-radius:4px; padding:2px 8px; font-size:10px; font-weight:700; color:#fff; white-space:nowrap; margin-top:1px; flex-shrink:0;">My Goals</div><div style="font-size:12px; color:rgba(255,255,255,0.7);">Goals and sub-goals you&#8217;re aligned to &mdash; your strategic anchors.</div></div>
+          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#1B2A6B; border-radius:4px; padding:2px 8px; font-size:10px; font-weight:700; color:#fff; white-space:nowrap; margin-top:1px; flex-shrink:0;">My Portfolio Items</div><div style="font-size:12px; color:rgba(255,255,255,0.7);">Initiatives you own or are a contributor on.</div></div>
+          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#1a6b3a; border-radius:4px; padding:2px 8px; font-size:10px; font-weight:700; color:#fff; white-space:nowrap; margin-top:1px; flex-shrink:0;">Dependency Requests</div><div style="font-size:12px; color:rgba(255,255,255,0.7);">Incoming and outgoing cross-team dependencies assigned to you.</div></div>
+          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#5d4037; border-radius:4px; padding:2px 8px; font-size:10px; font-weight:700; color:#fff; white-space:nowrap; margin-top:1px; flex-shrink:0;">Favorite Views</div><div style="font-size:12px; color:rgba(255,255,255,0.7);">Pinned roadmap views and reports you&#8217;ve saved for quick access.</div></div>
+          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#4a148c; border-radius:4px; padding:2px 8px; font-size:10px; font-weight:700; color:#fff; white-space:nowrap; margin-top:1px; flex-shrink:0;">Get Started Guide</div><div style="font-size:12px; color:rgba(255,255,255,0.7);">dragonboat&#8217;s built-in onboarding checklist. Good for first-timers.</div></div>
+          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#006064; border-radius:4px; padding:2px 8px; font-size:10px; font-weight:700; color:#fff; white-space:nowrap; margin-top:1px; flex-shrink:0;">Views Shared With Me</div><div style="font-size:12px; color:rgba(255,255,255,0.7);">Roadmaps and reports that teammates have shared directly with you.</div></div>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(35,108,255,0.18); border-radius:10px; padding:18px;">
+        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:12px;">4 Key Takeaways</div>
+        <div style="display:flex; flex-direction:column; gap:13px;">
+          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#236CFF; border-radius:50%; width:22px; height:22px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">1</div><div style="font-size:12px; color:rgba(255,255,255,0.85);"><strong>Start at the homepage</strong> &mdash; the dragonboat icon in the upper left is always home base. Return here whenever you&#8217;re lost.</div></div>
+          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#236CFF; border-radius:50%; width:22px; height:22px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">2</div><div style="font-size:12px; color:rgba(255,255,255,0.85);"><strong>Taxonomy is visible everywhere:</strong> Goal &#8594; Subgoal &#8594; Workstream &#8594; Initiative &#8594; Epic. Every screen shows where you are in the hierarchy.</div></div>
+          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#236CFF; border-radius:50%; width:22px; height:22px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">3</div><div style="font-size:12px; color:rgba(255,255,255,0.85);"><strong>Dependencies live in Planner &#8594; Demand</strong> &mdash; this is the inbox for dependency requests, both incoming and outgoing.</div></div>
+          <div style="display:flex; align-items:flex-start; gap:10px;"><div style="background:#236CFF; border-radius:50%; width:22px; height:22px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">4</div><div style="font-size:12px; color:rgba(255,255,255,0.85);"><strong>Audit trail is always available</strong> &mdash; click the <strong>History</strong> button on any initiative or dependency to see a full log of every change made.</div></div>
+        </div>
+      </div>
+    </div>
+
     <div class="sdiv">1 &mdash; Setting Up an Initiative</div>
     <div class="card-grid">
       <div class="card">
@@ -854,6 +891,111 @@ body {
     <div class="callout tip">
       <div class="callout-icon">&#11088;</div>
       <div class="callout-body"><strong>Pro tip:</strong> The <strong>&#8853; symbol</strong> (top right, next to search) always brings you back to your home page. Use the search/filter icon next to it to find initiatives by person name or team. Asterisk fields (*) are marked for eventual data hygiene &mdash; they won't be required at creation initially to reduce friction, but fill them in when you can.</div>
+    </div>
+
+
+    <div class="sdiv">Initiative Management &mdash; What You Need to Know</div>
+    <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:14px;">An <strong style="color:#fff;">initiative is the pivot point</strong>, bridging strategy and the engineering work that brings the strategy to life. It is a large, outcome-driven body of work that delivers specific customer or business outcomes.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:16px;">
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:16px;">
+          <div style="font-size:13px; font-weight:700; color:#6b9eff; margin-bottom:6px;">What Every Initiative Needs</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.75); line-height:1.6;">A parent Workstream, a named owner, a driving organization, a release quarter, and all four Quad roles assigned.</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:16px;">
+          <div style="font-size:13px; font-weight:700; color:#6b9eff; margin-bottom:6px;">Why It Matters</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.75); line-height:1.6;">An initiative that isn&#8217;t properly created cannot be hydrated &mdash; and one that isn&#8217;t hydrated cannot generate a dependency.</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:16px;">
+          <div style="font-size:13px; font-weight:700; color:#6b9eff; margin-bottom:6px;">When Would You Create a New Initiative?</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.75); line-height:1.6;">Most of your work was defined during 3&amp;1 Yr. Planning and will be brought into dragonboat for hydration. If the scope of your work changed from what was aligned during Annual Planning, you would need to create a new initiative.</div>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:18px;">
+        <div style="font-size:13px; font-weight:700; color:#6b9eff; text-align:center; margin-bottom:6px;">What Is The Quad*?</div>
+        <div style="font-size:12px; color:rgba(255,255,255,0.65); text-align:center; margin-bottom:14px; line-height:1.5;">The Quad is the leadership engine of every initiative &mdash; the four roles that must be present, assigned, and aligned before any initiative can proceed to hydration, dependency filing, or execution.</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+          <div style="border:1px solid rgba(35,108,255,0.4); border-radius:8px; padding:12px; text-align:center;">
+            <div style="font-size:13px; font-weight:800; color:#fff; margin-bottom:5px;">PM</div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.6); line-height:1.5;">Owns the initiative, scope, and roadmap integrity</div>
+          </div>
+          <div style="border:1px solid rgba(35,108,255,0.4); border-radius:8px; padding:12px; text-align:center;">
+            <div style="font-size:13px; font-weight:800; color:#fff; margin-bottom:5px;">PD</div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.6); line-height:1.5;">Owns solution delivery, Epics, and backlog readiness</div>
+          </div>
+          <div style="border:1px solid rgba(35,108,255,0.4); border-radius:8px; padding:12px; text-align:center;">
+            <div style="font-size:13px; font-weight:800; color:#fff; margin-bottom:5px;">TPM</div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.6); line-height:1.5;">Drives execution, dependency management, and risk escalation</div>
+          </div>
+          <div style="border:1px solid rgba(35,108,255,0.4); border-radius:8px; padding:12px; text-align:center;">
+            <div style="font-size:13px; font-weight:800; color:#fff; margin-bottom:5px;">Arch</div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.6); line-height:1.5;">Confirms technical feasibility and sequencing</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sdiv">Hydrating Initiatives &mdash; What You Need to Know</div>
+    <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:14px;"><strong style="color:#fff;">Hydration turns a named initiative into an execution-ready commitment.</strong> Pre-populated dependency data from annual planning is reviewed and updated to reflect Quad decisions &mdash; before any dependency is submitted.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:16px;">
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:16px;">
+          <div style="font-size:13px; font-weight:700; color:#6b9eff; margin-bottom:6px;">What does &#8220;hydration&#8221; mean?</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.75); line-height:1.6;">Completing an initiative with enough definition to confirm scope, align the Quad, and identify what cross-team support is needed.</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:16px;">
+          <div style="font-size:13px; font-weight:700; color:#6b9eff; margin-bottom:6px;">What &#8220;good&#8221; looks like</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.75); line-height:1.6;">A defined customer problem, business impact, target timeline, linked PRD, and explicit Quad alignment on solution approach and sequencing.</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:16px;">
+          <div style="font-size:13px; font-weight:700; color:#6b9eff; margin-bottom:6px;">The gate condition</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.75); line-height:1.6;">Hydration is the quality gate before dependencies are filed. Nothing gets submitted until it&#8217;s passed.</div>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:18px;">
+        <div style="font-size:13px; font-weight:700; color:#6b9eff; text-align:center; margin-bottom:6px;">The Hydration Checklist</div>
+        <div style="font-size:12px; color:rgba(255,255,255,0.6); text-align:center; margin-bottom:14px;">A fully hydrated initiative has the following:</div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; align-items:flex-start; gap:8px; font-size:12px; color:rgba(255,255,255,0.8);"><span style="color:#27ae60; font-weight:700; flex-shrink:0;">&#10003;</span><div><strong>Customer Problem:</strong> who it solves for, what barrier it removes</div></div>
+          <div style="display:flex; align-items:flex-start; gap:8px; font-size:12px; color:rgba(255,255,255,0.8);"><span style="color:#27ae60; font-weight:700; flex-shrink:0;">&#10003;</span><div><strong>Business Impact:</strong> measurable outcome of doing (or not doing) the work</div></div>
+          <div style="display:flex; align-items:flex-start; gap:8px; font-size:12px; color:rgba(255,255,255,0.8);"><span style="color:#27ae60; font-weight:700; flex-shrink:0;">&#10003;</span><div><strong>Target timeline:</strong> start and end dates confirmed by the Quad</div></div>
+          <div style="display:flex; align-items:flex-start; gap:8px; font-size:12px; color:rgba(255,255,255,0.8);"><span style="color:#27ae60; font-weight:700; flex-shrink:0;">&#10003;</span><div><strong>PRD or equivalent:</strong> linked via &#8220;Links&#8221; field or &#8220;Attach File&#8221; tab</div></div>
+          <div style="display:flex; align-items:flex-start; gap:8px; font-size:12px; color:rgba(255,255,255,0.8);"><span style="color:#27ae60; font-weight:700; flex-shrink:0;">&#10003;</span><div><strong>Quad alignment:</strong> solution, sequencing, and readiness confirmed</div></div>
+          <div style="display:flex; align-items:flex-start; gap:8px; font-size:12px; color:rgba(255,255,255,0.8);"><span style="color:#27ae60; font-weight:700; flex-shrink:0;">&#10003;</span><div><strong>Dependencies identified:</strong> identify what work requires external team support (if applicable)</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sdiv">Key Takeaways &mdash; Initiative Management</div>
+    <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:20px;">
+      <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px;">
+        <div style="background:#236CFF; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">1</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.85); line-height:1.5;"><strong>Initiatives are the center of execution</strong>, enabling the IYE Golden Thread from goals to delivery.</div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px;">
+        <div style="background:#236CFF; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">2</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.85); line-height:1.5;"><strong>Creating and hydrating initiatives</strong> validate that work is clearly defined and owned before execution.</div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px;">
+        <div style="background:#236CFF; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">3</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.85); line-height:1.5;"><strong>Initiative scope and execution approach</strong> (e.g., Quad alignment) must be defined before identifying and sending dependencies.</div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px;">
+        <div style="background:#236CFF; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">4</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.85); line-height:1.5;"><strong>Execution readiness</strong> requires initiatives to be fully aligned, decomposed, and connected to epics in dragonboat.</div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px;">
+        <div style="background:#236CFF; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">5</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.85); line-height:1.5;"><strong>Dependency request quality is enforced upfront</strong>, with structured intake requirements and validation before requests create downstream work.</div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px;">
+        <div style="background:#236CFF; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">6</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.85); line-height:1.5;"><strong>Dependency requests are tied to defined, hydrated initiatives</strong>, ensuring dependencies are scoped and ready for execution.</div>
+      </div>
     </div>
 
     <div class="sdiv">2 &mdash; Setting Dependencies</div>
@@ -1002,6 +1144,198 @@ body {
   <!-- Resources -->
 
 
+
+  <!-- Section: Roadmaps -->
+  <div class="section" id="roadmaps">
+    <div class="section-title">Roadmaps</div>
+    <div class="section-sub">The 6-Quarter Roadmap (6QRM) is how dragonboat surfaces your initiative data as a living, shareable plan of record &mdash; no manual decks required.</div>
+
+    <div class="sdiv">What Are 6-Quarter Roadmaps &amp; Why They Matter</div>
+    <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:16px;">A roadmap in dragonboat is not a static deck &mdash; it&#8217;s a living view of the same data you use to manage execution. It updates as your initiatives, priorities, and dependencies evolve.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:20px;">
+      <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:20px;">
+        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:14px;">What Is It?</div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; align-items:flex-start; gap:8px; font-size:12px; color:rgba(255,255,255,0.8);"><span style="color:#236CFF; margin-top:2px;">&#9679;</span><div>A living <strong>plan of record</strong> for what we&#8217;re building, when, and in what sequence</div></div>
+          <div style="display:flex; align-items:flex-start; gap:8px; font-size:12px; color:rgba(255,255,255,0.8);"><span style="color:#236CFF; margin-top:2px;">&#9679;</span><div><strong>Rolling 6-quarter horizon</strong> with high-fidelity near-term + directional outer quarters</div></div>
+          <div style="display:flex; align-items:flex-start; gap:8px; font-size:12px; color:rgba(255,255,255,0.8);"><span style="color:#236CFF; margin-top:2px;">&#9679;</span><div><strong>Updated</strong> as priorities, dependencies, and execution realities evolve</div></div>
+          <div style="display:flex; align-items:flex-start; gap:8px; font-size:12px; color:rgba(255,255,255,0.8);"><span style="color:#236CFF; margin-top:2px;">&#9679;</span><div><strong>A single source of truth</strong> that aligns teams and enables faster trade-offs</div></div>
+        </div>
+      </div>
+
+      <div style="background:rgba(35,108,255,0.07); border:1px solid rgba(35,108,255,0.25); border-radius:10px; padding:20px;">
+        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:14px;">What They Enable (Benefits)</div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <div style="background:rgba(35,108,255,0.15); border-radius:6px; padding:9px 14px; font-size:12px; font-weight:600; color:#fff;">Lighter-weight annual planning</div>
+          <div style="background:rgba(35,108,255,0.15); border-radius:6px; padding:9px 14px; font-size:12px; font-weight:600; color:#fff;">Improved alignment across Product, Capability, and GTM teams</div>
+          <div style="background:rgba(35,108,255,0.15); border-radius:6px; padding:9px 14px; font-size:12px; font-weight:600; color:#fff;">Look-ahead visibility to enable long- and short-term trade-off decisions</div>
+          <div style="background:rgba(35,108,255,0.15); border-radius:6px; padding:9px 14px; font-size:12px; font-weight:600; color:#fff;">Time saved for higher-value work</div>
+          <div style="background:rgba(35,108,255,0.15); border-radius:6px; padding:9px 14px; font-size:12px; font-weight:600; color:#fff;">Stronger portfolio-level focus and capacity alignment</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sdiv">How Roadmaps Work in dragonboat (and Why It&#8217;s Better)</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:20px;">
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:16px;">
+          <div style="font-size:13px; font-weight:700; color:#6b9eff; margin-bottom:6px;">Generated on demand</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.75); line-height:1.6;">Roadmaps are created from the same data used to manage execution. No manual creation or reformatting required.</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:16px;">
+          <div style="font-size:13px; font-weight:700; color:#6b9eff; margin-bottom:6px;">Built on initiatives</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.75); line-height:1.6;">Roadmaps are generated from initiative data &mdash; keeping initiatives up to date ensures the roadmap stays accurate.</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:16px;">
+          <div style="font-size:13px; font-weight:700; color:#6b9eff; margin-bottom:6px;">Produced at different altitudes</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.75); line-height:1.6;">The same roadmap can be viewed at portfolio, product, or team level to give each audience the right level of detail from a single source of truth.</div>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:18px;">
+        <div style="font-size:13px; font-weight:700; color:#6b9eff; text-align:center; margin-bottom:14px;">Roadmap Views in dragonboat</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+          <div style="background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.25); border-radius:8px; padding:14px; text-align:center;">
+            <div style="font-size:12px; font-weight:700; color:#fff; margin-bottom:6px;">Gantt Chart View</div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.6); line-height:1.4;">Timeline bars showing initiative delivery across quarters. Best for sequencing and dependency visualization.</div>
+          </div>
+          <div style="background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.25); border-radius:8px; padding:14px; text-align:center;">
+            <div style="font-size:12px; font-weight:700; color:#fff; margin-bottom:6px;">Swimlane View</div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.6); line-height:1.4;">Team-by-team horizontal lanes. Best for cross-team alignment and capacity discussions.</div>
+          </div>
+          <div style="background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.25); border-radius:8px; padding:14px; text-align:center;">
+            <div style="font-size:12px; font-weight:700; color:#fff; margin-bottom:6px;">List View</div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.6); line-height:1.4;">Tabular view of all initiatives with owner, quarter, status, and goal columns. Best for bulk editing.</div>
+          </div>
+          <div style="background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.25); border-radius:8px; padding:14px; text-align:center;">
+            <div style="font-size:12px; font-weight:700; color:#fff; margin-bottom:6px;">3D Dynamic View</div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.6); line-height:1.4;">Multi-dimensional view across portfolios, goals, and quarters. Best for executive-level briefings.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sdiv">Key Takeaways &mdash; Roadmaps</div>
+    <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:20px;">
+      <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px;">
+        <div style="background:#236CFF; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">1</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.85); line-height:1.5;">The 6-Quarter roadmap (6QRM) is the <strong>single view of what and when</strong> we plan to deliver work.</div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px;">
+        <div style="background:#236CFF; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">2</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.85); line-height:1.5;">Use the roadmap to <strong>understand initiative scope, sequencing, and prioritization</strong> before taking action.</div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px;">
+        <div style="background:#236CFF; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">3</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.85); line-height:1.5;">Roadmap alignment starts with <strong>validating existing work rather than creating new work</strong>.</div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px;">
+        <div style="background:#236CFF; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">4</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.85); line-height:1.5;">Roadmaps allow you to <strong>keep work traceable from goals to workstreams and initiatives</strong>, ensuring alignment to business outcomes.</div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px;">
+        <div style="background:#236CFF; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">5</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.85); line-height:1.5;">An accurate and up-to-date roadmap is a <strong>prerequisite before moving into execution</strong>.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section: Dependency Management -->
+  <div class="section" id="dependencies">
+    <div class="section-title">Dependency Management</div>
+    <div class="section-sub">Dependencies in dragonboat are not standalone tickets &mdash; they are structural parts of initiatives, with a system-supported workflow from submission to execution.</div>
+
+    <div class="sdiv">What&#8217;s Changing for Receiving Teams</div>
+    <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:16px;">Receiving teams now have a <strong style="color:#fff;">structured, system-supported workflow</strong> in dragonboat &mdash; from how requests arrive to how they become execution-ready work. Four things are different under IYE:</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:20px;">
+      <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:16px;">
+        <div style="font-size:13px; font-weight:700; color:#6b9eff; margin-bottom:7px;">The Triad</div>
+        <div style="font-size:12px; color:rgba(255,255,255,0.75); line-height:1.6;">Each receiving team has a defined Triad (Dependency Steward, Product Lead, Engineering Lead). Requests route automatically to the right owners in dragonboat.</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:16px;">
+        <div style="font-size:13px; font-weight:700; color:#6b9eff; margin-bottom:7px;">Streamlined Communication Between Requester and Receiver</div>
+        <div style="font-size:12px; color:rgba(255,255,255,0.75); line-height:1.6;">The tool allows for notifications and updated statuses, reducing the back-and-forth between the requester and receiver.</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:16px;">
+        <div style="font-size:13px; font-weight:700; color:#6b9eff; margin-bottom:7px;">Inbound Dependencies Arrive Stack Ranked and Aligned to Goals and Roadmaps</div>
+        <div style="font-size:12px; color:rgba(255,255,255,0.75); line-height:1.6;">Inbound dependencies will already include goal alignment, a 1-N priority rank, and alignment to initiatives &#8594; workstreams &#8594; sub-goals &#8594; goals &mdash; everything needed for receiving teams to make confident decisions.</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:16px;">
+        <div style="font-size:13px; font-weight:700; color:#6b9eff; margin-bottom:7px;">Promote Aligned Dependencies to New Epics in Jira from Within dragonboat</div>
+        <div style="font-size:12px; color:rgba(255,255,255,0.75); line-height:1.6;">Aligned dependencies are promoted to Epics and are parented by the requesting Initiative, enabling real-time progress tracking for the requesting team.</div>
+      </div>
+    </div>
+
+    <div class="sdiv">Dependency Workflow &mdash; Statuses Explained</div>
+    <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:14px;">Every dependency moves through a defined status lifecycle in dragonboat. Here&#8217;s what each status means:</p>
+
+    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:10px; margin-bottom:20px;">
+      <div style="background:rgba(39,174,96,0.1); border:1px solid rgba(39,174,96,0.3); border-radius:8px; padding:14px;">
+        <div style="font-size:11px; font-weight:700; color:#27ae60; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Requester</div>
+        <div style="font-size:13px; font-weight:700; color:#fff; margin-bottom:6px;">Draft</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.65); line-height:1.5;">Dependency has been created but not yet submitted to the receiving team.</div>
+      </div>
+      <div style="background:rgba(39,174,96,0.1); border:1px solid rgba(39,174,96,0.3); border-radius:8px; padding:14px;">
+        <div style="font-size:11px; font-weight:700; color:#27ae60; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Requester</div>
+        <div style="font-size:13px; font-weight:700; color:#fff; margin-bottom:6px;">Submitted</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.65); line-height:1.5;">Sent to the receiving team. Awaiting acknowledgment or routing to &#8220;In Review.&#8221;</div>
+      </div>
+      <div style="background:rgba(39,174,96,0.1); border:1px solid rgba(39,174,96,0.3); border-radius:8px; padding:14px;">
+        <div style="font-size:11px; font-weight:700; color:#27ae60; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Requester</div>
+        <div style="font-size:13px; font-weight:700; color:#fff; margin-bottom:6px;">Withdrawn</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.65); line-height:1.5;">Requester may &#8220;Withdraw&#8221; if the initiative is deprioritized or the dependent work is no longer required.</div>
+      </div>
+      <div style="background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.3); border-radius:8px; padding:14px;">
+        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Recipient</div>
+        <div style="font-size:13px; font-weight:700; color:#fff; margin-bottom:6px;">Need More Info</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.65); line-height:1.5;">Receiving team needs clarification before they can route to review.</div>
+      </div>
+      <div style="background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.3); border-radius:8px; padding:14px;">
+        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Recipient</div>
+        <div style="font-size:13px; font-weight:700; color:#fff; margin-bottom:6px;">In Review</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.65); line-height:1.5;">Receiving team is actively evaluating the request.</div>
+      </div>
+      <div style="background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.3); border-radius:8px; padding:14px;">
+        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Recipient</div>
+        <div style="font-size:13px; font-weight:700; color:#fff; margin-bottom:6px;">Parked</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.65); line-height:1.5;">Lower priority than current plan &mdash; will be revisited in a subsequent cycle. Either party can set to Parked.</div>
+      </div>
+      <div style="background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.3); border-radius:8px; padding:14px;">
+        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Recipient</div>
+        <div style="font-size:13px; font-weight:700; color:#fff; margin-bottom:6px;">Declined</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.65); line-height:1.5;">Request was deemed outside the scope of the receiving team&#8217;s platform layer and better suited for the application layer.</div>
+      </div>
+      <div style="background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.3); border-radius:8px; padding:14px;">
+        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Recipient</div>
+        <div style="font-size:13px; font-weight:700; color:#fff; margin-bottom:6px;">Aligned</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.65); line-height:1.5;">Recipient has created or linked one or more Epics. Newly created Epics are parented by the requesting Initiative.</div>
+      </div>
+      <div style="background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.3); border-radius:8px; padding:14px;">
+        <div style="font-size:11px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Recipient</div>
+        <div style="font-size:13px; font-weight:700; color:#fff; margin-bottom:6px;">Aligned for InnerSource</div>
+        <div style="font-size:11px; color:rgba(255,255,255,0.65); line-height:1.5;">Epic is focused on review of contributed code changes. For chained dependencies, a new Initiative should be created from the dependency.</div>
+      </div>
+    </div>
+
+    <div class="sdiv">Key Takeaways &mdash; Dependency Management</div>
+    <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:20px;">
+      <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px;">
+        <div style="background:#236CFF; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">1</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.85); line-height:1.5;"><strong>Each receiving team has a defined Triad</strong> (Dependency Steward, Product Lead, Engineering Lead) pre-populated in dragonboat, responsible for solutioning and decisioning inbound dependencies.</div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px;">
+        <div style="background:#236CFF; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">2</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.85); line-height:1.5;"><strong>Prioritization and decisions happen in one system</strong>, with full context across requests, timelines, and business goals.</div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px;">
+        <div style="background:#236CFF; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">3</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.85); line-height:1.5;"><strong>Aligned dependencies are promoted to Epics in dragonboat</strong> and are parented by the requesting team&#8217;s initiative, enabling real-time progress tracking for the requesting team.</div>
+      </div>
+    </div>
+  </div>
+
   <div class="section" id="fintech-status">
     <div class="section-title">Fintech Status</div>
 
@@ -1012,21 +1346,15 @@ body {
         <strong>At Risk &mdash; actively monitoring</strong>
         <div style="margin-top:8px; color:rgba(255,255,255,0.75); line-height:1.7;">
           <div>&#8226; UAT is on track to kick off <strong>May 4</strong> with Fintech testers confirmed across TPM, PM, PD, and EM personas.</div>
-          <div style="margin-top:4px;">&#8226; CTO Staff comms are set to go out <strong>April 30</strong> &mdash; after UAT invites have already been sent. Fintech has flagged that comms going out after UAT begins risks lower engagement and "why are we doing this?" questions from the broader population.</div>
-          <div style="margin-top:4px;">&#8226; Input Goals and E2E prioritization will <strong>not</strong> be fully available at go-live &mdash; both confirmed by PDX as known constraints, not yet widely communicated.</div>
-          <div style="margin-top:4px;">&#8226; PDX has been engaging Fintech SMEs directly without looping in the Fintech Champion &mdash; flagged to PDX multiple times, actively being resolved. If you are a SME/UAT participant getting direct comms from PDX, loop in <a href="https://insight.app.intuit.com/profile/blawrence1" target="_blank" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Bryoni Lawrence, Staff TPM</a>.</div>
-          <div style="margin-top:4px;">&#8226; Low PM buy-in from other orgs Fintech partners closely with &mdash; like Services &mdash; will result in low adoption. Flagged to PDX; PDX is actively working with Services Champions to engage their PMs.</div>
+          <div style="margin-top:4px;">&#8226; CTO Staff comms were <strong>not sent out April 30</strong> &mdash; after UAT has begun. Fintech has flagged that comms going out after UAT begins risks lower engagement and &#8220;why are we doing this?&#8221; questions from the broader population.</div>
+          <div style="margin-top:4px;">&#8226; Input Goals and E2E prioritization will <strong>not</strong> be fully available at go-live &mdash; both confirmed by PDX as known constraints.</div>
+          <div style="margin-top:4px;">&#8226; Risk of Low Adoption / Low PM buy-in from other orgs Fintech partners closely with &mdash; like Services, CG, etc. Flagged to PDX; PDX is actively working with Services &amp; CG Champions &amp; Leaders to engage their PMs.</div>
         </div>
       </div>
     </div>
 
     <div class="sdiv">Key Dates at a Glance</div>
     <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap:10px; margin-top:12px;">
-      <div style="background:rgba(35,108,255,0.06); border:1px solid rgba(35,108,255,0.15); border-radius:8px; padding:14px 16px;">
-        <div style="font-size:10px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:6px;">Apr 30</div>
-        <div style="font-size:13px; font-weight:700; color:#fff;">CTO Staff Comms</div>
-        <div style="font-size:11px; color:rgba(255,255,255,0.55); margin-top:4px;">Tool mandate + PDX microsite launch</div>
-      </div>
       <div style="background:rgba(35,108,255,0.06); border:1px solid rgba(35,108,255,0.15); border-radius:8px; padding:14px 16px;">
         <div style="font-size:10px; font-weight:700; color:#6b9eff; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:6px;">Apr 30 &ndash; May 4</div>
         <div style="font-size:13px; font-weight:700; color:#fff;">Pre-UAT Training</div>
@@ -1281,6 +1609,10 @@ body {
       </div>
     </div>
 
+    <div class="callout tip" style="margin-bottom:16px;">
+      <div class="callout-icon">&#128231;</div>
+      <div class="callout-body"><strong>Execution Catalyst Program Team:</strong> For program-level questions, reach out to <a href="mailto:Execution_Catalyst_Program@intuit.com" style="color:#6b9eff; text-decoration:underline; text-underline-offset:3px;">Execution_Catalyst_Program@intuit.com</a></div>
+    </div>
     <div class="sdiv">Slack Channels</div>
     <div class="callout tip">
       <div class="callout-body">
