@@ -1148,7 +1148,14 @@ body {
     <div class="section-title">Roadmaps</div>
     <div class="section-sub">The 6-Quarter Roadmap (6QRM) is how dragonboat surfaces your initiative data as a living, shareable plan of record &mdash; no manual decks required.</div>
 
-    <div class="sdiv">What Are 6-Quarter Roadmaps &amp; Why They Matter</div>
+    <div style="display:flex; flex-wrap:wrap; gap:6px; margin:16px 0 8px; padding:12px 16px; background:rgba(255,255,255,0.03); border:1px solid rgba(35,108,255,0.15); border-radius:8px;">
+      <span style="font-size:10px; font-weight:700; color:rgba(255,255,255,0.35); text-transform:uppercase; letter-spacing:0.08em; align-self:center; margin-right:4px;">Jump to:</span>
+      <a href="#rm-what" onclick="document.getElementById('rm-what').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">What Are 6QRMs?</a>
+      <a href="#rm-how" onclick="document.getElementById('rm-how').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">How Roadmaps Work</a>
+      <a href="#rm-takeaways" onclick="document.getElementById('rm-takeaways').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:11px; font-weight:600; color:#6b9eff; text-decoration:none; background:rgba(35,108,255,0.1); border:1px solid rgba(35,108,255,0.2); border-radius:4px; padding:3px 9px; white-space:nowrap;">Key Takeaways</a>
+    </div>
+
+    <div id="rm-what"></div><div class="sdiv">What Are 6-Quarter Roadmaps &amp; Why They Matter</div>
     <p style="font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:16px;">A roadmap in dragonboat is not a static deck &mdash; it&#8217;s a living view of the same data you use to manage execution. It updates as your initiatives, priorities, and dependencies evolve.</p>
 
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:20px;">
@@ -1174,7 +1181,7 @@ body {
       </div>
     </div>
 
-    <div class="sdiv">How Roadmaps Work in dragonboat (and Why It&#8217;s Better)</div>
+    <div id="rm-how"></div><div class="sdiv">How Roadmaps Work in dragonboat (and Why It's Better)</div>
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:20px;">
       <div style="display:flex; flex-direction:column; gap:10px;">
         <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:16px;">
@@ -1214,7 +1221,7 @@ body {
       </div>
     </div>
 
-    <div class="sdiv">Key Takeaways &mdash; Roadmaps</div>
+    <div id="rm-takeaways"></div><div class="sdiv">Key Takeaways &mdash; Roadmaps</div>
     <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:20px;">
       <div style="display:flex; align-items:flex-start; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px;">
         <div style="background:#236CFF; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0;">1</div>
