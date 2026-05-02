@@ -625,64 +625,95 @@ body {
     <div style="margin-bottom:28px;">
       <div style="font-size:16px; font-weight:800; color:#fff; margin-bottom:16px;">The Intuit Planning and Execution Interconnected Taxonomy</div>
 
-      <!-- Replica of the slide: 6 columns, header row + pill rows -->
-      <div style="border:1px solid rgba(255,255,255,0.12); border-radius:10px; overflow:hidden; background:rgba(255,255,255,0.02);">
+      <!-- Outer wrapper: positions Goal (top-left), Driving Org (top-right), Work (main body) -->
+      <div style="position:relative; padding-top:0;">
 
-        <!-- Header row -->
-        <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr; background:rgba(255,255,255,0.06); border-bottom:1px solid rgba(255,255,255,0.1);">
-          <div style="padding:10px 12px; font-size:11px; font-weight:700; color:#f8a84b; text-align:center; border-right:1px solid rgba(255,255,255,0.08);">Goal</div>
-          <div style="padding:10px 12px; font-size:11px; font-weight:700; color:#6b9eff; text-align:center; border-right:1px solid rgba(255,255,255,0.08);">Work</div>
-          <div style="padding:10px 12px; font-size:11px; font-weight:700; color:#d4a017; text-align:center; border-right:1px solid rgba(255,255,255,0.08);">Capability</div>
-          <div style="padding:10px 12px; font-size:11px; font-weight:700; color:#a07ee0; text-align:center; border-right:1px solid rgba(255,255,255,0.08);">Product</div>
-          <div style="padding:10px 12px; font-size:11px; font-weight:700; color:#5dba7d; text-align:center; border-right:1px solid rgba(255,255,255,0.08);">Dependency / Scrum Team</div>
-          <div style="padding:10px 12px; font-size:11px; font-weight:700; color:#e06c75; text-align:center;">Driving Org</div>
+        <!-- Top row: Goal box (left) + Driving Org box (right) -->
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0; position:relative; z-index:2;">
+
+          <!-- Goal box -->
+          <div style="background:rgba(255,200,130,0.18); border:2px solid #e8a87c; border-radius:10px; padding:14px 18px; width:220px;">
+            <div style="font-size:12px; font-weight:800; color:#c77a20; margin-bottom:10px;">Goal</div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+              <div style="background:#e87f1e; border-radius:8px; padding:8px 20px; font-size:13px; font-weight:700; color:#fff; width:100%; text-align:center; border:2px solid #3a6fd8;">Goal</div>
+              <div style="font-size:16px; color:#c77a20; line-height:1;">&#8595;</div>
+              <div style="background:#f5a623; border-radius:8px; padding:8px 20px; font-size:13px; font-weight:700; color:#fff; width:100%; text-align:center; border:2px solid #3a6fd8;">Sub Goal</div>
+            </div>
+          </div>
+
+          <!-- Driving Org box -->
+          <div style="background:rgba(255,180,180,0.18); border:2px solid #e08080; border-radius:10px; padding:14px 18px; width:220px;">
+            <div style="font-size:12px; font-weight:800; color:#c0392b; margin-bottom:10px;">Driving Org</div>
+            <div style="display:flex; flex-direction:column; gap:6px;">
+              <div style="background:#8b0000; border-radius:8px; padding:8px 12px; font-size:13px; font-weight:700; color:#fff; text-align:center;">Driving Org L3</div>
+              <div style="background:#c0392b; border-radius:8px; padding:8px 12px; font-size:13px; font-weight:700; color:#fff; text-align:center;">Driving Org L4</div>
+            </div>
+          </div>
         </div>
 
-        <!-- Pill rows -->
-        <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr; align-items:start; padding:14px 10px; gap:0;">
+        <!-- Work outer box -->
+        <div style="background:rgba(173,213,240,0.13); border:2px solid rgba(100,160,210,0.5); border-radius:10px; padding:18px; margin-top:-30px; position:relative; z-index:1;">
+          <div style="font-size:12px; font-weight:800; color:#7ab8d8; margin-bottom:14px;">Work</div>
 
-          <!-- Goal column -->
-          <div style="padding:0 6px; border-right:1px solid rgba(255,255,255,0.06); display:flex; flex-direction:column; gap:6px;">
-            <div style="background:#e87f1e; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">Goal</div>
-            <div style="background:#f5a623; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">Sub Goal</div>
+          <!-- Inner grid: Capability | [Workstream+Initiative center] | Dependency -->
+          <div style="display:grid; grid-template-columns:160px 1fr 200px; gap:14px; align-items:start;">
+
+            <!-- Capability box -->
+            <div style="background:rgba(210,170,30,0.15); border:2px dashed #c49a2a; border-radius:8px; padding:12px;">
+              <div style="font-size:11px; font-weight:800; color:#c49a2a; margin-bottom:10px;">Capability</div>
+              <div style="display:flex; flex-direction:column; gap:6px; align-items:center;">
+                <div style="background:#8B6914; border-radius:8px; padding:7px 14px; font-size:13px; font-weight:700; color:#fff; width:100%; text-align:center;">L0</div>
+                <div style="font-size:14px; color:#c49a2a; line-height:1;">&#8595;</div>
+                <div style="background:#d4a017; border-radius:8px; padding:7px 14px; font-size:13px; font-weight:700; color:#fff; width:100%; text-align:center;">... L4</div>
+              </div>
+            </div>
+
+            <!-- Center: Workstream &#8594; Initiative, with Product below -->
+            <div style="display:flex; flex-direction:column; gap:0; align-items:center;">
+              <!-- Workstream -->
+              <div style="background:#1B4FD8; border-radius:8px; padding:10px 28px; font-size:14px; font-weight:700; color:#fff; text-align:center; width:100%; max-width:200px;">Workstream</div>
+              <div style="font-size:18px; color:#7ab8d8; line-height:1.2;">&#8595;</div>
+              <!-- Initiative -->
+              <div style="background:#236CFF; border-radius:8px; padding:10px 28px; font-size:14px; font-weight:700; color:#fff; text-align:center; width:100%; max-width:200px;">Initiative</div>
+
+              <!-- Product box below -->
+              <div style="background:rgba(180,140,220,0.15); border:2px dashed #9b59b6; border-radius:8px; padding:12px; margin-top:14px; width:100%;">
+                <div style="font-size:11px; font-weight:800; color:#9b59b6; margin-bottom:10px;">Product</div>
+                <div style="display:flex; flex-direction:column; gap:6px; align-items:center;">
+                  <div style="background:#7b2fbe; border-radius:8px; padding:7px 12px; font-size:12px; font-weight:700; color:#fff; width:100%; text-align:center;">Product Portfolio</div>
+                  <div style="font-size:14px; color:#9b59b6; line-height:1;">&#8595;</div>
+                  <div style="background:#7b2fbe; border-radius:8px; padding:7px 12px; font-size:12px; font-weight:700; color:#fff; width:100%; text-align:center;">Product</div>
+                  <div style="font-size:14px; color:#9b59b6; line-height:1;">&#8595;</div>
+                  <div style="background:#9b59b6; border-radius:8px; padding:7px 12px; font-size:12px; font-weight:700; color:#fff; width:100%; text-align:center;">Feature</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Dependency + Scrum Teams stacked -->
+            <div style="display:flex; flex-direction:column; gap:12px;">
+
+              <!-- Dependency box -->
+              <div style="background:rgba(30,150,80,0.13); border:2px dashed #27ae60; border-radius:8px; padding:12px;">
+                <div style="font-size:11px; font-weight:800; color:#27ae60; margin-bottom:10px;">Dependency</div>
+                <div style="display:flex; flex-direction:column; gap:6px;">
+                  <div style="background:#1a6b3a; border-radius:8px; padding:7px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">Workstream Dependency</div>
+                  <div style="font-size:14px; color:#27ae60; text-align:center; line-height:1;">&#8595;</div>
+                  <div style="background:#27ae60; border-radius:8px; padding:7px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">Initiative Dependency</div>
+                </div>
+              </div>
+
+              <!-- Scrum Teams box -->
+              <div style="background:rgba(90,180,220,0.13); border:2px dashed #5dade2; border-radius:8px; padding:12px;">
+                <div style="font-size:11px; font-weight:800; color:#5dade2; margin-bottom:10px;">Scrum Teams</div>
+                <div style="display:flex; flex-direction:column; gap:6px;">
+                  <div style="background:#2e86c1; border-radius:8px; padding:7px 10px; font-size:12px; font-weight:700; color:#fff; text-align:center;">Epic</div>
+                  <div style="font-size:14px; color:#5dade2; text-align:center; line-height:1;">&#8595;</div>
+                  <div style="background:#5dade2; border-radius:8px; padding:7px 10px; font-size:12px; font-weight:700; color:#fff; text-align:center;">User Story</div>
+                </div>
+              </div>
+
+            </div>
           </div>
-
-          <!-- Work column -->
-          <div style="padding:0 6px; border-right:1px solid rgba(255,255,255,0.06); display:flex; flex-direction:column; gap:6px;">
-            <div style="background:#1B2A6B; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">Workstream</div>
-            <div style="background:#236CFF; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">Initiative</div>
-          </div>
-
-          <!-- Capability column -->
-          <div style="padding:0 6px; border-right:1px solid rgba(255,255,255,0.06); display:flex; flex-direction:column; gap:6px;">
-            <div style="background:#8B6914; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">L0</div>
-            <div style="background:#c49a2a; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">L1</div>
-            <div style="background:#d4a017; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">L2</div>
-            <div style="background:#e0b830; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">L3</div>
-            <div style="background:#f0cc50; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#333; text-align:center;">L4</div>
-          </div>
-
-          <!-- Product column -->
-          <div style="padding:0 6px; border-right:1px solid rgba(255,255,255,0.06); display:flex; flex-direction:column; gap:6px;">
-            <div style="background:#6a0dad; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">Product Portfolio</div>
-            <div style="background:#7b2fbe; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">Product</div>
-            <div style="background:#9b59b6; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">Feature</div>
-          </div>
-
-          <!-- Dependency / Scrum Team column -->
-          <div style="padding:0 6px; border-right:1px solid rgba(255,255,255,0.06); display:flex; flex-direction:column; gap:6px;">
-            <div style="background:#1a6b3a; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">Workstream Dependency</div>
-            <div style="background:#27ae60; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">Initiative Dependency</div>
-            <div style="background:#2e86c1; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">Epic</div>
-            <div style="background:#5dade2; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">User Story</div>
-          </div>
-
-          <!-- Driving Org column -->
-          <div style="padding:0 6px; display:flex; flex-direction:column; gap:6px;">
-            <div style="background:#8b0000; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">Driving Org L3</div>
-            <div style="background:#c0392b; border-radius:20px; padding:6px 10px; font-size:11px; font-weight:700; color:#fff; text-align:center;">Driving Org L4</div>
-          </div>
-
         </div>
       </div>
     </div>
